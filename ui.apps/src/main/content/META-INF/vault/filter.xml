@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/rjs/core/clientlibs"/>
+    <filter root="/apps/rjs/core/components"/>
+    <filter root="/apps/rjs/core/i18n"/>
+    <filter root="/apps/msm/rjs-core_blueprint" mode="merge"/>
+</workspaceFilter>

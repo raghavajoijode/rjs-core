@@ -1,0 +1,10 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/rjs-core",
+        "create path (nt:unstructured) /content/dam/rjs-core/jcr:content",
+        "set properties on /content/dam/rjs-core/jcr:content",
+        "set cq:conf{String} to /conf/rjs-core",
+        "set jcr:title{String} to \"RJS Core\"",
+        "end"
+    ]
+}
