@@ -1,0 +1,539 @@
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.exceptions.JWTCreationException;
+import com.auth0.jwt.exceptions.JWTDecodeException;
+import com.auth0.jwt.interfaces.Claim;
+import com.auth0.jwt.interfaces.DecodedJWT;
+import com.docusign.esign.client.JSON;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fmcc.ssd.core.service.JWTAccessTokenService;
+import org.apache.commons.collections4.CollectionUtils;
+import org.apache.sling.api.SlingHttpServletRequest;
+import org.apache.sling.api.resource.Resource;
+import org.apache.sling.api.resource.ResourceResolver;
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
+import org.bouncycastle.util.io.pem.PemObject;
+import org.bouncycastle.util.io.pem.PemReader;
+import org.glassfish.jersey.client.ClientConfig;
+import org.glassfish.jersey.client.ClientProperties;
+import org.glassfish.jersey.client.HttpUrlConnectorProvider;
+import org.glassfish.jersey.client.spi.Connector;
+import org.glassfish.jersey.client.spi.ConnectorProvider;
+import org.glassfish.jersey.jackson.JacksonFeature;
+import org.glassfish.jersey.logging.LoggingFeature;
+import org.glassfish.jersey.media.multipart.FormDataBodyPart;
+import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
+import org.glassfish.jersey.media.multipart.MultiPart;
+import org.glassfish.jersey.media.multipart.MultiPartFeature;
+import org.osgi.service.component.annotations.Component;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.jcr.Node;
+import javax.jcr.RepositoryException;
+import javax.net.ssl.*;
+import javax.ws.rs.client.*;
+import javax.ws.rs.core.Form;
+import javax.ws.rs.core.GenericType;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.StringReader;
+import java.net.*;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
+import java.security.*;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
+import java.security.interfaces.RSAPrivateKey;
+import java.security.interfaces.RSAPublicKey;
+import java.security.spec.EncodedKeySpec;
+import java.security.spec.InvalidKeySpecException;
+import java.security.spec.PKCS8EncodedKeySpec;
+import java.security.spec.X509EncodedKeySpec;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import static org.apache.http.client.utils.DateUtils.formatDate;
+
+@Component(service = JWTAccessTokenService.class, immediate = true)
+public class JWTAccessTokenServiceImpl implements JWTAccessTokenService {
+
+    private static final Logger LOG = LoggerFactory.getLogger(JWTAccessTokenServiceImpl.class);
+    private SSLContext sslContext = null;
+
+    @Override
+    public String generateJWTAssertion(String publicKeyFilename, String privateKeyFilename, String oAuthBasePath,
+                                       String clientId, String userId, long expiresIn, SlingHttpServletRequest request)
+            throws JWTCreationException, IOException, RepositoryException {
+        String token = null;
+        if (expiresIn <= 0L) {
+            throw new IllegalArgumentException("expiresIn should be a non-negative value");
+        }
+        if (publicKeyFilename == null || "".equals(publicKeyFilename) || privateKeyFilename == null
+                || "".equals(privateKeyFilename) || oAuthBasePath == null || "".equals(oAuthBasePath)
+                || clientId == null || "".equals(clientId) || userId == null || "".equals(userId)) {
+            throw new IllegalArgumentException("One of the arguments is null or empty");
+        }
+
+        try {
+            RSAPublicKey publicKey = readPublicKeyFromFile(publicKeyFilename, "RSA", request);
+            RSAPrivateKey privateKey = readPrivateKeyFromFile(privateKeyFilename, "RSA", request);
+            Algorithm algorithm = Algorithm.RSA256(publicKey, privateKey);
+            long now = System.currentTimeMillis();
+            token = JWT.create().withIssuer(clientId).withSubject(userId).withAudience(oAuthBasePath)
+                    .withNotBefore(new Date(now)).withExpiresAt(new Date(expiresIn))
+                    .withClaim("scope", "signature impersonation").sign(algorithm);
+        } catch (JWTCreationException | IOException | RepositoryException e) {
+            LOG.info("Exception while creating acccess token {}", e.getMessage());
+        }
+
+        return token;
+    }
+
+    private static RSAPublicKey readPublicKeyFromFile(String filepath, String algorithm,
+                                                      SlingHttpServletRequest request) throws IOException, RepositoryException {
+        String jcrDataValue = getJcrDataContent(filepath, request);
+        RSAPublicKey publicKey = null;
+        try (PemReader reader = new PemReader(new StringReader(jcrDataValue))) {
+
+            PemObject pemObject = reader.readPemObject();
+            byte[] bytes = pemObject.getContent();
+
+            KeyFactory kf = KeyFactory.getInstance(algorithm);
+            EncodedKeySpec keySpec = new X509EncodedKeySpec(bytes);
+            publicKey = (RSAPublicKey) kf.generatePublic(keySpec);
+        } catch (NoSuchAlgorithmException e) {
+            LOG.info("Could not reconstruct the public key, the given algorithm could not be found.");
+        } catch (InvalidKeySpecException e) {
+            LOG.info("Could not reconstruct the public key");
+        }
+        return publicKey;
+    }
+
+    private static String getJcrDataContent(String filepath, SlingHttpServletRequest request)
+            throws RepositoryException {
+        ResourceResolver resolver = request.getResourceResolver();
+        Resource xslResourcePath = resolver.getResource(filepath);
+        Node xslFileNode = null;
+        Node jcrContentNode = null;
+        String jcrDataValue = null;
+        if (null != xslResourcePath) {
+            xslFileNode = xslResourcePath.adaptTo(Node.class);
+        }
+        if (null != xslFileNode) {
+            jcrContentNode = xslFileNode.getNode("jcr:content");
+        }
+        if (null != jcrContentNode) {
+            jcrDataValue = jcrContentNode.getProperty("jcr:data").getString();
+        }
+        return jcrDataValue;
+    }
+
+    private static RSAPrivateKey readPrivateKeyFromFile(String filepath, String algorithm,
+                                                        SlingHttpServletRequest request) throws IOException, RepositoryException {
+        String jcrDataValue = getJcrDataContent(filepath, request);
+        RSAPrivateKey privateKey = null;
+        try (PemReader reader = new PemReader(new StringReader(jcrDataValue))) {
+            PemObject pemObject = reader.readPemObject();
+            byte[] bytes = pemObject.getContent();
+
+            Security.addProvider(new BouncyCastleProvider());
+            KeyFactory kf = KeyFactory.getInstance(algorithm, "BC");
+            EncodedKeySpec keySpec = new PKCS8EncodedKeySpec(bytes);
+            privateKey = (RSAPrivateKey) kf.generatePrivate(keySpec);
+        } catch (NoSuchAlgorithmException e) {
+            LOG.info("Could not reconstruct the private key, the given algorithm could not be found.");
+        } catch (InvalidKeySpecException e) {
+            LOG.info("Could not reconstruct the private key");
+        } catch (NoSuchProviderException e) {
+            LOG.info("Could not reconstruct the private key, invalid provider.");
+        }
+
+        return privateKey;
+    }
+
+    @Override
+    public Client buildHttpClient(boolean debugging) {
+        final ClientConfig clientConfig = new ClientConfig();
+        clientConfig.register(MultiPartFeature.class);
+        JSON json = new JSON();
+        clientConfig.register(json);
+        clientConfig.register(JacksonFeature.class);
+        clientConfig.property(HttpUrlConnectorProvider.SET_METHOD_WORKAROUND, true);
+        // turn off compliance validation to be able to send payloads with
+        // DELETE calls
+        clientConfig.property(ClientProperties.SUPPRESS_HTTP_COMPLIANCE_VALIDATION, true);
+        if (debugging) {
+            clientConfig
+                    .register(new LoggingFeature(java.util.logging.Logger.getLogger(LoggingFeature.DEFAULT_LOGGER_NAME),
+                            java.util.logging.Level.INFO, LoggingFeature.Verbosity.PAYLOAD_ANY,
+                            1024 * 50 /* Log payloads up to 50K */));
+            clientConfig.property(LoggingFeature.LOGGING_FEATURE_VERBOSITY, LoggingFeature.Verbosity.PAYLOAD_ANY);
+            java.util.logging.Logger.getLogger(LoggingFeature.DEFAULT_LOGGER_NAME)
+                    .setLevel(java.util.logging.Level.ALL);
+        } else {
+            java.util.logging.Logger.getLogger("org.glassfish.jersey.client").setLevel(java.util.logging.Level.SEVERE);
+        }
+        performAdditionalClientConfiguration(clientConfig);
+
+        try {
+            System.setProperty("https.protocols", "TLSv1.2");
+        } catch (SecurityException se) {
+            LOG.info("failed to set https.protocols property");
+        }
+
+        if (sslContext == null) {
+            try {
+                sslContext = SSLContext.getInstance("TLSv1.2");
+                sslContext.init(null, new TrustManager[]{new SecureTrustManager()}, new SecureRandom());
+                HttpsURLConnection.setDefaultSSLSocketFactory(sslContext.getSocketFactory());
+            } catch (NullPointerException | NoSuchAlgorithmException | KeyManagementException ex) {
+                LOG.info("failed to initialize SSL context");
+            }
+        }
+
+        getConnection(clientConfig, sslContext);
+
+        return ClientBuilder.newBuilder().sslContext(sslContext).withConfig(clientConfig).build();
+    }
+
+    @Override
+    public String getJWTAccessToken(String assertion, String oAuthBasePath) {
+        String grantTypeJwt = "urn:ietf:params:oauth:grant-type:jwt-bearer";
+        String accessToken = null;
+        Map<String, Object> form = new HashMap<>();
+        form.put("assertion", assertion);
+        form.put("grant_type", grantTypeJwt);
+
+        Client client = buildHttpClient(false);
+        WebTarget target = client.target("https://" + oAuthBasePath + "/oauth/token");
+        Invocation.Builder invocationBuilder = target.request();
+        invocationBuilder = invocationBuilder.header("Cache-Control", "no-store").header("Pragma", "no-cache");
+
+        Entity<?> entity = null;
+        Response resp = null;
+        try {
+            entity = serialize(null, form, MediaType.APPLICATION_FORM_URLENCODED);
+
+            resp = invocationBuilder.post(entity);
+
+            if (resp.getStatusInfo().getFamily() != Response.Status.Family.SUCCESSFUL) {
+                String message = "error";
+                String respBody = null;
+                if (resp.hasEntity()) {
+                    respBody = String.valueOf(resp.readEntity(String.class));
+                    message = "Error while requesting server, received a non successful HTTP code "
+                            + resp.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'";
+                }
+                throw new ApiException(resp.getStatusInfo().getStatusCode(), message, buildResponseHeaders(resp),
+                        respBody);
+            }
+
+            GenericType<JsonNode> returnType = new GenericType<JsonNode>() {
+            };
+            JsonNode responseJson = deserialize(resp, returnType);
+            if (!responseJson.has("access_token") || !responseJson.has("expires_in")) {
+                throw new ApiException("Error while requesting an access token: " + responseJson);
+            }
+            accessToken = responseJson.get("access_token").asText();
+            LOG.debug("------- Access Token {} --------", accessToken);
+
+        } catch (ApiException | RuntimeException e) {
+            LOG.error("ApiException or Runtime exception occured while requesting an access token {}", e.getMessage());
+        } catch (Exception e) {
+            LOG.error("Failed to Intilaize SSL Context{}", e.getMessage());
+        } finally {
+            try {
+                if (resp != null) {
+                    resp.close();
+                }
+            } catch (Exception e) {
+                LOG.error("Error while requesting an access token{}", e.getMessage());
+            }
+        }
+        return accessToken;
+    }
+
+    @Override
+    public DecodedJWT getDecodedJwt(final String token) throws JWTDecodeException {
+        //String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXUyJ9.eyJpc3MiOiJhdXRoMCJ9.AbIJTDMFc7yUa5MhvcP03nJPyCPzZtQcGEp-zWfOkEE";
+        return JWT.decode(token);
+    }
+
+    @Override
+    public Map<String, Claim> getClaims(final String token) throws JWTDecodeException {
+        return getDecodedJwt(token).getClaims();
+    }
+
+    @Override
+    public List<String> getJwtAudience(final String token) throws JWTDecodeException {
+        return getDecodedJwt(token).getAudience();
+    }
+
+    @Override
+    public boolean validateAudience(final String token, final String requiredAudience) throws JWTDecodeException {
+        return CollectionUtils.containsAny(getJwtAudience(token), requiredAudience);
+    }
+
+    private static boolean isNonProxyHost(String host, String nonProxyHosts) {
+        if (null == host || null == nonProxyHosts) {
+            return false;
+        }
+
+        for (String spec : nonProxyHosts.split("\\|")) {
+            int length = spec.length();
+            StringBuilder sb = new StringBuilder(length);
+            for (int i = 0; i < length; i++) {
+                char c = spec.charAt(i);
+                switch (c) {
+                    case '*':
+                        sb.append(".*");
+                        break;
+                    case '.':
+                        sb.append("\\.");
+                        break;
+                    default:
+                        sb.append(c);
+                }
+            }
+            if (host.matches(sb.toString()))
+                return true;
+        }
+
+        return false;
+    }
+
+    private static Proxy getProxy(Proxy p, String host, Integer port, String user, String password) {
+        if (host != null && port != null) {
+            p = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(host, port));
+        }
+        if (user != null && password != null) {
+            Authenticator.setDefault(new Authenticator() {
+                @Override
+                protected PasswordAuthentication getPasswordAuthentication() {
+                    if (getRequestorType() == RequestorType.PROXY && getRequestingHost().equalsIgnoreCase(host)
+                            && port == getRequestingPort()) {
+                        return new PasswordAuthentication(user, password.toCharArray());
+                    }
+                    return null;
+                }
+            });
+        }
+        return p;
+    }
+
+    private static void getConnection(ClientConfig clientConfig, SSLContext sslContext) {
+        clientConfig.connectorProvider(new ConnectorProvider() {
+            Proxy p = null;
+
+            @Override
+            public Connector getConnector(Client client, javax.ws.rs.core.Configuration configuration) {
+                HttpUrlConnectorProvider customConnProv = new HttpUrlConnectorProvider();
+                customConnProv.connectionFactory(new HttpUrlConnectorProvider.ConnectionFactory() {
+                    @Override
+                    public HttpURLConnection getConnection(URL url) throws IOException {
+                        if (url == null) {
+                            return null;
+                        }
+
+                        if (isNonProxyHost(url.getHost(), System.getProperty("http.nonProxyHosts"))) {
+                            HttpsURLConnection connection = (HttpsURLConnection) url.openConnection(Proxy.NO_PROXY);
+                            connection.setSSLSocketFactory(sslContext.getSocketFactory());
+                            return connection;
+                        }
+
+                        if (p == null) {
+                            if (System.getProperty("https.proxyHost") != null) {
+                                p = getProxy(p, "https.proxyHost", Integer.getInteger("https.proxyPort"),
+                                        "https.proxyUser", "https.proxyPassword");
+
+                            } else if (System.getProperty("http.proxyHost") != null) {
+                                p = getProxy(p, "http.proxyHost", Integer.getInteger("http.proxyPort"),
+                                        "http.proxyUser", "http.proxyPassword");
+                            } else {
+                                p = Proxy.NO_PROXY;
+                            }
+                        }
+
+                        HostnameVerifier allHostsValid = new InsecureHostnameVerifier();
+                        HttpsURLConnection connection = (HttpsURLConnection) url.openConnection(p);
+                        connection.setSSLSocketFactory(sslContext.getSocketFactory());
+                        connection.setHostnameVerifier(allHostsValid);
+                        return connection;
+                    }
+                });
+                return customConnProv.getConnector(client, configuration);
+            }
+        });
+    }
+
+    protected static void performAdditionalClientConfiguration(ClientConfig clientConfig) {
+        // No-op extension point
+    }
+
+    static class InsecureHostnameVerifier implements HostnameVerifier {
+        @Override
+        public boolean verify(String hostname, SSLSession session) {
+            return true;
+        }
+    }
+
+    static class SecureTrustManager implements X509TrustManager {
+
+        @Override
+        public void checkClientTrusted(X509Certificate[] arg0, String arg1) throws CertificateException {
+            // TO DO
+        }
+
+        @Override
+        public void checkServerTrusted(X509Certificate[] arg0, String arg1) throws CertificateException {
+            //
+        }
+
+        @Override
+        public X509Certificate[] getAcceptedIssuers() {
+            return new X509Certificate[0];
+        }
+
+    }
+
+    private static Entity<Object> serialize(Object obj, Map<String, Object> formParams, String contentType) {
+        Entity<Object> entity = null;
+        try (MultiPart multiPart = new MultiPart()) {
+            if (contentType.startsWith("multipart/form-data")) {
+                for (Map.Entry<String, Object> param : formParams.entrySet()) {
+                    if (param.getValue() instanceof byte[]) {
+                        byte[] bytes = (byte[]) param.getValue();
+                        FormDataContentDisposition contentDisp = FormDataContentDisposition.name(param.getKey())
+                                .fileName(param.getKey()).size(bytes.length).build();
+
+                        multiPart.bodyPart(
+                                new FormDataBodyPart(contentDisp, bytes, MediaType.APPLICATION_OCTET_STREAM_TYPE));
+                    } else if (param.getValue() instanceof File) {
+                        File file = (File) param.getValue();
+                        FormDataContentDisposition contentDisp = FormDataContentDisposition.name(param.getKey())
+                                .fileName(file.getName()).size(file.length()).build();
+                        multiPart.bodyPart(
+                                new FormDataBodyPart(contentDisp, file, MediaType.APPLICATION_OCTET_STREAM_TYPE));
+                    } else {
+                        FormDataContentDisposition contentDisp = FormDataContentDisposition.name(param.getKey())
+                                .build();
+                        multiPart.bodyPart(new FormDataBodyPart(contentDisp, parameterToString(param.getValue())));
+                    }
+                }
+                entity = Entity.entity(multiPart, MediaType.MULTIPART_FORM_DATA_TYPE);
+
+            } else if (contentType.startsWith("application/x-www-form-urlencoded")) {
+                Form form = new Form();
+                for (Map.Entry<String, Object> param : formParams.entrySet()) {
+                    form.param(param.getKey(), parameterToString(param.getValue()));
+                }
+                entity = Entity.entity(form, MediaType.APPLICATION_FORM_URLENCODED_TYPE);
+            } else {
+                entity = Entity.entity(obj, contentType);
+            }
+        } catch (IOException e) {
+            LOG.error("IOException Occured{}", e.getMessage());
+        }
+        return entity;
+    }
+
+    private static String parameterToString(Object param) {
+        if (param == null) {
+            return "";
+        } else if (param instanceof Date) {
+            return formatDate((Date) param);
+        } else if (param instanceof Collection) {
+            StringBuilder b = new StringBuilder();
+            for (Object o : (Collection) param) {
+                if (b.length() > 0) {
+                    b.append(',');
+                }
+                b.append(String.valueOf(o));
+            }
+            return b.toString();
+        } else {
+            return String.valueOf(param);
+        }
+    }
+
+    protected static Map<String, List<String>> buildResponseHeaders(Response response) {
+        Map<String, List<String>> responseHeaders = new HashMap<>();
+        for (Map.Entry<String, List<Object>> entry : response.getHeaders().entrySet()) {
+            List<Object> values = entry.getValue();
+            List<String> headers = new ArrayList<>();
+            for (Object o : values) {
+                headers.add(String.valueOf(o));
+            }
+            responseHeaders.put(entry.getKey(), headers);
+        }
+        return responseHeaders;
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T> T deserialize(Response response, GenericType<T> returnType) throws ApiException {
+        if (response == null || returnType == null) {
+            return null;
+        }
+
+        if ("byte[]".equals(returnType.toString())) {
+            return (T) response.readEntity(byte[].class);
+        } else if (returnType.getRawType() == File.class) {
+            return (T) downloadFileFromResponse(response);
+        }
+
+        return response.readEntity(returnType);
+    }
+
+    private static File downloadFileFromResponse(Response response) throws ApiException {
+        try {
+            File file = prepareDownloadFile(response);
+            Files.copy(response.readEntity(InputStream.class), file.toPath(), StandardCopyOption.REPLACE_EXISTING);
+            return file;
+        } catch (IOException e) {
+            throw new ApiException(e);
+        }
+    }
+
+    private static File prepareDownloadFile(Response response) throws IOException {
+        String filename = null;
+        String tempFolderPath = null;
+        String contentDisposition = (String) response.getHeaders().getFirst("Content-Disposition");
+        if (contentDisposition != null && !"".equals(contentDisposition)) {
+            // Get filename from the Content-Disposition header.
+            Pattern pattern = Pattern.compile("filename=['\"]?([^'\"\\s]+)['\"]?");
+            Matcher matcher = pattern.matcher(contentDisposition);
+            if (matcher.find())
+                filename = matcher.group(1);
+        }
+
+        String prefix;
+        String suffix = null;
+        if (filename == null) {
+            prefix = "download-";
+            suffix = "";
+        } else {
+            int pos = filename.lastIndexOf('.');
+            if (pos == -1) {
+                prefix = filename + "-";
+            } else {
+                prefix = filename.substring(0, pos) + "-";
+                suffix = filename.substring(pos);
+            }
+            // File.createTempFile requires the prefix to be at least three
+            // characters long
+            if (prefix.length() < 3)
+                prefix = "download-";
+        }
+
+        if (true)
+            return File.createTempFile(prefix, suffix);
+        else
+            return File.createTempFile(prefix, suffix, new File(tempFolderPath));
+    }
+
+}

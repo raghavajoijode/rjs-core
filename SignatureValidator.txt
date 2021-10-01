@@ -1,0 +1,129 @@
+package com.example.demo.model;
+
+import com.sun.org.apache.xml.internal.security.exceptions.Base64DecodingException;
+import org.apache.commons.codec.binary.Base64;
+import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.StringHttpMessageConverter;
+import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
+
+import java.security.*;
+import java.security.spec.InvalidKeySpecException;
+import java.security.spec.X509EncodedKeySpec;
+
+/**
+ * Created by cyourman on 7/28/2017.
+ *
+ * http://xacmlinfo.org/2015/03/19/validate-and-process-jwt-tokens-with-java/
+ * https://stackoverflow.com/questions/38998702/verify-a-signature-in-jwt-io
+ *
+ */
+
+@Component
+public class SignatureValidator {
+    @Value("${oauthserver.tokenkeyEndpoint}")
+    String tokenkeyEndpoint;
+
+    private String signedMessage = ""; // JWT components used creating signature
+    private byte[] tokenSignature = null;
+
+    private JSONObject keyResponse = null;
+    private String signingKey = null;
+
+    public SignatureValidator() {}
+
+    public boolean checkSignature(String token) {
+        // parse token components
+        this.tokenSignature = Base64.decodeBase64(token.split("\\.")[2]);
+        signedMessage = token.substring(0, token.lastIndexOf("."));
+
+        // get signing key
+        keyResponse = getSigningKey(tokenkeyEndpoint);
+
+        // validate signature
+        try {
+            return validateSignature();
+         } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return false;
+    }
+
+    // Converts the PEM formatted key to a PublicKey object
+    private PublicKey getPublicKey() throws InvalidKeySpecException, NoSuchAlgorithmException, Base64DecodingException {
+        String key = getKey();
+        key = key.replace("-----BEGIN PUBLIC KEY-----\n", "");
+        key = key.replace("\n-----END PUBLIC KEY-----", "");
+        byte[] keyBytes = Base64.decodeBase64(key);
+        X509EncodedKeySpec keySpec = new X509EncodedKeySpec(keyBytes);
+        KeyFactory keyFactory = KeyFactory.getInstance("RSA");
+        return keyFactory.generatePublic(keySpec);
+    }
+
+
+    private boolean validateSignature() throws NoSuchAlgorithmException, InvalidKeySpecException, InvalidKeyException, SignatureException, Base64DecodingException {
+        Signature rsaVerify = Signature.getInstance(getAlg()); // Set algorithm used
+        rsaVerify.initVerify(getPublicKey()); // Set the signing key
+        rsaVerify.update(signedMessage.getBytes()); // jwt body to verify
+        return rsaVerify.verify(tokenSignature); // verify body with supplied signature
+    }
+
+    @Cacheable("signingKey")
+    public JSONObject getSigningKey(String keyEndpoint) {
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.getMessageConverters().add(new StringHttpMessageConverter());
+
+        ResponseEntity<String> result = restTemplate.exchange(
+                keyEndpoint,
+                HttpMethod.GET,
+                null,
+                String.class);
+        return new JSONObject(result.getBody());
+    }
+
+    private String getKey() {
+        if (keyResponse != null) {
+            return keyResponse.getString("value");
+        }
+        return null;
+    }
+
+    private String getKid() {
+        if (keyResponse != null) {
+            return keyResponse.getString("kid");
+        }
+        return null;
+    }
+
+    private String getAlg() {
+        if (keyResponse != null) {
+            return keyResponse.getString("alg");
+        }
+        return null;
+    }
+
+    private String getN() {
+        if (keyResponse != null) {
+            return keyResponse.getString("n");
+        }
+        return null;
+    }
+
+    private String getE() {
+        if (keyResponse != null) {
+            return keyResponse.getString("e");
+        }
+        return null;
+    }
+
+    private String getKty(){
+        if (keyResponse != null) {
+            return keyResponse.getString("kty");
+        }
+        return null;
+    }
+}
