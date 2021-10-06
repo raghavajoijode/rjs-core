@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+	<filter root="/apps/foundation" mode="replace">
+		<exclude pattern="/apps/foundation/install" />
+	</filter>
+	<filter root="/apps/cq/core/content/nav/tools/subra-foundation" />
+	<filter root="/apps/kajado" />
+	<filter root="/apps/sling" />
+	<filter root="/apps/msm/foundation_blueprint" mode="merge" />
+</workspaceFilter>

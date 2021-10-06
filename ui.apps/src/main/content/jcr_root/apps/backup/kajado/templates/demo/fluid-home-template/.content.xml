@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:description="Fluid Template for home page"
+          jcr:primaryType="cq:Template"
+          jcr:title="Fluid Home Template"
+          allowedPaths="[/content/demo(/.*)?]"
+          ranking="{Long}1">
+    <jcr:content
+            jcr:primaryType="cq:PageContent"
+            sling:resourceType="/apps/demo/components/structure/fluid-home-page">
+        <par-1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+            <layout_container_com
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="demo/components/content/layout-container-component">
+                <parsys
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid"/>
+            </layout_container_com>
+        </par-1>
+        <par-2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+            <layout_container_com
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="demo/components/content/layout-container-component"
+                    selectbackground="white"
+                    selectmargin="margin">
+                <parsys
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <title
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="demo/components/content/title"
+                            title="Our Success Stories"/>
+                </parsys>
+            </layout_container_com>
+        </par-2>
+        <par-3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+            <layout_container_com
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="demo/components/content/layout-container-component"
+                    selectbackground="white"
+                    selectmargin="margin">
+                <parsys jcr:primaryType="nt:unstructured">
+                    <title
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="demo/components/content/title"
+                            title="What We Think"/>
+                </parsys>
+            </layout_container_com>
+        </par-3>
+        <par-4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+            <layout_container_com
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="demo/components/content/layout-container-component"
+                    selectbackground="grey"
+                    selectmargin="withoutmargin">
+                <parsys
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <title
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="demo/components/content/title"
+                            title="Social media"/>
+                </parsys>
+            </layout_container_com>
+        </par-4>
+        <ipar-header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/iparsys">
+            <header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="demo/components/structure/header"/>
+        </ipar-header>
+        <ipar-footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/iparsys">
+            <footer
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="demo/components/structure/footer"/>
+            <demo_sitemap
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="demo/components/structure/demo-sitemap"/>
+        </ipar-footer>
+    </jcr:content>
+</jcr:root>

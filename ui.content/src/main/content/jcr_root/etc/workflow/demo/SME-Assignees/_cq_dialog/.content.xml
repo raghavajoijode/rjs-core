@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Performers"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+        <items jcr:primaryType="nt:unstructured">
+            <columns
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <performers
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/select"
+                        fieldLabel="Choose Next Performer"
+                        name="performers">
+                        <items jcr:primaryType="nt:unstructured">
+                            <reviewers
+                                jcr:primaryType="nt:unstructured"
+                                text="Content Reviewers"
+                                value="reviewers"/>
+                            <ghost-writers
+                                jcr:primaryType="nt:unstructured"
+                                text="Ghost Writers"
+                                value="ghost-writers"/>
+                            <vmms
+                                jcr:primaryType="nt:unstructured"
+                                text="Vertical Marketing Manager"
+                                value="vmms"/>
+                            <smes
+                                jcr:primaryType="nt:unstructured"
+                                text="Subject Matter Experts"
+                                value="smes"/>
+                        </items>
+                    </performers>
+                </items>
+            </columns>
+        </items>
+    </content>
+</jcr:root>

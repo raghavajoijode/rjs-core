@@ -1,0 +1,11 @@
+<sly data-sly-use.clientLib="/apps/foundation/components/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories=properties.pageClientLibs}"/>
+<div class="scomponent subra-scroll-top d-none">
+    <img src="scroll-top.png" alt="back to top" title="back to top"/>
+    <!-- <i class="fas fa-arrow-up"></i> -->
+</div>
+
+<sly data-sly-use.clientLib="/apps/foundation/components/templates/clientlib.html"
+     data-sly-call="${clientlib.js @ categories=properties.pageClientLibs}"/>
+
+<!--<script src="${component.path}/scroll-to-top.js"></script>-->   

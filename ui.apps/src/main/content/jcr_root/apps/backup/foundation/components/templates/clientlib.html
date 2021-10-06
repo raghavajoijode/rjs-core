@@ -1,0 +1,34 @@
+<!--/*  Template used for including CSS client libraries */-->
+<template
+        data-sly-template.css="${@ categories='Client Library categories', crossorigin='Accepts anonymous and use-credentials'}">
+    <sly data-sly-test="${request.getResourceResolver}"
+         data-sly-call="${includeMarkUp @ categories=categories, mode='css', crossorigin=crossorigin}"/>
+</template>
+
+<!--/* Template used for including JS client libraries */-->
+<template data-sly-template.js="${@ categories='Client Library categories',
+									loading='Accepts async and defer',
+                                    onload='JavaScript to run for async and defer',
+                                    crossorigin='Accepts anonymous and use-credentials'}">
+    <sly data-sly-test="${request.getResourceResolver}"
+         data-sly-call="${includeMarkUp @ categories=categories, mode='js', loading=loading, onload=onload, crossorigin=crossorigin}"/>
+</template>
+
+<!--/* Template used for including ALL client libraries */-->
+<template data-sly-template.all="${@ categories='Client Library categories',
+                                     loading='Accepts async and defer',
+                                     onload='JavaScript to run for async and defer',
+                                     crossorigin='Accepts anonymous and use-credentials'}">
+    <sly data-sly-test="${request.getResourceResolver}"
+         data-sly-call="${includeMarkUp @ categories=categories, loading=loading, onload=onload, crossorigin=crossorigin}"/>
+</template>
+
+<!--/* Template used for render markup of requested client libraries */-->
+<template data-sly-template.includeMarkUp="${@ categories='Client Library categories', 
+											   mode='optional: JS or CSS, case-insensitve',
+                                         	   loading='optional: JS async or defer',
+                                         	   onload='optional: JS to run for async and defer',
+                                         	   crossorigin='optional: accepts anonymous and use-credentials'}"
+          data-sly-use.clientlib="${'org.subra.aem.rjs.core.component.models.ClientLibUseObject' @ categories=categories, mode=mode, loading=loading, onload=onload, crossorigin=crossorigin}">
+    ${clientlib.includeMarkUp @ context='unsafe'}
+</template>

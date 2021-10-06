@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured">
+    <tabs
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+                type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <tab1
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Basic"
+                    sling:resourceType="granite/ui/components/foundation/section"
+                    listOrder="0"
+                    tabid="f84cc8d6-60ab-474e-bdf8-a0b7a434f289">
+                <items jcr:primaryType="nt:unstructured">
+                    <col1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container"
+                            listOrder="0"/>
+                    <col2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container"
+                            listOrder="1"/>
+                    <col3
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container"
+                            listOrder="2"/>
+                </items>
+            </tab1>
+            <tab2
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Advanced"
+                    sling:resourceType="granite/ui/components/foundation/section"
+                    listOrder="1"
+                    tabid="7c927721-1473-492f-b949-4fa2f82a32a0">
+                <items jcr:primaryType="nt:unstructured">
+                    <col1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container"
+                            listOrder="0"/>
+                    <col2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container"
+                            listOrder="1"/>
+                    <col3
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container"
+                            _x0038_4209069904-DefaultValue="true"
+                            listOrder="2">
+                        <items jcr:primaryType="nt:unstructured">
+                            <header
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="dam/gui/components/admin/schemaforms/formbuilder/sectionfield"
+                                    fieldLabel="YouTube Publishing"
+                                    metaType="section"/>
+                            <category
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/select"
+                                    fieldLabel="YouTube Category"
+                                    metaType="dropdown"
+                                    name="./jcr:content/metadata/dam:youtube_category"
+                                    renderReadOnly="true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <film
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Film &amp; Animation"
+                                            value="Film &amp; Animation"/>
+                                    <autos
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Autos &amp; Vehicles"
+                                            value="Autos &amp; Vehicles"/>
+                                    <music
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Music"
+                                            value="Music"/>
+                                    <animals
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Pets &amp; Animals"
+                                            value="Pets &amp; Animals"/>
+                                    <sports
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Sports"
+                                            value="Sports"/>
+                                    <games
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Gaming"
+                                            value="Gaming"/>
+                                    <people
+                                            jcr:primaryType="nt:unstructured"
+                                            text="People &amp; Blogs"
+                                            value="People &amp; Blogs"/>
+                                    <comedy
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Comedy"
+                                            value="Comedy"/>
+                                    <entertainment
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Entertainment"
+                                            value="Entertainment"/>
+                                    <news
+                                            jcr:primaryType="nt:unstructured"
+                                            text="News &amp; Politics"
+                                            value="News &amp; Politics"/>
+                                    <howto
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Howto &amp; Style"
+                                            value="Howto &amp; Style"/>
+                                    <education
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Education"
+                                            value="Education"/>
+                                    <tech
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Science &amp; Technology"
+                                            value="Science &amp; Technology"/>
+                                    <nonprofit
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Nonprofits &amp; Activism"
+                                            value="Nonprofits &amp; Activism"/>
+                                    <travel
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Travel &amp; Events"
+                                            value="Travel &amp; Events"/>
+                                </items>
+                            </category>
+                            <privacy
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/select"
+                                    fieldLabel="YouTube Privacy"
+                                    metaType="dropdown"
+                                    name="./jcr:content/metadata/dam:youtube_privacy"
+                                    renderReadOnly="true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <public
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Public (anyone can search for and view)"
+                                            value="public"/>
+                                    <unlisted
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Unlisted (anyone with the link can view)"
+                                            value="unlisted"/>
+                                    <private
+                                            jcr:primaryType="nt:unstructured"
+                                            text=" Private (only specific YouTube users can view)"
+                                            value="private"/>
+                                </items>
+                            </privacy>
+                            <urls
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="dam/gui/components/admin/youtubeurllist"
+                                    fieldLabel="YouTube URL List"
+                                    metaType="youtubeurllist"
+                                    name="./jcr:content/metadata/dam:youtube_urls"/>
+                        </items>
+                    </col3>
+                </items>
+            </tab2>
+            <tabdemo
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Demo"
+                    sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                        margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <workflowrelated
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                    listOrder="0"/>
+                            <pagetype
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Page Type"
+                                    sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <setPageType
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <heading
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/heading"
+                                                    class="coral-Heading coral-Heading--4"
+                                                    level="{Long}4"
+                                                    text=""/>
+                                            <well
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/container">
+                                                <layout
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/layouts/well"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <page-type
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/form/select"
+                                                            class="cq-dialog-dropdown-showhide"
+                                                            cq-dialog-dropdown-showhide-target=".list-option-listfrom-showhide-target"
+                                                            name="./jcr:content/metadata/page-type"
+                                                            renderReadOnly="{Boolean}true"
+                                                            required="{Boolean}true">
+                                                        <datasource
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="/apps/dam/content/schemaeditors/forms/datasource/page-type"/>
+                                                    </page-type>
+                                                </items>
+                                            </well>
+                                        </items>
+                                    </setPageType>
+                                    <setCorporate
+                                            cq:showOnCreate="{Boolean}true"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container"
+                                            class="hide list-option-listfrom-showhide-target foundation-layout-util-vmargin corporate-class"
+                                            id="corporate-id"
+                                            showhidetargetvalue="corporate">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <heading
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/heading"
+                                                    class="coral-Heading coral-Heading--4"
+                                                    level="{Long}4"
+                                                    text=""/>
+                                            <well
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/container"
+                                                    class="corp-well">
+                                                <layout
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/layouts/well"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <corporate
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/form/select"
+                                                            class="corporate-class-new"
+                                                            fieldLabel="Corporate Page Type"
+                                                            id="selectCorporateID"
+                                                            name="./jcr:content/metadata/corporate-page-type"
+                                                            renderReadOnly="{Boolean}true"
+                                                            required="{Boolean}true">
+                                                        <datasource
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="/apps/demo/components/structure/datasource/corporate"/>
+                                                    </corporate>
+                                                    <tilldate
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/form/datepicker"
+                                                            fieldLabel="Event From Date &amp; Time"
+                                                            format="m/d/Y"
+                                                            minDate=""
+                                                            name="./jcr:content/metadata/fromcorporatedate-time"
+                                                            renderReadOnly="{Boolean}true"
+                                                            type="datetime"/>
+                                                    <totilldate
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/form/datepicker"
+                                                            fieldLabel="Event To Date &amp; Time"
+                                                            format="m/d/Y"
+                                                            minDate=""
+                                                            name="./jcr:content/metadata/tocorporatedate-time"
+                                                            renderReadOnly="{Boolean}true"
+                                                            type="datetime"/>
+                                                    <venue
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                            fieldLabel="Event Venue"
+                                                            name="./jcr:content/metadata/venue"
+                                                            renderReadOnly="{Boolean}true"/>
+                                                </items>
+                                            </well>
+                                        </items>
+                                    </setCorporate>
+                                </items>
+                            </pagetype>
+                            <tagrelated
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Tags Related"
+                                    sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <setTagRelated
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <heading
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/heading"
+                                                    class="coral-Heading coral-Heading--4"
+                                                    level="{Long}4"
+                                                    text=""/>
+                                            <well
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/container">
+                                                <layout
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/layouts/well"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <setPriamryBV
+                                                            cq:showOnCreate="{Boolean}true"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/container"
+                                                            class="hide list-option-listfrom-showhide-target foundation-layout-util-vmargin"
+                                                            id="setPrimaryBV-id"
+                                                            showhidetargetvalue="case-study">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <heading
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/heading"
+                                                                    class="coral-Heading coral-Heading--4"
+                                                                    level="{Long}4"
+                                                                    text=""/>
+                                                            <well
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/container">
+                                                                <layout
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/foundation/layouts/well"/>
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <primary-bv
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/foundation/form/select"
+                                                                            class="primarybvclass"
+                                                                            fieldLabel="Primary BV"
+                                                                            name="./jcr:content/metadata/primary-bv"
+                                                                            renderReadOnly="{Boolean}true">
+                                                                        <datasource
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="/apps/demo/components/structure/datasource/primaryBVTag"/>
+                                                                    </primary-bv>
+                                                                </items>
+                                                            </well>
+                                                        </items>
+                                                    </setPriamryBV>
+                                                    <setPriamrySL
+                                                            cq:showOnCreate="{Boolean}true"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/container"
+                                                            class="hide list-option-listfrom-showhide-target foundation-layout-util-vmargin"
+                                                            id="setPrimarySL-id"
+                                                            showhidetargetvalue="case-study">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <heading
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/heading"
+                                                                    class="coral-Heading coral-Heading--4"
+                                                                    level="{Long}4"
+                                                                    text=""/>
+                                                            <well
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/container">
+                                                                <layout
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/foundation/layouts/well"/>
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <primary-sl
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/foundation/form/select"
+                                                                            class="primaryslclass"
+                                                                            fieldLabel="Primary SL"
+                                                                            name="./jcr:content/metadata/primary-sl"
+                                                                            renderReadOnly="{Boolean}true">
+                                                                        <datasource
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="/apps/demo/components/structure/datasource/primarySLTag"/>
+                                                                    </primary-sl>
+                                                                </items>
+                                                            </well>
+                                                        </items>
+                                                    </setPriamrySL>
+                                                    <primary-tags
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                            fieldDescription="Not for authors use"
+                                                            fieldLabel="Primary Tag"
+                                                            id="primarytagid"
+                                                            name="./jcr:content/metadata/cq:primarytags"
+                                                            renderReadOnly="{Boolean}true"/>
+                                                    <tags
+                                                            cq:showOnCreate="{Boolean}true"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="cq/gui/components/common/tagspicker"
+                                                            allowBulkEdit="{Boolean}true"
+                                                            allowCreate="{Boolean}true"
+                                                            cq-msm-lockable="cq:tags"
+                                                            fieldLabel="Tags"
+                                                            name="./jcr:content/metadata/cq:tags"
+                                                            renderReadOnly="{Boolean}true"/>
+                                                    <content-type-tags
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                            fieldLabel="Content Type Tag"
+                                                            id="contenttypetagid"
+                                                            name="./jcr:content/metadata/cq:content-type-tags"
+                                                            readOnly="{Boolean}true"
+                                                            renderReadOnly="{Boolean}true"/>
+                                                </items>
+                                            </well>
+                                        </items>
+                                    </setTagRelated>
+                                </items>
+                            </tagrelated>
+                            <pageattributes
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Page Attributes"
+                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                    class="hide list-option-listfrom-showhide-target foundation-layout-util-vmargin"
+                                    id="selectionCOwner"
+                                    showhidetargetvalue="case-study">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <setContentOwner
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container"
+                                            id="setcontentownerid">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <heading
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/heading"
+                                                    class="coral-Heading coral-Heading--4"
+                                                    level="{Long}4"
+                                                    text=""/>
+                                            <well
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/container">
+                                                <layout
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/layouts/well"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <content-owner-selection
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/form/select"
+                                                            class="selectionCOwner"
+                                                            fieldLabel="Content Owner -"
+                                                            name="./jcr:content/metadata/contentownerselection">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <select-options
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="Select Option"
+                                                                    value=""/>
+                                                            <primary-bv
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="Primary BV"
+                                                                    value=".primarybvclass"/>
+                                                            <primary-sl
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="Primary SL"
+                                                                    value=".primaryslclass"/>
+                                                        </items>
+                                                    </content-owner-selection>
+                                                    <content-owner
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                            fieldLabel="Content Owner "
+                                                            id="ddlChar"
+                                                            name="./jcr:content/metadata/content-owner"
+                                                            renderReadOnly="{Boolean}true"/>
+                                                </items>
+                                            </well>
+                                        </items>
+                                    </setContentOwner>
+                                </items>
+                            </pageattributes>
+                            <tile-image
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Pathfield Section"
+                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                    class="hide list-option-listfrom-showhide-target foundation-layout-util-vmargin"
+                                    listOrder="1"
+                                    showhidetargetvalue="case-study">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <set-tileimage
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container"
+                                            id="tileimageid">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <heading
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/heading"
+                                                    class="coral-Heading coral-Heading--4"
+                                                    level="{Long}4"
+                                                    text=""/>
+                                            <well
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/container">
+                                                <layout
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/layouts/well"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <tile-image
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                            class="tileimageattribute"
+                                                            fieldDescription="alternate image for Tile"
+                                                            fieldLabel="Tile Image(Optional)"
+                                                            name="./jcr:content/metadata/tile-image"
+                                                            renderReadOnly="true"
+                                                            rootPath="/content/dam"/>
+                                                </items>
+                                            </well>
+                                        </items>
+                                    </set-tileimage>
+                                </items>
+                            </tile-image>
+                        </items>
+                    </column>
+                </items>
+            </tabdemo>
+        </items>
+    </tabs>
+</jcr:root>

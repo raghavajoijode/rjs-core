@@ -1,0 +1,16 @@
+
+Hello ${recipientName},
+
+Greetings from Subra!
+
+You have been invited to register an account with us, by ${senderName}. Please click on the link below to finish your registration.
+
+Registration Link: ${link}
+
+Upon successful registration, you shall be welcomed with an email.
+ 
+-----------
+From,
+Team Subra.
+-----------
+***This is a system generated electronic message. Please do not reply as this mailbox is never monitored.***

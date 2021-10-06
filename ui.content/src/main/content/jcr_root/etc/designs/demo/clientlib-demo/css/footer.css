@@ -1,0 +1,311 @@
+/* footer css starts */
+body {
+    padding: 0;
+    margin: 0;
+
+}
+.location-content-box ul li p{
+line-height:26px;}
+
+.fluid-width {
+    max-width: 1585px;
+    padding: 0 24px 0 24px;
+	margin:auto;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+.flex-footer-table{
+	width:100%;
+	border-collapse:collapse;
+	text-align:center;
+}
+.copyright-desktop{
+	width: 16%;
+	text-align: left;
+	color:#ffffff;
+	font-size:14px;
+	line-height:20px;
+    font-family:'Akkurat-Light';
+;
+}
+a .social-image {
+	display:inline-block;
+	vertical-align:middle;
+	width:50%;
+}
+.middle-row{
+	width:35%;
+	text-align:center;
+}
+.middle-row table{
+	width:100%;
+	border-collapse:collapse;
+	text-align:center;
+}
+.social-container{
+    width:16%;
+	text-align:right;
+}
+.copyright-mobile{
+	display:none;
+	text-align: center;
+	color:#ffffff;
+	font-size:12px;
+	line-height:12px;
+}
+.footer-text{
+	text-decoration:none;
+	color:#ffffff !important;
+	display:inline-block;
+	vertical-align:middle;
+	text-align:center;
+    font-size: 16px;
+	 padding: 0 5px 0 5px;
+}
+
+.Subra-footer {
+    background-color: #0e3570;
+    color: white;
+    box-sizing: border-box;
+    padding: 26px 20px;
+    clear: both;
+}
+
+.Subra-copyright {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+    .Subra-copyright p {
+        margin: 0;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+.small-text {
+    font-size: 12px !important;
+    letter-spacing: 0 !important;
+    font-weight: normal !important;
+    padding: 3px 0 0 0;
+    text-transform: none !important;
+}
+
+.Subra-about-footer-column h4 {
+    color: #ffffff;
+    line-height: 20px;
+    font-family:'Akkurat-Mono';
+    font-size: 22px;
+    margin-bottom: 10px;
+    margin-top:20px;
+}
+
+.Subra-about-footer {
+    -webkit-box-shadow: inset 0px 70px 78px -40px rgba(43,43,43,0.59);
+    -moz-box-shadow: inset 0px 70px 78px -40px rgba(43,43,43,0.59);
+    box-shadow: inset 0px 70px 78px -40px rgba(43,43,43,0.59);
+    box-sizing: border-box;
+    padding: 80px 0 60px;
+}
+
+.Subra-copyright a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.Subra-about-footer-column p a {
+    text-decoration: none;
+    color: #ffffff;
+	line-height:20px;
+	word-break:break-word;
+}
+
+.Subra-about-footer-column p {
+    display: block;
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.Subra-footer-list {
+    display: block;
+    margin-bottom: 35px;
+}
+
+.Subra-footer-list h4 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+.Subra-about-footer-column {
+    margin-bottom: 30px;
+}
+
+.Subra-footer-list:last-child {
+    margin-bottom: 0;
+}
+
+.Subra-privacy {
+    text-align: center;
+}
+
+    .Subra-privacy img {
+        display: inline-block;
+        vertical-align: top;
+    }
+	.social-space {
+		padding:0;
+		font-size:12px;
+	}
+	.copyright-text {
+		padding:0px;
+	}
+.Subra-about-footer-column>p:first-child{
+    margin-top:55px;
+
+}
+.Subra-about-footer-column h4 + p{
+    margin-top:15px;
+ }
+@media only screen and (min-width: 1920px) {
+.copyright-desktop {
+    width: 23%;
+    font-size: 14px;
+    line-height: 22px;
+}
+    .Subra-footer-list h4 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+.Subra-about-footer-column p {
+    font-size: 18px; 
+}
+	.middle-row{
+	width:50%;
+	text-align:center;
+	padding:0 1% 0 1%;
+}
+.footer-text {
+    font-size: 23px;
+    padding: 0 5px 0 5px;
+}
+}
+@media screen and (min-device-width: 1366px) and (max-device-width: 1920px) {
+    .social-space img {
+        padding-left: 4px;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .fluid-width {
+        max-width: 1585px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+.flex-footer-table .copyright-desktop {
+    width: 10%;
+}
+}
+
+@media only screen and (max-width:1024px) {
+.social-container {
+    width: 11%;
+}
+.middle-row {
+    width: 24%;
+}
+}
+
+@media only screen and (max-width:940px) {
+.social-container{
+	display:table-cell;
+	vertical-align:middle;
+    width:12%;
+}
+.copyright-desktop {
+    font-size: 12px;
+}
+.copyright-desktop{
+	width: 16%;
+}
+.middle-row .footer-text{
+    padding:0;
+    font-size:12px;
+}
+.Subra-about-footer-column h4{
+    line-height: 24px;
+}
+}
+
+@media (width: 768px) {
+.Subra-about-footer .container .col-sm-3 {
+    width: 24%;
+}
+}
+
+@media only screen and (max-width:767px) {
+    .Subra-copyright p {
+        margin-bottom: 20px;
+    }
+    .middle-row .footer-text {
+        font-size: 16px;
+    }
+	.social-container{
+	text-align:center;
+		display:block;
+		width:100%;
+}
+	 .social-image img{
+		    padding: 17px 10px 22px 10px;
+	}
+	.flex-footer-table td{
+		width:100%;
+		display:block;
+	}
+	.middle-row{
+		width:100%;
+	}
+	.middle-row table tr td{
+		display:block;
+		width:100% !important;
+		padding:7px 0 !important;
+	}
+	.copyright-desktop{
+		display:none !important;
+	}
+	.Subra-footer {
+	padding:7px 0 20px;
+	} 
+.copyright-mobile{
+	display:block;
+}
+    .Subra-copyright img {
+        margin: 12px 12px 24px 12px;
+    }
+
+    .copyright-text p {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .Subra-about-footer {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .Subra-copyright p {
+        margin-bottom: 20px;
+    }
+}
+
+/* footer css ends */

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    cq:lastReplicated="{Date}2017-04-28T08:07:57.918-04:00"
+    cq:lastReplicatedBy="raghava"
+    cq:lastReplicationAction="Activate"
+    jcr:description="#D68910"
+    jcr:lastModified="{Date}2017-02-13T12:19:06.282-05:00"
+    jcr:lastModifiedBy="admin"
+    jcr:mixinTypes="[cq:ReplicationStatus]"
+    jcr:primaryType="cq:Tag"
+    jcr:title="Global Infrastructure Services"
+    sling:resourceType="cq/tagging/components/tag"/>

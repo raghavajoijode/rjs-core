@@ -1,0 +1,80 @@
+
+
+html,
+body {
+   min-height: 100%;
+   margin:0;
+   padding:0;
+}
+.Subra-table-container{
+	display:block;
+	margin:auto;
+	overflow:auto;
+	font-family: neuzeit-grotesk, sans-serif;
+}
+.Subra-table-container table{
+	text-align:left;
+	border-collapse:collapse;
+	border-left:1px solid transparent;
+	border-right:1px solid transparent;
+	width:100%;
+	padding:0;
+	margin:50px 0;
+}
+
+.Subra-table-container table th{
+	border-left:1px solid #000000;
+	border-right:1px solid #000000;
+	background-color:#f2f2f2;
+	vertical-align:top;
+    padding: 18px 32px 18px 24px;
+	font-weight:400;
+	    border-bottom: 1px solid #000;
+}
+.Subra-table-container table td{
+	border-bottom:1px solid #000000;
+	border-left:1px solid #000000;
+	border-right:1px solid #000000;
+	text-align:left;
+	box-sizing:border-box;
+	padding: 10px 10px 10px 24px;
+}
+.Subra-table-container table tr:first-child td{
+	border:none !important;
+	text-align:left !important;
+	padding:4px 0px !important;
+}
+.Subra-table-container table tr:first-child td:last-child{
+	padding:4px 24px !important;	
+}
+.Subra-table-container table th:first-child{
+	border-left:1px solid transparent;
+}
+.Subra-table-container table th:last-child{
+	border-right:1px solid transparent;
+}
+.Subra-table-container table tr:not(:first-child) td:first-child{
+	border-left:1px solid transparent;
+}
+.Subra-table-container table tr:not(:first-child) td:last-child{
+	border-right:1px solid transparent;
+}
+@media only screen and (min-width:1920px){
+.Subra-table-container table tr:first-child td{
+	font-size:24px;
+	line-height:28px;
+	font-weight:700;
+}
+.Subra-table-container table th{
+	font-size:24px;
+	line-height:28px;	
+}
+.Subra-table-container table td{
+	font-size:20px;
+	line-height:20px;
+}
+.Subra-table-container table tr:not(:first-child) td:first-child {
+	padding: 25px 24px;
+}
+}
+/* FAQ-Section-Ends */

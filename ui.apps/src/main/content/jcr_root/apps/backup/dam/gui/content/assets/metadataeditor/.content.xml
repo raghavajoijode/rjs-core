@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+            jcr:primaryType="nt:unstructured"
+            jcr:title="AEM Assets | Asset Metadata"
+            sling:resourceType="granite/ui/components/foundation/page">
+        <body
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/page/body">
+            <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/container"
+                    selfurl="/mnt/overlay/dam/gui/content/assets/metadataeditor.html">
+                <content
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                    <items jcr:primaryType="nt:unstructured">
+                        <demomodalvalidationerror
+                                jcr:description="Owner Tag should be either a Primary BV or Primary SL"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Invaid Input"
+                                sling:resourceType="dam/gui/components/admin/modal"
+                                class="coral-Modal--error"
+                                dismiss-button-text="Cancel"
+                                id="aem-assets-metadataedit-demo-validationerror"/>
+                    </items>
+                </content>
+            </content>
+        </body>
+    </jcr:content>
+</jcr:root>

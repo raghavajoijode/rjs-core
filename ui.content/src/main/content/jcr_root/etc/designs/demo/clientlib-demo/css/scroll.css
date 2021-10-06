@@ -1,0 +1,365 @@
+/* header css starts */
+body {
+	margin:0px;
+	padding:0px;
+	overflow-y:scroll;
+}
+a {
+	text-decoration:none;
+	background:none;
+	outline:0px;
+}
+
+/* Main Menu CSS Starts */
+
+.Subra-logo img {
+	width:180px;
+}
+
+
+/* Main Menu CSS Ends */
+
+/* Side Icon & Menu CSS Starts */
+.right-side-icon {
+	text-align:right;
+}
+.header-search, .header-globe{
+	width:32px;
+	display:inline-block;
+	vertical-align:top;
+	margin-top:12px;
+	text-align:center;
+	margin-right:20px;
+	cursor:pointer;
+	position:relative;
+}
+
+/* Side Icon & Menu CSS Ends */
+
+/* sub-menu css starts */
+.sub-menu{
+	    box-sizing: border-box;
+    width: 100%;
+    position: fixed;
+    top: 82px;
+    z-index: 99999 !important;
+    transition: .4s;
+
+}
+.sub-menu-content{
+	position:relative;
+    -webkit-box-shadow: inset 0px 56px 28px -41px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 0px 56px 28px -41px rgba(0,0,0,0.75);
+box-shadow: inset 0px 56px 28px -41px rgba(0,0,0,0.75);
+    padding: 20px 15px 20px 15px;
+}
+.sub-menu-content-popup{
+	position:relative;
+-webkit-box-shadow: inset 0px 56px 28px -41px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 0px 56px 28px -41px rgba(0,0,0,0.75);
+box-shadow: inset 0px 56px 28px -41px rgba(0,0,0,0.75);
+padding: 15px 25px 15px 25px;
+}
+.sub-menu-content-popup .black-background, .sub-menu-content .black-background{
+    position: absolute;
+    width: 100%;
+    background-color: black;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+.sub-menu-content .sub-menu-part{
+	color:#ffffff;
+	text-transform:uppercase;
+	font-size:14px;
+    line-height: 24px;
+	vertical-align:middle;
+	font-family: 'Neuzeit-Gro-bold';
+	letter-spacing:3px;
+	position:relative;
+	opacity:1;
+}
+ .sub-menu-content .sub-menu-part-text{
+	margin-left:35px;
+}
+.sub-menu-content .sub-menu-part p{
+	display:none;
+}
+.sub-menu-logos {
+		top:0px;
+	    left: 0px;	
+}
+ .sub-menu-content .sub-menu-logos{
+	text-align:right;
+	    font-size: 0;
+}
+ .sub-menu-content .plus{
+	display:none;
+    border: 3px solid #ffffff;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    float: right;
+	position:relative;
+	   transition: 0.4s; 
+}
+  .plus:before{
+	content:"";
+	position:absolute;
+	width: 2px;
+    height: 10px;
+	background-color:#ffffff;
+	top:50%;
+	left:0;
+	right:0;
+	margin:auto;
+	transform:translateY(-50%);
+}
+.plus:after{
+	content:"";
+	position:absolute;
+	width:2px;
+    height: 10px;
+	background-color:#ffffff;
+	transform:rotate(90deg);
+	top:50%;
+		left:0;
+	right:0;
+	margin:auto;
+	transform:translateY(-50%) rotate(90deg);
+}
+.plus .sub-menu-logos{
+	display:none;
+}
+.plus .sub-menu-logos img{
+	    display: block;
+    margin: 10px 0 10px 0;
+    width: 12px;
+}
+.sub-menu-content .sub-menu-part-text:before{
+	    content: "<";
+	position: absolute;
+    width: 30px;
+    height: 18px;
+    color: #ffffff;
+    left: 0px;
+    top: 0;
+    bottom: 0;
+    font-size: 30px;
+}
+.sub-menu-part-text:before, .sub-menu-part p:before
+.sub-menu-logos img{
+	    width: 33px;
+	margin: 0 5% 0 5%;
+}
+.sub-menu-part p{
+	margin-bottom:0;
+}
+ a{
+	color:inherit;
+}
+ a:hover{
+	 color:inherit;
+	 text-decoration:none;
+ }
+  a:focus{
+	  	 color:inherit;
+	 text-decoration:none;
+  }
+
+/* sub-menu css ends */
+ @media screen and (max-width:1920px) { 
+
+	 	.sub-menu-content .sub-menu-part p{
+    display: block;
+    text-align: center;
+    opacity: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 22px;
+    text-transform: none;
+    font-weight: bold;
+    overflow: hidden;
+    margin-left: 63px;
+    max-width: 530px;
+    letter-spacing: 0;
+}
+ .sub-menu-content .sub-menu-part img{
+	  width: 21px !important;
+	margin: 0 5% 0 5%;
+}
+}
+ @media screen and (min-width:1920px) { 
+/* Side Icon & Menu CSS Starts */
+.main-menu li a{
+	padding: 0px 56px;
+	text-decoration:none;
+}
+ .sub-menu-content .sub-menu-part a{
+		 font-size: 18px;
+	 }
+	  .sub-menu .sub-menu-content{
+		    padding: 37px 15px 28px 15px;
+	 }
+	.sub-menu-content .sub-menu-part p{
+    margin-left: 160px;
+	 line-height: 35px;
+}
+.sub-menu-part-text {
+	margin-left:50px;
+}
+ .sub-menu-content .sub-menu-part img{
+	  width: 35px !important;
+	margin: 0 5% 0 5%;
+}
+/* Side Icon & Menu CSS Ends */
+ }
+  @media screen and (min-width:1366px) { 
+  .sub-menu-part img{
+	    width: 25px;
+	margin: 0 5% 0 5%;
+}
+  }
+ @media screen and (max-width:1024px) {
+/* Main Menu CSS Starts */	 
+	 .main-menu {
+	 display:none;
+	}
+	 .sub-menu-content .sub-menu-part p {
+    max-width: 350px;
+	 }
+ /* Main Menu CSS Ends */
+ /* Side Icon & Menu CSS Starts */ 
+.navbar-right > li > a {
+	 padding:5px 0px !important;
+ }
+.header-search, .header-globe{
+	margin-right:15px;
+} 
+	 .menu-home {
+    padding: 12px 25px;
+	}
+ /* Side Icon & Menu CSS Ends */
+}
+ @media screen and (max-width:991px) {
+	 .menu-home {
+    padding: 12px 25px;
+	}
+	 .sub-menu-content .sub-menu-part p {
+    display: none;
+	 }
+ }
+@media screen and (max-width:940px) { 
+.sub-menu-part img{
+	width:24px;
+	margin: 0 3% 0 3%;
+}
+}
+@media screen and (max-width:800px) { 
+/* Side Icon & Menu CSS Starts */ 
+.navbar-right {
+    width: 25px;
+    float: right;
+    margin:10px 0px;
+}
+ .sub-menu-content .sub-menu-part img{
+	  width: 21px !important;
+	margin: 0 4% 0 4%;
+}
+ /* Side Icon & Menu CSS Ends */ 
+}
+@media screen and (max-width:767px) { 
+.sub-menu-part{
+text-align:center;
+}
+.sub-menu-content .sub-menu-part p{
+	display:block;
+	opacity: 1;
+}
+  .sub-menu-content .sub-menu-part p{
+	display:block;
+	font-size:12px;
+	  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  letter-spacing:0px;
+      text-align: left;
+      margin-left: 30px;
+	  margin-bottom:0;
+}
+.sub-menu-content .sub-menu-part p:before{
+	    content: "<";
+	font-family: 'Neuzeit-Grotesk';
+    position: absolute;
+    width: 30px;
+    height: 18px;
+    color: #ffffff;
+    left: 0px;
+    top: 0;
+    bottom: 0;
+    font-size: 30px;
+}
+.sub-menu-content{
+	padding: 20px 20px 14px 20px;
+}
+.sub-menu-part-text{
+	display:none;
+}
+	.fluid-width{
+		padding:0 12px 0 12px;
+	}
+ .sub-menu-content .plus{
+	display:block;
+		float:right;
+}
+ .sub-menu-content .sub-menu-logos{
+	display:none;
+}
+}
+@media screen and (max-width:480px) {
+	/* Side Icon & Menu CSS Starts */ 
+.header-search, .header-globe {
+	margin-right:5px;
+}
+.article-section{
+	margin-top:10px;
+	    margin-bottom: 30px;
+		}
+.sub-menu-content{
+	    padding: 20px 5px 14px 5px;
+}
+.sub-menu-part p{
+	margin-left:20px;
+}
+}
+@media screen and (max-width:420px) {
+	.sub-menu-part a{
+		font-size:12px;
+	}
+}
+@media screen and (max-width:360px) {
+.menu-home {
+    padding: 3px 0px;
+	}
+	.sub-menu {
+    top: 52px;
+	}
+}
+	
+@media screen and (max-width:320px) {
+	.menu-home {
+    padding: 7px 0px;
+	}
+	.header-search, .header-globe {
+		margin-top:10px;
+	}
+	.header-r-menu {
+    margin-top: 12px;
+	}
+.Subra-logo img {
+    width: 150px;
+}
+}
+
+/* header css ends */

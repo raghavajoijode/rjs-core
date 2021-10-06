@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Add External Page To AEM</title>
+		
+		<link rel="stylesheet" href="..\..\..\content\jcr_root\apps\kajado\clientlibs\clientlib-bootstrap\4.3.1\css\bootstrap.css" />
+		<script src="..\..\..\content\jcr_root\apps\kajado\clientlibs\clientlib-jquery\clientlib-jquery-standalone\js\jquery-3.4.1.js"></script>
+		<script src="..\..\..\content\jcr_root\apps\kajado\clientlibs\clientlib-bootstrap\4.3.1\js\bootstrap.bundle.js"></script>
+		<script src="..\..\..\content\jcr_root\apps/kajado\clientlibs\third-party\clientlib-masonry\js\masonry.js"></script>
+		<script src="..\..\..\content\jcr_root\apps/kajado\clientlibs/third-party/clientlib-infinite-scroll/js/infinite-scroll.js"></script>
+		<link rel="stylesheet" href="..\..\..\content\jcr_root\apps\kajado\clientlibs\clientlib-fontawesome\css\4.7.0\font-awesome.css"/>
+		<link rel="stylesheet" href="..\..\..\..\..\..\ui.content\src\main\content\jcr_root\etc\clientlibs\subra\fonts-happymonkey\css\fonts.css">
+		<link rel="stylesheet" href="..\..\..\content\jcr_root\apps\kajado\clientlibs\clientlib-global\css\global.css">
+		<link rel="stylesheet" href="..\..\..\content\jcr_root\apps\kajado\clientlibs\clientlib-global\css\home.css"/>
+		<link rel="stylesheet" href="..\..\..\content\jcr_root\apps\kajado\clientlibs\clientlib-global\css\carousel.css"/>
+	</head>
+	<body class="subra">
+	
+		<!-- -------------------- -->
+		<!-- Header               -->
+		<!-- -------------------- -->
+		<header class="subra-header navbar navbar-default navbar-fixed-top">
+			<div class="scomponent container-fluid">
+				<div class="navbar-header header-logo">
+					<a class="navbar-brand" href="#"><img class="logo" src="../global/images/logo/subra-logo-185x80.png"></a>
+				</div>
+				<ul class="header-center">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Page 1</a></li>
+					<li><a href="#">Page 2</a></li>
+				</ul>
+				<ul class="header-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				</ul>
+			</div>
+		</header>
+		<!-- -------------------- -->
+		<!-- Breadcrumb           -->
+		<!-- -------------------- -->
+		<nav class="scomponent subra-breadcrumb" aria-label="breadcrumb">
+			<ol class="breadcrumb m-0">
+				<li class="breadcrumb-item"><a href="#">Home</a></li>
+				<li class="breadcrumb-item"><a href="#">Library</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Data</li>
+			</ol>
+		</nav>
+			
+		<div class="page-content">
+			
+			<!-- -------------------- -->
+			<!-- Heading              -->
+			<!-- -------------------- -->
+			<div class="scomponent subra-heading text-center">
+				<h1>Add External Page To AEM</h1>
+			</div>
+			
+			<div class="scomponent subra-add-external-page">
+				<form class="add-external-page">
+					<div class="form-group">
+						<label for="add-page-type">Select Page Type</label>
+						<select class="custom-select">
+							<option selected>Please select page type</option>
+							<option value="recipe">Recipe</option>
+							<option value="news">News</option>
+							<option value="request-new-type">Request New Type</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="add-page-title">Page Title</label>
+						<input type="text" class="form-control" id="add-page-title" placeholder="Enter Page Title">
+					</div>
+					<div class="form-group">
+						<label for="add-page-description">Page Description</label>
+						<textarea class="form-control" id="add-page-description" placeholder="Enter Page Description"></textarea>
+						<small>Can contain html elements as well.</small>
+					</div>
+					<div class="form-group">
+						<label for="add-page-tags">Page Tags</label>
+						<input type="text" class="form-control" id="add-page-tags" placeholder="Enter Page Tags">
+						<small>Multiple tags can be added with help of ','</small>
+					</div>
+					<div class="form-group">
+						<label for="add-page-link">Page Source Link</label>
+						<input type="text" class="form-control" id="add-page-link" placeholder="Enter Page Source Link"/>
+						<small>Include Protocal aswell!</small>
+					</div>
+					<div class="form-group">
+						<label for="add-page-link-source">Page Source</label>
+						<input type="text" class="form-control" id="add-page-link-source" placeholder="Enter Page Source Name"/>
+					</div>
+					<button type="submit" class="btn btn-primary">Create Page</button>
+				</form>
+				<div class="response-text d-none">
+					<h3>Status:</h3>
+					<p></p>
+				</div>
+			</div>
+			
+			
+
+		</div>
+		<!-- -------------------- -->
+		<!-- Footer               -->
+		<!-- -------------------- -->
+		<footer class="subra-footer">
+			<div class="scomponent container-fluid text-white">
+				<div class="row footer-disclaimer">
+					<div class="col justify-content-center">
+						<div class="social-icons">
+							<ul>
+								<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+								<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+								<li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="w-100"></div>
+					<div class="col">
+						<div class="language">
+							<p>Change Language</p>
+						</div>
+					</div>
+					<div class="col-auto">
+						<div class="copyright">
+							<p>Copyright &copy; 2019 Subra Technologies. All rights reserved.</p>
+							<ul>
+								<li><a href="#">Privacy</a></li>
+								<li><a href="#">Usage Terms</a></li>
+								<li><a href="#">Cookies</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script>
+				$('.language').on('click', function(){
+					alert("Hello, Language Selector Feature Coming Soon");
+				});
+			</script>
+			<script src=".\script.js"></script>
+		</footer>
+	</body>
+</html>                                		                            

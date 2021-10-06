@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Home Page</title>
+		
+		
+		<link rel="stylesheet" href="..\..\..\..\content\jcr_root\apps\foundation\clientlibs\subra\clientlib-bootstrap\4.3.1\css\bootstrap.css" />
+		<link rel="stylesheet" href="..\..\..\..\content\jcr_root\apps\foundation\clientlibs\subra\clientlib-fontawesome\css\4.7.0\font-awesome.css"/>
+		<link rel="stylesheet" href="..\..\..\..\..\..\..\foundation.ui.content\src\main\content\jcr_root\etc\clientlibs\subra\fonts-happymonkey\css\fonts.css">
+		<link rel="stylesheet" href="..\..\..\..\content\jcr_root\apps\foundation\clientlibs\subra\clientlib-global\css\global.css">
+		
+		<script src="..\..\..\..\content\jcr_root\apps\foundation\clientlibs\subra\clientlib-jquery\clientlib-jquery-standalone\js\jquery-3.4.1.js"></script>
+		<script src="..\..\..\..\content\jcr_root\apps\foundation\clientlibs\subra\clientlib-bootstrap\4.3.1\js\bootstrap.bundle.js"></script>
+		
+		<script src="..\..\..\..\content\jcr_root\apps/foundation\clientlibs\subra\third-party\clientlib-masonry\js\masonry.js"></script>
+		
+		<script src="..\..\..\..\content\jcr_root\apps/foundation\clientlibs\subra\clientlib-global\js\ajax-manager.js"></script>
+		<script src="..\..\..\..\content\jcr_root\apps/foundation\clientlibs\subra\clientlib-global\js\cookie-manager.js"></script>
+		<script src="..\..\..\..\content\jcr_root\apps/foundation\clientlibs\subra\clientlib-global\js\url-manager.js"></script>
+		<script src="..\..\..\..\content\jcr_root\apps/foundation\clientlibs\subra\clientlib-global\js\test.js"></script>
+		
+		<link rel="stylesheet" href="..\..\..\..\content\jcr_root\apps\foundation\clientlibs\subra\clientlib-site\css\home.css"/>
+		<link rel="stylesheet" href="..\..\..\..\content\jcr_root\apps\foundation\clientlibs\subra\clientlib-global\css\carousel.css"/>
+		<link rel="stylesheet" href="..\..\..\..\content\jcr_root\apps\foundation\clientlibs\subra\clientlib-global\css\mansory.css"/>
+	</head>
+	<body class="subra">
+	
+		<!-- -------------------- -->
+		<!-- Header               -->
+		<!-- -------------------- -->
+		<header class="subra-header navbar navbar-default navbar-fixed-top">
+			<div class="scomponent container-fluid">
+				<div class="navbar-header header-logo">
+					<a class="navbar-brand" href="#"><img class="logo" src="../../global/images/logo/subra-logo-185x80.png"></a>
+				</div>
+				<ul class="header-center">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Page 1</a></li>
+					<li><a href="#">Page 2</a></li>
+				</ul>
+				<ul class="header-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				</ul>
+			</div>
+		</header>
+		
+		<div class="page-content">
+			<!-- -------------------- -->
+			<!-- Breadcrumb     COPIED      --> 
+			<!-- -------------------- -->
+			<nav class="scomponent subra-breadcrumb" aria-label="breadcrumb">
+				<ol class="breadcrumb m-0">
+					<li class="breadcrumb-item"><a href="#">Home</a></li>
+					<li class="breadcrumb-item"><a href="#">Library</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Data</li>
+				</ol>
+			</nav>
+			<!-- -------------------- -->
+			<!-- Carousel       COPIED      -->
+			<!-- -------------------- -->
+			<div class="scomponent container-fluid">
+				<div class="subra-carousel carousel slide" data-ride="carousel" data-interval="2000" id="subra-bg-carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+					  <li data-target="#subra-bg-carousel" data-slide-to="0" class="active"></li>
+					  <li data-target="#subra-bg-carousel" data-slide-to="1"></li>
+					  <li data-target="#subra-bg-carousel" data-slide-to="2"></li>
+					</ol>
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							
+							<img class="slide d-block w-100" src="../../global/images/carousel/carousel-1.jpg" alt="First slide">
+							<div class="hero">
+								<hgroup>
+									<h2>We are creative</h2>        
+									<h3>Get start your next awesome project</h3>
+								</hgroup>
+								<button class="btn btn-hero btn-lg" role="button">See all features</button>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="slide d-block w-100" src="../../global/images/carousel/carousel-2.jpg" alt="Second slide">
+							<!--<div class="hero">        
+								<hgroup>
+									<h2>We are smart</h2>        
+									<h3>Get start your next awesome project</h3>
+								</hgroup>       
+								<button class="btn btn-hero btn-lg" role="button">See all features</button>
+							</div>-->
+						</div>
+						<div class="carousel-item">
+							<img class="slide d-block w-100" src="../../global/images/carousel/carousel-3.jpg" alt="Third slide">
+							<div class="hero">        
+								<hgroup>
+									<h2>We are amazing</h2>        
+									<h3>Get start your next awesome project</h3>
+								</hgroup>
+								<button class="btn btn-hero btn-lg" role="button">See all features</button>
+							</div>
+						</div>
+					</div> 
+					<a class="carousel-control-prev" href="#subra-bg-carousel" role="button" data-slide="prev">
+					  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					  <span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#subra-bg-carousel" role="button" data-slide="next">
+					  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+					  <span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+			<!-- -------------------- -->
+			<!-- Heading        COPIED      -->
+			<!-- -------------------- -->
+			<div class="scomponent subra-heading text-center">
+				<h1>Development Header</h1>
+			</div>
+
+
+			<!-- -------------------- -->
+			<!-- TEXT IMAGE           -->
+			<!-- -------------------- -->
+			<div class="scomponent subra-text-image">
+				<h2>Welcome!!!</h2>
+				<p>Some exiting content coming soon..</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in diam vitae justo faucibus aliquet. Maecenas efficitur risus nec fringilla euismod. Etiam at mi non velit porttitor venenatis. Quisque gravida non nisl at suscipit. Nulla vel sapien et nunc vestibulum porta. Nulla at maximus neque. Nunc at commodo orci, quis efficitur metus. Vivamus gravida mi eros. Integer ut accumsan orci. Mauris quis odio nec risus finibus vehicula. Mauris a neque eu urna iaculis rutrum sit amet id leo. Phasellus vitae mi neque. Aenean orci quam, tincidunt ut scelerisque et, tristique a eros.
+				</p>
+				
+				<p>
+					Cras hendrerit vel sapien eget molestie. Proin est orci, mattis sit amet velit vitae, ultricies sollicitudin magna. Etiam consectetur odio sit amet diam sagittis, eu bibendum mauris posuere. Quisque imperdiet, orci sit amet posuere porttitor, ante mauris dictum leo, ut ultricies mauris diam eget turpis. Proin id cursus ante. Ut vitae feugiat lorem. Vivamus molestie gravida odio, vitae porttitor quam tristique id. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Nulla facilisi. Donec interdum purus nec purus iaculis sagittis.
+				</p>
+				<img class="float-left ml-0 mr-3" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+				<p>
+					Maecenas convallis et orci in interdum. Nunc fermentum libero id leo commodo, ac convallis est laoreet. Pellentesque eget purus metus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer sit amet consequat quam, eu molestie eros. Ut in eros eget erat pellentesque pharetra id eleifend felis. Vestibulum vestibulum mauris enim. Praesent vel sapien ultrices massa condimentum condimentum. Sed euismod luctus purus a vehicula. Fusce tincidunt mi nec lorem fermentum auctor. Nullam vel velit eu sapien sollicitudin ultricies. Curabitur sit amet arcu id diam consectetur consectetur vitae vel ligula. Fusce tincidunt in lectus nec fermentum. Nulla molestie a urna sed tincidunt. Donec ultrices mauris nunc, non egestas eros fermentum vitae.
+				</p>
+				<p>
+					Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In nec libero non mauris condimentum blandit ultrices vel diam. Pellentesque semper massa id mauris aliquam, vel efficitur mi eleifend. Proin placerat nisi eros, et eleifend lacus interdum a. Integer malesuada convallis imperdiet. Pellentesque molestie quam eget consectetur molestie. Integer nec egestas ante, in eleifend eros. Nulla ac metus at est mattis euismod. Cras vulputate dictum imperdiet. Donec at erat ut mi eleifend egestas id a tellus. Praesent at dapibus erat, ac convallis nisi. Curabitur id nibh diam. In a congue nisi, sodales mattis ipsum.
+				</p>
+					<img class="float-right mr-0 ml-3" src="../../global/images/placeholder-500x300.jpg"/>
+				<p>
+					Etiam molestie justo erat, vitae scelerisque nisi placerat quis. Proin sapien odio, sagittis id nisi commodo, aliquam tempor nunc. Donec eu aliquet libero, pulvinar auctor lectus. Maecenas ultricies nunc non varius dapibus. Fusce sit amet elementum purus, at luctus dolor. Ut vel bibendum odio. Cras blandit odio eget odio lobortis finibus eu sagittis odio. Aliquam lobortis magna ut libero mattis porttitor. Sed ut sagittis ipsum.	
+				</p>
+				
+				<p>
+					Phasellus et convallis purus, varius blandit libero. Donec imperdiet diam sapien. Sed eu imperdiet ante, sit amet sodales erat. Pellentesque faucibus erat eget diam posuere, eget convallis dolor placerat. Quisque ultricies vitae lorem ac vestibulum. Morbi sagittis massa nunc, sit amet vehicula nisi laoreet eu. Nulla et rhoncus odio.
+
+					Nulla porttitor malesuada commodo. Donec finibus vehicula orci eget tincidunt. Mauris quis faucibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue pulvinar scelerisque. Maecenas maximus rhoncus faucibus. Sed in diam sit amet dui lacinia euismod nec sed nisl. Curabitur viverra elementum quam ut fringilla. In finibus ante sit amet purus vehicula, id vestibulum lectus tristique. Morbi porttitor at eros vitae tempor. Mauris dignissim eros eget lacus rutrum, sit amet venenatis lectus molestie. Nunc suscipit suscipit posuere.	
+				</p>
+			</div>
+			<!-- -------------------- -->
+			<!-- Jumbotron          COPIED  -->
+			<!-- -------------------- -->
+			<div class="scomponent subra-jumbotron text-center">
+				<div class="jumbotron mb-0">
+					<h2>Welcome!!!</h2>
+					<p>Some exiting content coming soon..</p>
+				</div>
+			</div>
+			
+			<!-- -------------------- -->
+			<!-- Masonry              -->
+			<!-- -------------------- -->
+			<div class="scomponent subra-masonry-grid">
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example t on the card title and make up  on the card title and make up  on the card title and make up ext to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example  on the card title and make up  on the card title and make up  on the card title and make up text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick examp on the card title and make up  on the card title and make up  on the card title and make up  on the card title and make up le text  on the card title and make up  on the card title and make up to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example  on the card title and make up  on the card title and make up  make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on  on the card title and make up  on the card title and make up  on the card title and make up the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to buthe bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the on the card title and make up  on the card title and make up  card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example t on the card title and make up  on the card title and make up  on the card title and make up ext to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example  on the card title and make up  on the card title and make up  on the card title and make up text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick examp on the card title and make up  on the card title and make up  on the card title and make up  on the card title and make up le text  on the card title and make up  on the card title and make up to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example  on the card title and make up  on the card title and make up  make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on  on the card title and make up  on the card title and make up  on the card title and make up the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- -------------------- -->
+			<!-- Container        -->
+			<!-- -------------------- -->
+			<div class="scomponent container-fluid text-center">
+				<div class="row justify-content-around">
+					<div class="col-md-4">
+						<img src="../../global/images/carousel/carousel-1.jpg"/>
+					</div>
+					<div class="col-md-4">
+						<img src="../../global/images/carousel/carousel-2.jpg"/>
+					</div>
+					<div class="col-md-4">
+						<img src="../../global/images/carousel/carousel-3.jpg"/>
+					</div>
+				</div>
+			</div>
+			
+			<!-- -------------------- -->
+			<!-- Product Cards        -->
+			<!-- -------------------- -->
+			
+			<div class="scomponent container-fluid text-center">
+				<div class="row justify-content-middle">
+					<div class="col-md-4">
+						<div class="subra-card card">
+							<img src="../../global/images/carousel/carousel-1.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								<a href="#" class="btn btn-primary">Go somewhere</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="subra-card card">
+							<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								<a href="#" class="btn btn-primary">Go somewhere</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="subra-card card">
+							<img src="../../global/images/carousel/carousel-3.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								<a href="#" class="btn btn-primary">Go somewhere</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- -------------------- -->
+			<!-- Scroll to top COPIED       -->
+			<!-- -------------------- -->
+			<div class="scomponent subra-scroll-top d-none">
+				<img src="..\..\..\..\..\..\..\foundation.ui.content\src\main\content\jcr_root\etc\designs\kajado\icons\scroll-top.png" alt="back to top" title="back to top"/>
+				<!-- <i class="fas fa-arrow-up"></i> -->
+			</div>
+		</div>
+		<div class="scomponent subra-masonry-grid">
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example t on the card title and make up  on the card title and make up  on the card title and make up ext to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example  on the card title and make up  on the card title and make up  on the card title and make up text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick examp on the card title and make up  on the card title and make up  on the card title and make up  on the card title and make up le text  on the card title and make up  on the card title and make up to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example  on the card title and make up  on the card title and make up  make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on  on the card title and make up  on the card title and make up  on the card title and make up the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to buthe bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the on the card title and make up  on the card title and make up  card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example t on the card title and make up  on the card title and make up  on the card title and make up ext to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example  on the card title and make up  on the card title and make up  on the card title and make up text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="masonry-item">
+					<div class="subra-card card">
+						<img src="../../global/images/carousel/carousel-2.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick examp on the card title and make up  on the card title and make up  on the card title and make up  on the card title and make up le text  on the card title and make up  on the card title and make up to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- -------------------- -->
+		<!-- Footer               -->
+		<!-- -------------------- -->
+		<footer class="subra-footer">
+			<div class="scomponent container-fluid text-white">
+				<div class="row footer-disclaimer">
+					<div class="col justify-content-center">
+						<div class="social-icons">
+							<ul>
+								<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+								<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+								<li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="w-100"></div>
+					<div class="col">
+						<div class="language">
+							<p>Change Language</p>
+						</div>
+					</div>
+					<div class="col-auto">
+						<div class="copyright">
+							<p>Copyright &copy; 2019 Subra Technologies. All rights reserved.</p>
+							<ul>
+								<li><a href="#">Privacy</a></li>
+								<li><a href="#">Usage Terms</a></li>
+								<li><a href="#">Cookies</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script>
+				$('.language').on('click', function(){
+					alert("Hello, Language Selector Feature Coming Soon");
+				});
+			</script>
+			<script src="..\..\script.js"></script>
+		</footer>
+	</body>
+</html>                                		                            

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jsI18n="[]"
+    jsI18nMsgError="[We're sorry! We're having trouble sending the email right now. Please try back later.,We're sorry - Wish List is currently unavailable. Please try back later!,Sorry\, there was a problem]"
+    jsI18nMsgInfo="[]"
+    jsI18nMsgSuccess="[]"
+    resourceType="subra/components/pages/wish-list"/>

@@ -1,0 +1,8 @@
+<div class="scomponent subra-jumbotron text-center"
+     data-sly-use.template="/apps/kajado/components/templates/common.html">
+    <div class="jumbotron mb-0">
+        <h2 data-sly-test.heading="${properties.heading}">${heading}</h2>
+        <p data-sly-test.text="${properties.text}">${text}</p>
+    </div>
+</div>
+<sly data-sly-call="${template.placeholder @ isEmpty=!(properties.heading || properties.text), cssClass='subra-cmp-jumbotron'}"/>

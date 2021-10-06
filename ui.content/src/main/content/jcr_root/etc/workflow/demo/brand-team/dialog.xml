@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    rootPath="/content/demo"
+    title="Publishing Schedule"
+    touchUiDialogPath="/etc/workflow/demo/brand-team/cq:dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <pdf-path
+            jcr:primaryType="cq:Widget"
+            fieldLabel="PDF Path::"
+            name="pdf-path"
+            rootPath="/content/dam"
+            xtype="pathfield"/>
+    </items>
+</jcr:root>

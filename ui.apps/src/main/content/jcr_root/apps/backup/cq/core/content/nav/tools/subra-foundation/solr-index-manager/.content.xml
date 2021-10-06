@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+          jcr:description="Index and De-Index to Solr"
+          jcr:mixinTypes="[rep:AccessControllable]"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Solr Search Index Manager"
+          href="/conf/foundation/settings/utilities/solr-index/console.html"
+          icon="search"
+          id="subra-foundation__solr-indexing"
+          target="_blank">
+    <rep:policy/>
+</jcr:root>

@@ -1,0 +1,13 @@
+
+Hello ${recipientName},
+
+Greetings from Subra!
+
+We have an exception occurred!
+Exception: {exception}
+ 
+-----------
+From,
+Team Subra.
+-----------
+***This is a system generated electronic message. Please do not reply as this mailbox is never monitored.***

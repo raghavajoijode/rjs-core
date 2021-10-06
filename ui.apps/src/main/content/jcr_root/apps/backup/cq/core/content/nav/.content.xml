@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+          jcr:primaryType="nt:unstructured">
+    <tools jcr:primaryType="nt:unstructured">
+        <acs-commons/>
+        <sites/>
+        <cloudservices/>
+        <subra-foundation
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Subra Foundation"
+                sling:orderBefore="resources"
+                id="cq-tools-subra-foundation">
+            <modernizestructure
+                    jcr:mixinTypes="[rep:AccessControllable]"
+                    jcr:primaryType="nt:unstructured"
+                    href="/libs/cq/modernize/templatestructure/content/console.html">
+                <rep:policy/>
+            </modernizestructure>
+            <solr-index-manager2
+                    jcr:description="Index and De-Index to Solr"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Solr Search Index Manager"
+                    href="/conf/foundation/settings/nav-tools/tag-to-csv-exporter.html"
+                    icon="search"
+                    id="subra-foundation__solr-indexing"
+                    target="_blank"/>
+            <solr-index-manager
+                    jcr:description="Index and De-Index to Solr"
+                    jcr:mixinTypes="[rep:AccessControllable]"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Solr Search Index Manager"
+                    href="/conf/foundation/settings/nav-tools/solr-index/console.html"
+                    icon="search"
+                    id="subra-foundation__solr-indexing"
+                    target="_blank">
+                <rep:policy/>
+            </solr-index-manager>
+        </subra-foundation>
+    </tools>
+</jcr:root>

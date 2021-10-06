@@ -1,0 +1,22 @@
+
+.analyst-interactions
+    {
+
+    }
+.red-text
+    {
+        color:rgb(255,0,0);
+        margin-left: 10px;
+    }
+
+ .red-icon{
+    width: 33px;
+    display: inline-block;
+    height: 28px;
+    margin-left: 10px;
+    vertical-align: middle;
+	}
+     .red-icon img{
+    width: 33px;
+    height: 28px;
+	}

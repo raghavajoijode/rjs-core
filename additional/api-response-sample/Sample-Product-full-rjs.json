@@ -1,0 +1,33 @@
+/*
+    Title, Code, 
+    images -> [{imageURL, desc}, {imageURL, desc}, {imageURL, desc}]
+    stock -> {availability, max_allowed_quantity}
+
+    
+
+
+*/
+{
+    "code": "B0001",
+    "name": "An awesome demo product",
+    "description": "This is some random text to be shown as a descrition of a product and can be utilized as an parameter for the process of the demo to the page and can be any way scrapped when we create db of product",
+    "images": [
+        {
+            "url": "/image1.png",
+            "description": "man wearing shirt",
+        },
+        {
+            "url": "/image2.png",
+            "description": "man wearing shirt",
+        }
+    ],
+    "stock": {
+        "status": "A", // A, O, L
+        "max": 5
+    },
+    "price" : {
+        "currency" : "INR",
+        "amount" : "5000",
+        "tax" : "5" // in percentage
+    }
+}

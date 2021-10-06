@@ -1,0 +1,275 @@
+body {
+    padding: 0;
+    margin: 0;
+
+}
+.fluid-width {
+    max-width: 1585px;
+    padding: 0 24px 0 24px;
+}
+
+.Subra-showmore-section {
+    padding: 20px 0 20px;
+}
+.showmore {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 0;
+    margin-top: 5px;
+    font-size: 0;
+    margin-bottom: 24px;
+    background-color: #fff;
+}
+.showmore-image{
+	width:50%;
+	display:inline-block;
+	vertical-align:top;
+	position: relative;
+}
+.showmore img {
+    width: 100%;
+}
+.showmore-textBox {
+	width:50%;
+	display:inline-block;
+	vertical-align:top;
+    padding: 0 25px 12px 25px;
+}
+.Subra-showmore-section .Subra-section-head-wrapper{
+	padding-bottom:0px;
+	padding-top: 0px
+}
+.showmore-textBox-head {
+    color: #ffffff;
+    box-sizing: border-box;
+    padding: 6px 10px;
+    text-align: left;
+    margin: 0;
+    line-height: 20px;
+    display: inline-block;
+    font-size: 18px;
+    font-family: 'Akkurat-Light';
+    text-transform: capitalize;
+}
+
+.showmore-textBox-text {
+    display: block;
+    padding-left: 0;
+    color: #000;
+    line-height: 14px;
+	padding:0;
+    font-size: 14px;
+    box-sizing: border-box; 
+    overflow: hidden;
+}
+.showmore-textBox-text h4 {
+    font-size: 22px;
+    margin: 25px 0 5px 0;
+    font-family: 'Akkurat-Bold';
+    text-decoration: underline;
+	
+}
+.showmore-textBox-text p {
+    font-size: 18px;
+    line-height: 20px;
+    color: #9b9b9b;
+    font-family: 'Akkurat-Light';
+    padding-top: 5px;
+}
+/* custom code */
+
+.showmore-textBox {
+    padding: 0px 15px 12px 70px;;
+}
+.showmore img {
+    width: 100%;
+}
+.search span.search-text {
+    font-family: 'Neuzeit-Gro-bold';
+}
+.show-more-popup {
+    background-color: rgba(0,0,0,0.8);
+    z-index: 99999999999;
+}
+.show-more-popup .modal-lg {
+    width: 90%;
+    margin:0 auto;
+}
+.show-more-popup .close {
+    opacity: 1 !important;
+    position: absolute;
+    right: 63px;
+    top: 30px;
+    font-size: 50px;
+    z-index: 9;
+    outline: none;
+}
+.show-more-popup .modal-body {
+    padding: 0px;
+    overflow: hidden;
+}
+.show-more-popup .modal-content {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+.Subra-showmore-section .Subra-section-head h2{
+    padding-left: 0px;
+}
+.Subra-showmore-section .Subra-section-head-wrapper .innerpage h2 span.content-sec-header-h2-akkurat-mono{
+    padding-left: 8px;
+}
+.seg-sol-block .Subra-solutions-squares-content-text {
+    height: 140px;
+}
+.seg-sol-block .Subra-solutions-squares-content-image img {
+    padding-bottom: 70px;
+}
+@media only screen and (min-width: 1920px) {
+.show-more-popup .modal-content {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.Subra-showmore-section {
+    padding: 20px 0 20px;
+}
+.showmore-textBox-head {
+    line-height: 34px;
+    font-size: 20px;
+    padding: 4px 10px;
+}
+.showmore-textBox-text h4 {
+    font-size: 24px;
+}
+.showmore-textBox-text p {
+    font-size: 20px;
+    line-height: 24px;
+}
+}
+@media only screen and (max-width: 1600px) {
+.fluid-width {
+    max-width: 1585px;
+}
+}
+ @media only screen and (max-width: 1400px) {
+.container {
+    max-width: 970px;
+}
+}
+@media only screen and (max-width:1024px) {
+/*.Subra-showmore-section {
+        padding-top:0;
+    }
+*/    .show-more-popup .modal-lg {
+    width: 98%;
+    margin:0 auto;
+}
+.showmore-textBox-text h4 {
+    font-size: 22px;
+    margin:15px 0 5px 0;
+}
+.show-more-popup .modal-content {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.Subra-showmore-section {
+    padding: 5px 0 30px;
+}
+.show-more-popup .close {
+    right: 25px;
+    top: 15px;
+} 
+.showmore{
+	margin:0 auto 15px;
+}
+.container {
+    max-width: 970px;
+}
+}
+@media only screen and (max-width:800px) {
+.fluid-width {
+    padding: 0 12px 0 12px;
+}
+.Subra-showmore-section {
+    padding: 0px 0 10px;
+}
+/* custom code */
+.showmore img {
+    width: 100%;
+    max-width: 100%;
+    padding: 0px;
+    margin:0px;
+}
+.show-more-popup .close{
+    top: 15px;
+}
+.showmore-textBox{
+    padding: 0 10px 10px 15px;
+}
+.showmore-textBox-text p{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+}
+@media only screen and (max-width:767px) {
+.Subra-showmore-section {
+    padding: 0px 0 5px;
+}
+.showmore-image{
+	width:80%;
+	margin:10px auto;
+	display:block;
+}
+.showmore-textBox {
+	width:80%;
+	margin:10px auto;
+	display:block;
+	padding: 0;
+}
+ .Subra-showmore-section .Subra-section-head h2{
+        padding-left: 10%;
+    }
+}
+@media only screen and (max-width:480px) {
+.Subra-showmore-section {
+    margin-top: 0px;
+}
+.show-more-popup .modal-content {
+    margin-top: 5px;
+
+}
+.showmore-textBox-head {
+    padding: 10px 10px;
+	   /* width: 100%;*/
+    }
+    .show-more-title h2{
+        width: 95%;
+    }
+	.showmore-textBox, .showmore-image {
+		width:100%;
+	}
+    .Subra-showmore-section .Subra-section-head h2{
+        padding-left: 5%;
+        font-size: 28px;
+    }
+}
+ @media only screen and (max-width:380px) {
+.showmore-textBox-head {
+    padding: 10px;
+    line-height: 12px;
+    font-size: 12px;
+}
+.showmore-textBox-text h4 {
+    font-size: 15px;
+    margin-top: 10px;
+}
+.showmore-textBox-text p {
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom:0;
+}
+}
+/* showmore css ends */

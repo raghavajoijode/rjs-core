@@ -1,0 +1,3 @@
+log.info("we are going to assign based on the last action: ");
+var lastAction = workflowData.getMetaDataMap().get("lastTaskAction","");
+log.info("lastTaskAction"+lastAction);

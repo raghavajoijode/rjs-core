@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="91d619e3-3411-4364-8671-aaa62784f38a">
+    <jcr:content
+        cq:name="first-cf"
+        cq:parentPath="/content/dam/foundation"
+        cq:versionCreator="admin"
+        jcr:description=""
+        jcr:lastModified="{Date}2020-04-28T21:11:05.556+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="First CF"
+        contentFragment="{Boolean}true"
+        lastFragmentSave="{Date}2020-04-28T21:11:05.557+05:30">
+        <data
+            cq:model="/conf/foundation/settings/dam/cfm/models/new-cf-model"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[cq:Taggable]"
+                jcr:primaryType="nt:unstructured"
+                author="RaghavaS"
+                author_x0040_LastModified="{Date}2020-04-28T21:11:05.493+05:30"
+                bval="{Boolean}true"
+                bval_x0040_LastModified="{Date}2020-04-28T21:11:05.496+05:30"
+                Date_x0040_LastModified="{Date}2020-04-28T21:11:05.494+05:30"
+                text="&lt;h2>What is OnlyIpsum?&lt;/h2>&#xa;&lt;p>&lt;b>Lorem Ipsum&lt;/b>&amp;nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p>&#xa;&lt;h2>Why do we use it?&lt;/h2>&#xa;&lt;p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).&lt;/p>&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xa;&lt;h2>Where does it come from?&lt;/h2>&#xa;&lt;p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of &amp;quot;de Finibus Bonorum et Malorum&amp;quot; (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, &amp;quot;Lorem ipsum dolor sit amet..&amp;quot;, comes from a line in section 1.10.32.&lt;/p>&#xa;"
+                text_x0040_ContentType="text/html"
+                text_x0040_LastModified="{Date}2020-04-28T21:11:05.497+05:30"
+                title="Some TItle"
+                title_x0040_LastModified="{Date}2020-04-28T21:11:05.492+05:30"/>
+        </data>
+        <metadata
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,17 @@
+<!--/*
+
+This is a htl file to display 'body' section of an AEM Page.
+
+File dependencies:
+	templates/head.html
+	templates/footer.html
+	templates/redirect.html
+	socialmedia/body-start.html
+	body.html
+	socialmedia/body-end.html
+
+*/-->
+
+<sly data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer"
+     data-sly-repeat.child="${templatedContainer.structureResources}"
+     data-sly-resource="${child.path @ resourceType=child.resourceType, decorationTagName='div', cssClassName='subra'}"></sly>

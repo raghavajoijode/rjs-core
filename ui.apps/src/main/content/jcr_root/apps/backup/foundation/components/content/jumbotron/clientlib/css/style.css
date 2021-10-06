@@ -1,0 +1,20 @@
+/* subra-jumbotron */
+.subra-jumbotron .jumbotron {
+	padding: 48px;
+}
+
+.scomponent-jumbotron_background-grey .jumbotron {
+	background-color: #e9ecef;
+}
+
+.scomponent-jumbotron_background-blue .jumbotron {
+	background-color: #4581b3;
+}
+
+.scomponent-jumbotron_text-white .jumbotron>* {
+	color: #fff;
+}
+
+.scomponent-jumbotron_text-black .jumbotron>* {
+	color: #000;
+}

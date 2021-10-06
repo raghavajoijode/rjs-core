@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/foundation/container">
+    <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/mode"
+            group="cq-damadmin-admin-childpages"/>
+    <items jcr:primaryType="nt:unstructured">
+        <default
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/navigation">
+            <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/endor/layouts/actionbar"/>
+            <items jcr:primaryType="nt:unstructured">
+                <search
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/endor/actionbar/innerrailtoggle"
+                        icon="icon-search"
+                        targetId="aem-assets-rail-search"
+                        text="Search"
+                        title="Search"/>
+                <timeline
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/endor/actionbar/innerrailtoggle"
+                        class="cq-common-admin-timeline-activator cq-common-admin-navigationpanel-changemode"
+                        foundation-mode-group="cq-damadmin-admin-childpages"
+                        foundation-mode-value="selection"
+                        icon="icon-clock"
+                        targetId="aem-assets-rail-timeline"
+                        text="Timeline"
+                        title="Timeline"/>
+                <references
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/endor/actionbar/innerrailtoggle"
+                        class="cq-common-admin-navigationpanel-changemode"
+                        foundation-mode-group="cq-damadmin-admin-childpages"
+                        foundation-mode-value="selection"
+                        icon="icon-unmerge"
+                        targetId="cq-rail-references"
+                        text="References"
+                        title="References"/>
+                <toggleselectionmode
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/endor/actionbar/button"
+                        class="foundation-mode-change"
+                        foundation-mode-group="cq-damadmin-admin-childpages"
+                        foundation-mode-value="selection"
+                        icon="icon-check-circle"
+                        text="Select"
+                        title="Select"/>
+                <togglelayout
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/cyclebuttons"
+                        active="${state[&quot;cq.assets.childassets.layoutId&quot;].string}">
+                    <layoutConfig
+                            jcr:primaryType="nt:unstructured"
+                            align="right"/>
+                    <items jcr:primaryType="nt:unstructured">
+                        <card
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/endor/actionbar/button"
+                                class="foundation-layout-control"
+                                icon="icon-view-card"
+                                text="Card View"
+                                title="Card View">
+                            <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    foundation-layout-control="\{&quot;action&quot;: &quot;switch&quot;, &quot;target&quot;: &quot;.cq-damadmin-admin-childpages&quot;, &quot;config&quot;: {&quot;name&quot;: &quot;foundation-layout-card&quot;, &quot;limit&quot;: 10, &quot;stateId&quot;: &quot;cq.assets.childassets&quot;, &quot;layoutId&quot;: &quot;card&quot;}}"/>
+                        </card>
+                        <list
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/endor/actionbar/button"
+                                class="foundation-layout-control"
+                                icon="icon-view-list"
+                                text="List View"
+                                title="List View">
+                            <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    foundation-layout-control="\{&quot;action&quot;: &quot;switch&quot;, &quot;target&quot;: &quot;.cq-damadmin-admin-childpages&quot;, &quot;config&quot;: {&quot;name&quot;: &quot;foundation-layout-list&quot;, &quot;limit&quot;: 20, &quot;stateId&quot;: &quot;cq.assets.childassets&quot;, &quot;layoutId&quot;: &quot;list&quot;}}"/>
+                        </list>
+                    </items>
+                </togglelayout>
+            </items>
+        </default>
+        <selection
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/navigation">
+            <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/endor/layouts/actionbar"/>
+            <items jcr:primaryType="nt:unstructured">
+                <search
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/endor/actionbar/innerrailtoggle"
+                        icon="icon-search"
+                        targetId="aem-assets-rail-search"
+                        text="Search"
+                        title="Search"/>
+                <timeline
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/endor/actionbar/innerrailtoggle"
+                        class="cq-common-admin-timeline-activator cq-common-admin-navigationpanel-changemode"
+                        foundation-mode-group="cq-damadmin-admin-childpages"
+                        foundation-mode-value="selection"
+                        icon="icon-clock"
+                        targetId="aem-assets-rail-timeline"
+                        text="Timeline"
+                        title="Timeline"/>
+                <references
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/endor/actionbar/innerrailtoggle"
+                        class="cq-common-admin-navigationpanel-changemode"
+                        foundation-mode-group="cq-damadmin-admin-childpages"
+                        foundation-mode-value="selection"
+                        icon="icon-unmerge"
+                        targetId="cq-rail-references"
+                        text="References"
+                        title="References"/>
+                <toggleselectionmode
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/endor/actionbar/button"
+                        active="{Boolean}true"
+                        class="foundation-mode-change"
+                        foundation-mode-group="cq-damadmin-admin-childpages"
+                        foundation-mode-value="default"
+                        icon="icon-close-circle"
+                        text="Deselect"
+                        title="Deselect"/>
+                <edit
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/endor/actionbar/button"
+                        class="foundation-collection-action dam-assetedit-action-select enter-fullscreen-asseteditor"
+                        contextpath="/assetdetails.html"
+                        dam-assetedit-action-select="\{&quot;target&quot;: &quot;.cq-damadmin-admin-childpages&quot;, &quot;activeSelectionCount&quot;: &quot;single&quot;,&quot;type&quot;: &quot;subasset&quot;}"
+                        href="/mnt/overlay/dam/gui/content/assets/assetedit.html"
+                        icon="icon-edit"
+                        pageheading="AEM Assets | Asset Editor"
+                        rel="aem-assets-admin-actions-edit-activator"
+                        target=".cq-damadmin-admin-childpages"
+                        text="Edit"
+                        title="Edit"/>
+                <annotate
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/endor/actionbar/button"
+                        class="foundation-collection-action dam-asset-annotate-action"
+                        contextpath="/assetdetails.html"
+                        dam-asset-annotate-action="\{&quot;target&quot;: &quot;.cq-damadmin-admin-childpages&quot;, &quot;activeSelectionCount&quot;: &quot;single&quot;,&quot;type&quot;: &quot;subasset&quot;}"
+                        href="/mnt/overlay/dam/gui/content/assets/annotate.html"
+                        icon="icon-note"
+                        pageheading="AEM Assets | Asset Annotator"
+                        rel="foundation-damadmin-properties-activator"
+                        target=".cq-damadmin-admin-childpages"
+                        text="Annotate"
+                        title="Annotate"/>
+                <viewproperties
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/endor/actionbar/button"
+                        class="foundation-collection-action dam-collection-metadata-action"
+                        contextpath="/assetdetails.html"
+                        dam-collection-metadata-action="\{&quot;target&quot;: &quot;.cq-damadmin-admin-childpages&quot;, &quot;activeSelectionCount&quot;: &quot;multiple&quot;,&quot;type&quot;: &quot;subasset&quot;}"
+                        href="/mnt/overlay/dam/gui/content/assets/metadataeditor.external.html"
+                        icon="icon-info-circle"
+                        pageheading="AEM Assets | Asset Metadata Editor"
+                        rel="foundation-damadmin-properties-activator"
+                        target=".cq-damadmin-admin-childpages"
+                        text="View Properties"
+                        title="View Properties"/>
+                <selectionstatus
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/endor/actionbar/selectionstatus"
+                        hideText="{Boolean}true"
+                        target=".cq-damadmin-admin-childpages">
+                    <layoutConfig
+                            jcr:primaryType="nt:unstructured"
+                            align="right"/>
+                </selectionstatus>
+            </items>
+        </selection>
+    </items>
+</jcr:root>

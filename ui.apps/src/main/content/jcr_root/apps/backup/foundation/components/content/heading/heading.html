@@ -1,0 +1,14 @@
+<sly
+        data-sly-use.clientLib="/apps/foundation/components/templates/clientlib.html"
+        data-sly-call="${clientlib.css @ categories=properties.pageClientLibs}"/>
+
+<div data-sly-use.api="org.subra.aem.rjs.core.component.models.Heading"
+     data-sly-test.heading="${api.heading}"
+     class="subra-heading ${properties.isTextCenter ? ' text-center':''}">
+    <h1 class="subra-heading__text" data-sly-element="${api.type}">
+        <a data-sly-unwrap="${!api.linkURL || api.linkDisabled}"
+           class="subra-heading__link" href="${api.linkURL}">${heading}</a>
+        <!-- /* TODO:
+            data-cmp-clickable="${title.data ? true : false}" */ -->
+    </h1>
+</div>

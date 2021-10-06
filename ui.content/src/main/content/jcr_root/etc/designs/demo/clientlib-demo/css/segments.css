@@ -1,0 +1,355 @@
+/*For Leadership */
+  .strategyalliances .independent-director-cotent-box-text
+    {
+        height:110px;
+    }
+     .strategyalliances .Subra-segments-squares-content
+    {
+        margin-bottom:10px;
+    }
+    .strategyalliances .independent-director-cotent-box
+    {
+         margin-bottom:0px;
+    }
+/*For Leadership */
+
+/* solutions and segments css starts */
+body {
+padding: 0;
+margin: 0;
+}
+.fluid-width {
+max-width: 1585px;
+padding: 0 24px 0 24px;
+}
+
+a {
+color: inherit;
+}
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+.Subra-solution-section {
+    box-sizing: border-box;
+	padding:30px 0 25px;
+}
+
+.hidden-button {
+    display: none;
+}
+
+
+.Subra-segments-squares {
+    padding-top: 7px;
+}
+
+.Subra-solutions-squares-content {
+    margin-bottom: 24px;
+}
+
+.Subra-segments-section {
+    padding:30px 0 42px;
+}
+
+.Subra-segments-squares-content {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+
+.solution-offering .Subra-segments-squares-content img
+{
+	  padding-bottom: 70px;
+}
+
+
+
+.Subra-segments-squares-content img {
+    width: 100%;
+	padding-bottom:0 !important;
+
+}
+/* Subra TV*/
+.Subra-tv .bg-color-12 {
+    background-color: #f5f5f5 !important;
+}
+.Subra-tv .Subra-solutions-squares-content-image img {
+    width: 100%;
+    padding-bottom: 0px;
+}
+
+/*Subra TV */
+.Subra-segments-squares-content-text {
+    color: white;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 10px;
+}
+.Subra-segments-squares-content-text div{
+    font-size: 22px;
+    line-height: 24px;
+    display: inline-block;
+	position:relative;
+	font-family:'Akkurat-Bold';
+	/*border-bottom:2px solid #ffffff;*/
+    text-decoration:underline;
+}
+.Subra-segments-squares-content-text div:before{
+    /*content: "";
+    left: -35px;
+    background-color: #ffffff;
+    bottom: -2px;
+    height: 2px;
+    position: absolute;
+    width: 35px;*/
+}
+.Subra-solutions-squares-content-image img {
+    width: 100%;
+	
+}
+.solution-offering .Subra-solutions-squares-content-image img 
+{
+	padding-bottom:70px;
+}
+.microsites .Subra-solutions-squares-content img
+{
+	  padding-bottom: 70px;
+}
+.Subra-solutions-squares-content-image {
+    width: 100%;
+    position: relative;
+    box-shadow: 5px 5px 5px #a5a5a5;
+    -webkit-box-shadow: 5px 5px 5px #a5a5a5;
+    -moz-box-shadow: 5px 5px 5px #a5a5a5;
+}
+/* Subra TV */
+.Subra-tv .Subra-solutions-squares-content-image {
+    width: 100%;
+    position: relative;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+.Subra-tv .Subratv-thumbnail {
+    position: relative;
+}
+
+/* Subra TV */
+.Subra-solutions-squares-content-text {
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    height: 120px;
+    width: 100%;
+    padding: 15px 15px 15px 20px;
+}
+/* Subra TV */
+.Subra-tv .Subra-solutions-squares-content-text {
+    /*background-color: #f5f5f5;*/
+    background-color: transparent;
+    position: relative;
+    bottom: 0;
+    height:auto;
+    width: 100%;
+    padding: 15px 20px 15px 20px;
+    overflow: hidden;
+    /*display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;*/
+}
+
+/*Subra TV*/
+
+
+.Subra-solutions-squares-content-text h4 {
+    font-family:akkurat-bold !important;
+    font-size: 18px !important;
+    padding-bottom: 5px;
+    margin: 0;
+	color: #000000;
+    line-height: 1.4;
+}
+
+/*Subra TV */
+.Subra-tv .Subra-solutions-squares-content-text h4 {
+        font-family:'Akkurat-bold' !important;
+        font-size: 22px !important;
+        padding-bottom: 5px;
+        margin: 0;
+        color: #000000;
+        line-height: 1.4;
+        /*overflow: hidden;
+    display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;*/
+    }
+
+
+/*Subra TV */
+
+.Subra-solutions-squares-content-text {
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    height: 120px;
+    width: 100%;
+    padding: 15px 15px 15px 20px;
+}
+
+
+.Subra-solutions-squares-content-text h4 {
+    font-family:akkurat-bold !important;
+    font-size: 18px !important;
+    padding-bottom: 5px;
+    margin: 0;
+	color: #000000;
+    line-height: 1.4;
+}
+
+.Subra-solutions-squares-content-text p {
+    font-size: 16px !Important;
+	font-family:'Akkurat-Light';
+    color: #000000;
+	font-weight: 400;
+    line-height: 18px;
+    margin: 0;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+@media only screen and (min-width: 1920px){
+.Subra-segments-squares-content-text div{
+	font-size:22px;
+	font-family:'Akkurat-Bold';
+	line-height:24px;
+}	
+
+.Subra-solutions-squares-content-text {
+	height: 120px;
+}
+.Subra-solutions-squares-content-text h4 {
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+.Subra-solutions-squares-content-text p {
+    font-size: 20px;
+    line-height: 24px;
+}
+}
+@media only screen and (max-width: 1600px) {
+.fluid-width {
+    max-width: 1585px;
+}
+}
+
+@media only screen and (max-width: 1400px) {
+.container {
+    max-width: 970px;
+}
+}
+
+@media only screen and (max-width: 1140px) {
+    .Subra-solutions-squares-content-text h4 {
+        font-size: 22px;
+    }
+	.Subra-segments-squares-content-text div{
+    font-size: 22px;
+	}
+
+    .Subra-solutions-squares-content-text {
+       padding: 8px 10px;
+    }
+    .Subra-solutions-squares-content-text{
+        height: 120px;
+    }
+
+    .Subra-solutions-squares-content-text p {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width:990px) {
+    .Subra-solutions-squares-content-text h4 {
+        font-size: 22px;
+        line-height: 20px;
+    }
+		
+
+    .Subra-solutions-squares-content-text {
+        padding: 15px;
+    }
+
+    .Subra-solutions-squares-content-text p {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .fluid-width {
+        padding: 0 12px 0 12px;
+    }
+		.Subra-segments-squares-content-text div{
+    display:block;
+	}
+}
+@media only screen and (max-width:767px) {
+.strategyalliances .independent-director-cotent-box-text{
+        height:auto;
+     }
+    .fluid-width.four-box{
+        padding: 0px 0px;
+    }
+ }
+@media only screen and (max-width:640px) {
+.Subra-section-head h2 {
+    font-size: 36px;
+}
+.Subra-solutions-squares-content-text p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical
+    }
+}
+@media only screen and (max-width:480px) {
+    .hidden-button {
+        display: block;
+    }
+.Subra-solutions-squares-content-text {
+    padding: 14px 12px;
+}
+.Subra-solutions-squares-content-text p {
+    font-size: 16px;
+    line-height: 18px;
+}
+.Subra-section-head h2 {
+    font-size: 32px;
+}
+}
+@media only screen and (max-width: 380px){
+.Subra-section-head h2 {
+    font-size: 32px;
+	line-height:48px;
+}
+.Subra-solutions-squares-content-text p {
+    font-size: 12px;
+    line-height: 20px;
+    -webkit-line-clamp: 2;
+}
+}
+@media only screen and (max-width: 340px){
+     .Subra-section-head h2 {
+        font-size: 26px;
+    }
+}
+/* solutions and segments css ends */

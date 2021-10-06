@@ -1,0 +1,16 @@
+/* subra-breadcrumb */
+nav.subra-breadcrumb {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index : 4;
+}
+.subra-breadcrumb .breadcrumb {
+	border-radius: unset;
+}
+.subra-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    display: inline-block;
+    padding-right: 0.5rem;
+    color: rgba(23, 97, 160, 0.8);
+    content: ">>";
+}

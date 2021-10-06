@@ -1,0 +1,128 @@
+    .highlight li {
+    }
+
+    .highlight .toggle-button-content-button {
+        color: red;
+    }
+
+    .page-specific-search {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+        font-size: 0;
+        text-align: center;
+    }
+
+    #txtSearch {
+    width: 100%;
+    font-family: 'Akkurat-Mono';
+    font-weight:normal;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50px;
+    box-sizing: border-box;
+    padding: 15px;
+    padding-top: 9px;
+    padding-bottom: 13px;
+    padding-left: 20px;
+    font-size: 22px;
+    border: 1px solid #9b9b9b;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #000;
+    text-align: center;
+    }
+#btnSearch {
+    width: 20%;
+    max-width: 150px;
+    border: 0;
+    border-radius: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 0 5px;
+    background-color: #0e3570;
+    color: #fff;
+    font-family: 'Akkurat-Mono';
+    font-weight: normal;
+}
+    #btnSearch, #btnReset {
+        width: 20%;
+        max-width: 153px;
+        border: none;
+        border-radius: 50px;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 16px;
+        box-sizing: border-box;
+        padding: 15px;
+        margin: 0 5px;
+        background-color: #0e3570;
+        color: #ffffff;
+    }
+	.location-content-box ul li.search-hidden-country{
+		visibility:hidden;
+		padding:0px;
+		margin:0px;
+		height:0px;
+	}
+	.location-content-box ul li div:empty, 
+	.location-content-box ul li:empty{
+		display:none;
+	}
+    #btnReset {
+        margin-right: 0px;
+    }
+	.removeTD{
+    display:none !important;
+    }
+
+@media only screen and (max-width:800px) {
+    #txtSearch{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        width: 94%;
+    }
+
+}
+    @media only screen and (max-width:767px) {
+        #txtSearch {
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+            padding:9px;
+            padding-left: 20px;
+            padding-top: 4px;
+
+        }
+        .page-specific-search {
+           margin-left: 0px;
+           margin-right: 0px;
+        }
+
+        #btnSearch, #btnReset {
+        /*width: 43%;
+        margin: 9px 9px;
+        display: inline-block;*/
+        width: 42%;
+        margin: 9px 9px;
+        margin-left: 0px;
+        margin-right: 0px;
+        max-width: 100%;
+        }
+        #btnSearch {
+            margin-right: 6%;
+        }
+        #txtSearch {
+            max-width: 90%;
+            margin: 0px auto;
+            margin-bottom: 21px;
+            text-align: center;
+        }
+
+
+    }
+	

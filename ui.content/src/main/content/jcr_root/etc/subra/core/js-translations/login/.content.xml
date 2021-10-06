@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jsI18n="[Show,Hide,Continue]"
+    jsI18nMsgError="[Something's not quite right. Please take a look at your email address again and re-enter.,Additional items added]"
+    jsI18nMsgInfo="[]"
+    jsI18nMsgSuccess="[]"
+    resourceType="subra/components/pages/checkout/login"/>

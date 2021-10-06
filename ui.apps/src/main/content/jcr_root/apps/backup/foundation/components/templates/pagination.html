@@ -1,0 +1,76 @@
+<template data-sly-template.displayPagination="${@ paging}">
+    <div class="subra-component" data-sly-test="${paging.list.size > 1}">
+        <div class="row center pagination-content">
+            <ul class="pagination">
+                <sly data-sly-test.first="${paging.firstPage}"/>
+                <li>
+                    <a class="${first && 'disabled'}" tabindex="${!first && '0'}">
+                        <img class="prevPage" src="" alt="${'Previous Page' @ i18n}"/>
+                    </a>
+                </li>
+                <li data-sly-repeat="${paging.list}" class="${item == paging.page && 'active'}"><a
+                        href="javascript:void(0)">${item}</a></li>
+                <sly data-sly-test.last="${paging.lastPage}"/>
+                <li>
+                    <a class="${last && 'disabled'}" tabindex="${!last && '0'}">
+                        <img class="nextPage" src="" alt="${'Next Page' @ i18n}"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</template>
+
+<template data-sly-template.displayPaginationRange="${@ paging}">
+    <div class="pagination-range row">
+        <div class="pagination-count">${'{0}-{1} of {2}' @ i18n, format=[paging.start, paging.end,
+            paging.totalRecords]}
+        </div>
+    </div>
+</template>
+
+<template data-sly-template.displayPaginationV2="${@ paging, searchString}">
+    <sly data-sly-test.paging="${paging}" data-sly-test="${paging.list.size > 1}">
+        <ul class="pagination v2">
+            <sly data-sly-test.first="${paging.firstPage}"/>
+            <li data-sly-test=${!first}>
+                <a href="${currentPage.path}.html?q=${searchString}&start=${ paging.prevPageOffset }">${'<'}</a>
+            </li>
+
+            <li data-sly-repeat="${paging.list}" class="${item.isCurrentPage && 'active'}">
+                <a data-sly-test.nolink="${item.isEllipse || item.isCurrentPage}">${item.displayNumber}</a>
+                <a data-sly-test="${!nolink}" href="${currentPage.path}.html?q=${searchString}&start=${item.offset}">${item.displayNumber}</a>
+            </li>
+
+            <sly data-sly-test.last="${paging.lastPage}"/>
+            <li data-sly-test=${!last}>
+                <a href="${currentPage.path}.html?q=${searchString}&start=${ paging.nextPageOffset }">${'>'}</a>
+            </li>
+        </ul>
+    </sly>
+</template>
+
+
+<template data-sly-template.displayPaginationV3="${@ paging, searchString}">
+    <sly data-sly-test.paging="${paging}" data-sly-test="${paging.list.size > 1}">
+        <ul class="pagination v3">
+
+            <sly data-sly-test.first="${paging.firstPage}"/>
+            <li data-sly-test=${!first}>
+                <a href="${currentPage.path}.html?q=${searchString}&start=${ paging.prevPageOffset }">${'<'}</a>
+            </li>
+
+            <li data-sly-repeat="${paging.list}" class="${item.isCurrentPage && 'active'}">
+                <a data-sly-test.nolink="${item.isEllipse || item.isCurrentPage}">${item.displayNumber}</a>
+                <a data-sly-test="${!nolink}" href="${currentPage.path}.html?q=${searchString}&start=${item.offset}">${item.displayNumber}</a>
+            </li>
+
+            <sly data-sly-test.last="${paging.lastPage}"/>
+            <li data-sly-test=${!last}>
+                <a href="${currentPage.path}.html?q=${searchString}&start=${ paging.nextPageOffset }">${'>'}</a>
+            </li>
+        </ul>
+    </sly>
+</template>
+
+

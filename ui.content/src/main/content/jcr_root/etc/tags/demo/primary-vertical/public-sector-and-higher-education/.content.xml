@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    cq:movedTo="/etc/tags/demo/primary-vertical/public-sector"
+    jcr:description="#641E16"
+    jcr:lastModified="{Date}2017-04-27T02:55:11.571-04:00"
+    jcr:lastModifiedBy="amrutha"
+    jcr:primaryType="cq:Tag"
+    jcr:title="Public Sector &amp; Higher Education"
+    sling:resourceType="cq/tagging/components/tag"/>

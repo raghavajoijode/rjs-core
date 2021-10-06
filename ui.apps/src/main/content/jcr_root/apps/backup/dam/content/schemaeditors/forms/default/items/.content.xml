@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured">
+    <tabs
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tab1
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Basic"
+                    sling:resourceType="granite/ui/components/foundation/section"
+                    tabid="f84cc8d6-60ab-474e-bdf8-a0b7a434f289">
+                <items jcr:primaryType="nt:unstructured">
+                    <col1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <header
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="dam/gui/components/admin/schemaforms/formbuilder/sectionfield"
+                                    fieldLabel="Metadata"
+                                    id="Key-1380270355817"
+                                    metaType="section"/>
+                            <title
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                    fieldLabel="Title"
+                                    id="Key-1380275706651"
+                                    maxlength="{Double}255.0"
+                                    metaType="text"
+                                    minlength="{Double}0.0"
+                                    name="./jcr:content/metadata/dc:title"
+                                    renderReadOnly="{Boolean}true"/>
+                            <description
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                    fieldLabel="Description"
+                                    id="Key-1380275737505"
+                                    maxlength="{Double}4096.0"
+                                    metaType="text"
+                                    minlength="{Double}0.0"
+                                    name="./jcr:content/metadata/dc:description"
+                                    renderReadOnly="{Boolean}true"/>
+                            <format
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                    disabled="{Boolean}true"
+                                    fieldLabel="Type"
+                                    maxlength="{Long}255"
+                                    metaType="text"
+                                    minlength="{Long}0"
+                                    name="./jcr:content/metadata/dc:format"
+                                    renderReadOnly="{Boolean}true"/>
+                            <language
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/select"
+                                    class="language"
+                                    fieldLabel="Language"
+                                    metaType="dropdown"
+                                    name="./jcr:content/metadata/dc:language"
+                                    ordered="true"
+                                    renderReadOnly="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <none
+                                            jcr:primaryType="nt:unstructured"
+                                            country="None"
+                                            language=""
+                                            selected="{Boolean}true"
+                                            text=""/>
+                                    <ar_tn
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Tunisia"
+                                            language="Arabic"
+                                            text="Arabic (Tunisia)"
+                                            value="ar_tn"/>
+                                    <ar_ye
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Yemen"
+                                            language="Arabic"
+                                            text="Arabic (Yemen)"
+                                            value="ar_ye"/>
+                                    <be_by
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Belorussia"
+                                            language="Belorussian"
+                                            text="Belorussian (Belorussia)"
+                                            value="be_by"/>
+                                    <bg_bg
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Bulgaria"
+                                            language="Bulgarian"
+                                            text="Bulgarian (Bulgaria)"
+                                            value="bg_bg"/>
+                                    <ca_es
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Spain"
+                                            language="Catalan"
+                                            text="Catalan (Spain)"
+                                            value="ca_es"/>
+                                    <cs_cz
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Czech Republic"
+                                            language="Czech"
+                                            text="Czech (Czech Republic)"
+                                            value="cs_cz"/>
+                                    <da_dk
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Denmark"
+                                            language="Danish"
+                                            text="Danish (Denmark)"
+                                            value="da_dk"/>
+                                    <de
+                                            jcr:primaryType="nt:unstructured"
+                                            country="*"
+                                            defaultcountry="de_de"
+                                            language="German"
+                                            text="German"
+                                            value="de"/>
+                                    <de_at
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Austria"
+                                            language="German"
+                                            text="German (Austria)"
+                                            value="de_at"/>
+                                    <de_ch
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Switzerland"
+                                            language="German"
+                                            text="German (Switzerland)"
+                                            value="de_ch"/>
+                                    <de_de
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Germany"
+                                            language="German"
+                                            text="German (Germany)"
+                                            value="de_de"/>
+                                    <de_lu
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Luxembourg"
+                                            language="German"
+                                            text="German (Luxembourg)"
+                                            value="de_lu"/>
+                                    <el_gr
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Greece"
+                                            language="Greek"
+                                            text="Greek (Greece)"
+                                            value="el_gr"/>
+                                    <en
+                                            jcr:primaryType="nt:unstructured"
+                                            country="*"
+                                            defaultcountry="en_gb"
+                                            language="English"
+                                            text="English"
+                                            value="en"/>
+                                    <en_au
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Australia"
+                                            language="English"
+                                            text="English (Australia)"
+                                            value="en_au"/>
+                                    <en_ca
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Canada"
+                                            language="English"
+                                            text="English (Canada)"
+                                            value="en_ca"/>
+                                    <en_gb
+                                            jcr:primaryType="nt:unstructured"
+                                            country="United Kingdom"
+                                            language="English"
+                                            text="English (United Kingdom)"
+                                            value="en_gb"/>
+                                    <en_ie
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Ireland"
+                                            language="English"
+                                            text="English (Ireland)"
+                                            value="en_ie"/>
+                                    <en_in
+                                            jcr:primaryType="nt:unstructured"
+                                            country="India"
+                                            language="English"
+                                            text="English (India)"
+                                            value="en_in"/>
+                                    <en_nz
+                                            jcr:primaryType="nt:unstructured"
+                                            country="New Zealand"
+                                            language="English"
+                                            text="English (New Zealand)"
+                                            value="en_nz"/>
+                                    <en_us
+                                            jcr:primaryType="nt:unstructured"
+                                            country="United States"
+                                            language="English"
+                                            text="English (United States)"
+                                            value="en_us"/>
+                                    <en_za
+                                            jcr:primaryType="nt:unstructured"
+                                            country="South Africa"
+                                            language="English"
+                                            text="English (South Africa)"
+                                            value="en_za"/>
+                                    <es
+                                            jcr:primaryType="nt:unstructured"
+                                            country="*"
+                                            defaultcountry="es_es"
+                                            language="Spanish"
+                                            text="Spanish"
+                                            value="es"/>
+                                    <es_ar
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Argentina"
+                                            language="Spanish"
+                                            text="Spanish (Argentina)"
+                                            value="es_ar"/>
+                                    <es_bo
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Bolivia"
+                                            language="Spanish"
+                                            text="Spanish (Bolivia)"
+                                            value="es_bo"/>
+                                    <es_cl
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Chile"
+                                            language="Spanish"
+                                            text="Spanish (Chile)"
+                                            value="es_cl"/>
+                                    <es_co
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Colombia"
+                                            language="Spanish"
+                                            text="Spanish (Colombia)"
+                                            value="es_co"/>
+                                    <es_cr
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Costa Rica"
+                                            language="Spanish"
+                                            text="Spanish (Costa Rica)"
+                                            value="es_cr"/>
+                                    <es_do
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Dominican Republic"
+                                            language="Spanish"
+                                            text="Spanish (Dominican Republic)"
+                                            value="es_do"/>
+                                    <es_ec
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Ecuador"
+                                            language="Spanish"
+                                            text="Spanish (Ecuador)"
+                                            value="es_ec"/>
+                                    <es_es
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Spain"
+                                            language="Spanish"
+                                            text="Spanish (Spain)"
+                                            value="es_es"/>
+                                    <es_gt
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Guatemala"
+                                            language="Spanish"
+                                            text="Spanish (Guatemala)"
+                                            value="es_gt"/>
+                                    <es_hn
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Honduras"
+                                            language="Spanish"
+                                            text="Spanish (Honduras)"
+                                            value="es_hn"/>
+                                    <es_mx
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Mexico"
+                                            language="Spanish"
+                                            text="Spanish (Mexico)"
+                                            value="es_mx"/>
+                                    <es_ni
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Nicaragua"
+                                            language="Spanish"
+                                            text="Spanish (Nicaragua)"
+                                            value="es_ni"/>
+                                    <es_pa
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Panama"
+                                            language="Spanish"
+                                            text="Spanish (Panama)"
+                                            value="es_pa"/>
+                                    <es_pe
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Peru"
+                                            language="Spanish"
+                                            text="Spanish (Peru)"
+                                            value="es_pe"/>
+                                    <es_pr
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Puerto Rico"
+                                            language="Spanish"
+                                            text="Spanish (Puerto Rico)"
+                                            value="es_pr"/>
+                                    <es_py
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Paraguay"
+                                            language="Spanish"
+                                            text="Spanish (Paraguay)"
+                                            value="es_py"/>
+                                    <es_sv
+                                            jcr:primaryType="nt:unstructured"
+                                            country="El Salvador"
+                                            language="Spanish"
+                                            text="Spanish (El Salvador)"
+                                            value="es_sv"/>
+                                    <es_uy
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Uruguay"
+                                            language="Spanish"
+                                            text="Spanish (Uruguay)"
+                                            value="es_uy"/>
+                                    <es_ve
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Venezuela"
+                                            language="Spanish"
+                                            text="Spanish (Venezuela)"
+                                            value="es_ve"/>
+                                    <et_ee
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Estonia"
+                                            language="Estonian"
+                                            text="Estonian (Estonia)"
+                                            value="et_ee"/>
+                                    <fi_fi
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Finland"
+                                            language="Finnish"
+                                            text="Finnish (Finland)"
+                                            value="fi_fi"/>
+                                    <fr
+                                            jcr:primaryType="nt:unstructured"
+                                            country="*"
+                                            defaultcountry="fr_fr"
+                                            language="French"
+                                            text="French"
+                                            value="fr"/>
+                                    <fr_be
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Belgium"
+                                            language="French"
+                                            text="French (Belgium)"
+                                            value="fr_be"/>
+                                    <fr_ca
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Canada"
+                                            language="French"
+                                            text="French (Canada)"
+                                            value="fr_ca"/>
+                                    <fr_ch
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Switzerland"
+                                            language="French"
+                                            text="French (Switzerland)"
+                                            value="fr_ch"/>
+                                    <fr_fr
+                                            jcr:primaryType="nt:unstructured"
+                                            country="France"
+                                            language="French"
+                                            text="French (France)"
+                                            value="fr_fr"/>
+                                    <fr_lu
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Luxembourg"
+                                            language="French"
+                                            text="French (Luxembourg)"
+                                            value="fr_lu"/>
+                                    <hi_in
+                                            jcr:primaryType="nt:unstructured"
+                                            country="India"
+                                            language="Hindi"
+                                            text="Hindi (India)"
+                                            value="hi_in"/>
+                                    <hr_hr
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Croatia"
+                                            language="Croatian"
+                                            text="Croatian (Croatia)"
+                                            value="hr_hr"/>
+                                    <hu_hu
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Hungary"
+                                            language="Hungarian"
+                                            text="Hungarian (Hungary)"
+                                            value="hu_hu"/>
+                                    <is_is
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Iceland"
+                                            language="Icelandic"
+                                            text="Icelandic (Iceland)"
+                                            value="is_is"/>
+                                    <it
+                                            jcr:primaryType="nt:unstructured"
+                                            country="*"
+                                            defaultcountry="it_it"
+                                            language="Italian"
+                                            text="Italian"
+                                            value="it"/>
+                                    <it_ch
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Switzerland"
+                                            language="Italian"
+                                            text="Italian (Switzerland)"
+                                            value="it_ch"/>
+                                    <it_it
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Italy"
+                                            language="Italian"
+                                            text="Italian (Italy)"
+                                            value="it_it"/>
+                                    <iw_il
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Israel"
+                                            language="Hebrew"
+                                            text="Hebrew (Israel)"
+                                            value="iw_il"/>
+                                    <ja
+                                            jcr:primaryType="nt:unstructured"
+                                            country="*"
+                                            defaultcountry="ja_jp"
+                                            language="Japanese"
+                                            text="Japanese"
+                                            value="ja"/>
+                                    <ja_jp
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Japan"
+                                            language="Japanese"
+                                            text="Japanese (Japan)"
+                                            value="ja_jp"/>
+                                    <ko_kr
+                                            jcr:primaryType="nt:unstructured"
+                                            country="South Korea"
+                                            language="Korean"
+                                            text="Korean (South Korea)"
+                                            value="ko_kr"/>
+                                    <lt_lt
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Lithuania"
+                                            language="Lithuanian"
+                                            text="Lithuanian (Lithuania)"
+                                            value="lt_lt"/>
+                                    <lv_lv
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Latvia"
+                                            language="Latvian"
+                                            text="Latvian (Latvia)"
+                                            value="lv_lv"/>
+                                    <mk_mk
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Macedonia"
+                                            language="Macedonian"
+                                            text="Macedonian (Macedonia)"
+                                            value="mk_mk"/>
+                                    <nl_be
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Belgium"
+                                            language="Dutch"
+                                            text="Dutch (Belgium)"
+                                            value="nl_be"/>
+                                    <nl_nl
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Netherlands"
+                                            language="Dutch"
+                                            text="Dutch (Netherlands)"
+                                            value="nl_nl"/>
+                                    <no_no
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Norway"
+                                            language="Norwegian (Bokmål)"
+                                            text="Norwegian (Bokmål) (Norway)"
+                                            value="no_no"/>
+                                    <no_no_ny
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Norway"
+                                            language="Norwegian (Nynorsk)"
+                                            text="Norwegian (Nynorsk) (Norway)"
+                                            value="no_no_ny"/>
+                                    <pl_pl
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Poland"
+                                            language="Polish"
+                                            text="Polish (Poland)"
+                                            value="pl_pl"/>
+                                    <pt
+                                            jcr:primaryType="nt:unstructured"
+                                            country="*"
+                                            defaultcountry="pt_pt"
+                                            language="Portuguese"
+                                            text="Portuguese"
+                                            value="pt"/>
+                                    <pt_br
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Brazil"
+                                            language="Portuguese"
+                                            text="Portuguese (Brazil)"
+                                            value="pt_br"/>
+                                    <pt_pt
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Portugal"
+                                            language="Portuguese"
+                                            text="Portuguese (Portugal)"
+                                            value="pt_pt"/>
+                                    <ro_ro
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Romania"
+                                            language="Romanian"
+                                            text="Romanian (Romania)"
+                                            value="ro_ro"/>
+                                    <ru
+                                            jcr:primaryType="nt:unstructured"
+                                            country="*"
+                                            defaultcountry="ru_ru"
+                                            language="Russian"
+                                            text="Russian"
+                                            value="ru"/>
+                                    <ru_ru
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Russia"
+                                            language="Russian"
+                                            text="Russian (Russia)"
+                                            value="ru_ru"/>
+                                    <sh_yu
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Yugoslavia"
+                                            language="Serbo-Croatian"
+                                            text="Serbo-Croatian (Yugoslavia)"
+                                            value="sh_yu"/>
+                                    <sk_sk
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Slovakia"
+                                            language="Slovak"
+                                            text="Slovak (Slovakia)"
+                                            value="sk_sk"/>
+                                    <sl_si
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Slovenia"
+                                            language="Slovenian"
+                                            text="Slovenian (Slovenia)"
+                                            value="sl_si"/>
+                                    <sq_al
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Albania"
+                                            language="Albanian"
+                                            text="Albanian (Albania)"
+                                            value="sq_al"/>
+                                    <sr_yu
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Yugoslavia"
+                                            language="Serbian (Cyrillic)"
+                                            text="Serbian (Cyrillic) (Yugoslavia)"
+                                            value="sr_yu"/>
+                                    <sv
+                                            jcr:primaryType="nt:unstructured"
+                                            country="*"
+                                            defaultcountry="sv_se"
+                                            language="Swedish"
+                                            text="Swedish"
+                                            value="sv"/>
+                                    <sv_se
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Sweden"
+                                            language="Swedish"
+                                            text="Swedish (Sweden)"
+                                            value="sv_se"/>
+                                    <th_th
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Thailand"
+                                            language="Thai (Western digits)"
+                                            text="Thai (Western digits) (Thailand)"
+                                            value="th_th"/>
+                                    <th_th_th
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Thailand"
+                                            language="Thai (Thai digits)"
+                                            text="Thai (Thai digits) (Thailand)"
+                                            value="th_th_th"/>
+                                    <tr_tr
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Turkey"
+                                            language="Turkish"
+                                            text="Turkish (Turkey)"
+                                            value="tr_tr"/>
+                                    <uk_ua
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Ukraine"
+                                            language="Ukrainian"
+                                            text="Ukrainian (Ukraine)"
+                                            value="uk_ua"/>
+                                    <zh
+                                            jcr:primaryType="nt:unstructured"
+                                            country="*"
+                                            defaultcountry="zh_cn"
+                                            language="Chinese (Simplified)"
+                                            text="Chinese (Simplified)"
+                                            value="zh"/>
+                                    <zh_cn
+                                            jcr:primaryType="nt:unstructured"
+                                            country="China"
+                                            language="Simplified Chinese"
+                                            text="Simplified Chinese (China)"
+                                            value="zh_cn"/>
+                                    <zh_hk
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Hong Kong"
+                                            language="Chinese"
+                                            text="Chinese (Hong Kong)"
+                                            value="zh_hk"/>
+                                    <zh_tw
+                                            jcr:primaryType="nt:unstructured"
+                                            country="Taiwan"
+                                            language="Chinese"
+                                            text="Chinese (Taiwan)"
+                                            value="zh_tw"/>
+                                </items>
+                            </language>
+                            <creation
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/datepicker"
+                                    disabled="{Boolean}true"
+                                    displayedFormat="MM-DD-YYYY HH:mm"
+                                    fieldLabel="Created"
+                                    metaType="datepicker"
+                                    name="./jcr:created"
+                                    renderReadOnly="{Boolean}true"
+                                    type="datetime"
+                                    typeHint="Date"/>
+                            <creatortool
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                    fieldLabel="Creator Tool"
+                                    id="Key-1380275802899"
+                                    maxlength="{Double}255.0"
+                                    metaType="text"
+                                    minlength="{Double}0.0"
+                                    name="./jcr:content/metadata/xmp:CreatorTool"
+                                    renderReadOnly="{Boolean}true"/>
+                        </items>
+                    </col1>
+                    <col2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <header
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="dam/gui/components/admin/schemaforms/formbuilder/sectionfield"
+                                    fieldLabel="Scheduled (de)activation"
+                                    id="Key-1380274741670"
+                                    metaType="section"/>
+                            <ontime
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/datepicker"
+                                    displayedFormat="MM-DD-YYYY HH:mm"
+                                    fieldLabel="On Time"
+                                    metaType="datepicker"
+                                    name="./jcr:content/onTime"
+                                    renderReadOnly="{Boolean}true"
+                                    type="datetime"
+                                    typeHint="Date"/>
+                            <offime
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/datepicker"
+                                    displayedFormat="MM-DD-YYYY HH:mm"
+                                    fieldLabel="Off Time"
+                                    metaType="datepicker"
+                                    name="./jcr:content/offTime"
+                                    renderReadOnly="{Boolean}true"
+                                    type="datetime"
+                                    typeHint="Date"/>
+                        </items>
+                    </col2>
+                    <col3
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <header
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="dam/gui/components/admin/schemaforms/formbuilder/sectionfield"
+                                    class="hide-in-bulkeditor"
+                                    fieldLabel="References"
+                                    id="Key-1380274741670"
+                                    metaType="section"/>
+                            <references
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="dam/gui/components/admin/references"
+                                    fieldLabel="Referenced By"
+                                    metaType="reference"/>
+                            <referencing
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="dam/gui/components/admin/referencing"
+                                    fieldLabel="Dependencies"
+                                    metaType="referencing"/>
+                        </items>
+                    </col3>
+                </items>
+            </tab1>
+            <tab2
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Advanced"
+                    sling:resourceType="granite/ui/components/foundation/section"
+                    tabid="7c927721-1473-492f-b949-4fa2f82a32a0">
+                <items jcr:primaryType="nt:unstructured">
+                    <col1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <header
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="dam/gui/components/admin/schemaforms/formbuilder/sectionfield"
+                                    fieldLabel="License"
+                                    id="Key-1380274975208"
+                                    metaType="section"
+                                    name="./jcr:content/metadata/"/>
+                            <creator
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                    fieldLabel="Creator"
+                                    id="Key-1380275021558"
+                                    maxlength="{Double}255.0"
+                                    metaType="text"
+                                    minlength="{Double}0.0"
+                                    name="./jcr:content/metadata/dc:creator"
+                                    renderReadOnly="{Boolean}true"/>
+                            <contributor
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                    fieldLabel="Contributor"
+                                    id="Key-1380275063191"
+                                    maxlength="{Double}255.0"
+                                    metaType="text"
+                                    minlength="{Double}0.0"
+                                    name="./jcr:content/metadata/dc:contributor"
+                                    renderReadOnly="{Boolean}true"/>
+                            <copyright
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                    fieldLabel="Copyright"
+                                    id="Key-1380275100089"
+                                    maxlength="{Double}255.0"
+                                    metaType="text"
+                                    minlength="{Double}0.0"
+                                    name="./jcr:content/metadata/dc:rights"
+                                    renderReadOnly="{Boolean}true"/>
+                            <copyrightowner
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                    fieldLabel="Copyright Owner"
+                                    id="Key-1380275131265"
+                                    maxlength="{Double}255.0"
+                                    metaType="text"
+                                    minlength="{Double}0.0"
+                                    name="./jcr:content/metadata/xmpRights:Owner"
+                                    renderReadOnly="{Boolean}true"/>
+                            <usageterms
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                    fieldLabel="Usage Terms"
+                                    id="Key-1380275171472"
+                                    maxlength="{Double}255.0"
+                                    metaType="text"
+                                    minlength="{Double}0.0"
+                                    name="./jcr:content/metadata/xmpRights:UsageTerms"
+                                    renderReadOnly="{Boolean}true"/>
+                            <expires
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/datepicker"
+                                    displayedFormat="MM-DD-YYYY HH:mm"
+                                    fieldLabel="Expires"
+                                    metaType="datepicker"
+                                    minDate="today"
+                                    name="./jcr:content/metadata/prism:expirationDate"
+                                    renderReadOnly="{Boolean}true"
+                                    type="datetime"
+                                    typeHint="Date"/>
+                        </items>
+                    </col1>
+                    <col2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <rating
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="dam/gui/components/admin/rating"
+                                    fieldLabel="Rating"
+                                    id="Key-1380274975208"
+                                    metaType="assetrating"/>
+                        </items>
+                    </col2>
+                    <col3
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container"/>
+                </items>
+            </tab2>
+            <tabdemo
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Demo"
+                    sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                        margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <workflowrelated
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Workflow Related"
+                                    sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <setworkflow
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <heading
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/heading"
+                                                    class="coral-Heading coral-Heading--4"
+                                                    level="{Long}4"
+                                                    text=""/>
+                                            <well
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/container">
+                                                <layout
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/layouts/well"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <author
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/form/select"
+                                                            fieldLabel="Author"
+                                                            name="./jcr:content/metadata/author"
+                                                            renderReadOnly="{Boolean}true"/>
+                                                    <reviewer
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/form/select"
+                                                            fieldLabel="Reviewer"
+                                                            name="./jcr:content/metadata/reviewer"
+                                                            renderReadOnly="{Boolean}true"/>
+                                                    <approver
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/form/select"
+                                                            fieldLabel="Approver"
+                                                            name="./jcr:content/metadata/approver"
+                                                            renderReadOnly="{Boolean}true"/>
+                                                </items>
+                                            </well>
+                                        </items>
+                                    </setworkflow>
+                                </items>
+                            </workflowrelated>
+                            <docid
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Doc ID"
+                                    sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <setDocID
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <heading
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/heading"
+                                                    class="coral-Heading coral-Heading--4"
+                                                    level="{Long}4"
+                                                    text=""/>
+                                            <well
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/container">
+                                                <layout
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/layouts/well"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <docid
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                            name="./jcr:content/metadata/docid"
+                                                            renderReadOnly="{Boolean}true"/>
+                                                </items>
+                                            </well>
+                                        </items>
+                                    </setDocID>
+                                </items>
+                            </docid>
+                        </items>
+                    </column>
+                </items>
+            </tabdemo>
+        </items>
+        <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+                type="nav"/>
+    </tabs>
+</jcr:root>

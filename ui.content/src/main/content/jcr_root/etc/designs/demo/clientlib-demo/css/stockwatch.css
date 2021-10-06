@@ -1,0 +1,210 @@
+.stock-grey {
+	background-color: rgb(232,232,232);
+	/*padding-top: 40px;
+	padding-bottom: 90px;*/
+	float: left;
+	width: 100%;
+}
+.Subra-stock-watch .container .col-lg-12 .col-md-6 {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.Subra-stock-watch .Subra-section-head {
+	text-align: center;
+	margin: 0;
+	box-sizing: border-box;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.Subra-stock-watch .Subra-section-head h2 {
+	font-size: 48px;
+	line-height: 48px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.Subra-stock-watch .stock-table {
+	margin-top: 42px;
+	padding-bottom: 10px;
+}
+.Subra-stock-watch .stock-table-right {
+	margin-top: 32px;
+}
+.Subra-stock-watch .stock-table table {
+	width: 100%;
+	display: block;
+	margin-top: 50px;
+}
+.stock-table-left {
+	border-right: 1px solid #939393;
+}
+.stock-table-right {
+	float: right;
+}
+.Subra-stock-watch .stock-table .nse-nyse{
+	font-size: 24px;
+}
+.Subra-stock-watch .stock-table h4 {
+	font-size: 30px;
+	font-weight: bold;
+	padding-right: 10px;
+	color: #161616;
+    font-family: 'Akkurat-Bold';
+}
+.Subra-stock-watch .container table tr td {
+	font-size: 24px;
+	padding-bottom: 5px;
+}
+.Subra-stock-watch .stock-table span img {
+	padding-left: 35px;
+	padding-right: 35px;
+	margin-top: -10px;
+}
+.analyst-interactions .dropdown-button-content-news:last-child{
+
+		margin-bottom: 0px;
+}
+@media screen and (max-width: 1920px) {
+.Subra-stock-watch .container table tr td {
+	font-size: 20px;
+	padding-bottom: 5px;
+	color: #151515;
+    font-family: 'Akkurat-Light';
+}
+.Subra-stock-watch .container table tr td:first-child {
+	width: 265px;
+	text-align: left;
+	float: left;
+}
+.Subra-stock-watch .container table tr td:nth-child(2) {
+	text-align: left;
+	float: left;
+}
+}
+@media screen and (max-width: 1400px) {
+.Subra-stock-watch .container table tr td:first-child {
+	width: 250px;
+}
+.Subra-stock-watch .container table tr td {
+	color: #161616;
+}
+.Subra-stock-watch .container {
+	max-width: 970px;
+}
+}
+@media screen and (max-width: 960px) {
+.Subra-stock-watch .stock-table-right {
+	margin-top: 45px;
+}
+.stock-table-right {
+	padding-left: 5px;
+	float: left;
+}
+.Subra-stock-watch .container table tr td:first-child {
+	width:50%;
+	float: left;
+	padding-left: 10px;
+}
+.Subra-stock-watch .container table tr td:nth-child(2) {
+	text-align: right;
+	float: right;
+	width: 50%;
+}
+.stock-table.stock-table-right {
+	float: left;
+}
+.Subra-stock-watch .container table tr td {
+	min-width: inherit;
+	padding-right: 10px;
+	text-align:left;
+
+}
+.Subra-stock-watch .stock-table span img {
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 35px;
+}
+.Subra-stock-watch .stock-table h4 {
+	font-size: 28px;
+	text-align: center;
+}
+.Subra-stock-watch .stock-table {
+	float: left;
+	padding-right: 5px;
+}
+}
+@media screen and (max-width: 767px) {
+.Subra-stock-watch .stock-table {
+	float: none;
+}
+.Subra-stock-watch .stock-table h4 {
+	text-align: center;
+}
+.stock-table-left {
+	border-right: 0px;
+}
+.Subra-stock-watch .container table tbody tr, .Subra-stock-watch .container table tbody {
+	width: 100%;
+	display: table;
+	float: left;
+	clear: both;
+}
+.Subra-stock-watch .container table tr td:first-child {
+	width: 50%;
+	padding-left: 10px;
+}
+.Subra-stock-watch .stock-table {
+	float: left;
+	width: 100%;
+	margin-top: 50px;
+}
+.Subra-stock-watch .stock-table-right {
+	margin-top: 50px;
+}
+}
+ @media only screen and (min-width:560px) and (max-width: 767px) {
+.stock-table .stock-value-left {
+	float: left;
+	text-align: right;
+	width: 45%;
+	padding-left: 10px;
+}
+.stock-table .stock-value-right {
+	float: right;
+	text-align: left;
+	width: 45%;
+}
+.Subra-stock-watch .stock-table span img {
+	padding-left: inherit;
+	padding-right: inherit;
+	width: inherit;
+}
+}
+ @media screen and (max-width: 460px) {
+.stock-table h4 span {
+	display: block;
+}
+.Subra-stock-watch .container table tr td:first-child {
+}
+.Subra-stock-watch .container table tr td:first-child {
+	float: left;
+}
+.Subra-stock-watch .container table tr td:nth-child(2) {
+	text-align: right;
+	float: right;
+	width: 50%;
+}
+.stock-img img {
+	padding-top: 5px;
+}
+.Subra-stock-watch .container table tr td{
+font-size: 14px;
+color: #161616;
+padding-left: 0px !important;
+padding-right: 0px;
+}
+.Subra-stock-watch .col-lg-12, .Subra-stock-watch .container .col-lg-12 .col-md-6{
+padding-left: 0px;
+padding-right: 0px;
+}
+}

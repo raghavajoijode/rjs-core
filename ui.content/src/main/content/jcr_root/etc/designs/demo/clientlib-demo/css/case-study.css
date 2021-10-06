@@ -1,0 +1,386 @@
+/* case-studies and latest thinking css starts */
+body {
+    padding: 0;
+    margin: 0;
+
+}
+
+.share-icon{
+    right: 0px;
+    top: 5px;
+    position: absolute;
+    width: 25px !important;
+}
+
+.social-container-case{
+     right: 5px;
+    position: absolute;
+    background-color: #0e3570;
+    padding: 5px 0px;
+    top: 53px;
+    display: none;
+    transition: .5s;
+
+}
+.video-share-container img{
+margin-left: 0px !important;
+margin-right: 0px !important;
+}
+
+.social-container-case:after {
+    bottom: 100%;
+    left: 75%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-left-color: #0e3570;
+    border-width: 8px;
+    margin-top: -8px;
+    transform: rotate(270deg);
+}
+
+.social-container-case-open{
+    width: 150px;
+    display: block;
+    z-index: 9;
+}
+.social-container-case-open .social-image{
+    float: left;
+}
+.social-container-case img{
+    padding: 5px 0px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.social-container-case img{
+    width: 22px !important;
+}
+.social-container-case .social-image{
+    display: block;
+}
+.social-image-mob{
+    display: block;
+    margin-top: 15px;
+}
+
+
+ a{
+	 outline:none !important;
+ }
+.fluid-width {
+    max-width: 1585px;
+    padding: 0 24px 0 24px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.Subra-section-head-wrapper{
+    text-align: left;
+    margin: 0;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 40px;
+	color: #0e3570;
+}
+.Subra-section-head{
+	position:relative;
+}
+.Subra-section-head:before {
+    content: '';
+    position: absolute;
+    left: -100%;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color:#0e3570;
+}
+ .Subra-section-head h2 {
+        font-size: 48px;
+        line-height: 48px;
+		display:inline-block;
+		border-bottom:2px solid #0e3570;
+        margin-top: 0;
+		    padding-left: 8px;
+        margin-bottom: 0;
+    }
+.Subra-case-studies-section{
+    padding: 70px 0 5px;
+}
+.Subra-latest-thinking-section{
+padding-bottom: 32px;
+	padding-top:5px;
+}
+.Subra-case-studies-bg {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 0;
+    margin-bottom: 24px;
+}
+.Subra-new-button-wrapper {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    overflow: hidden;
+}
+.Subra-new-button{
+	width: 65px;
+    padding-top: 21px;
+    height: 65px;
+    text-align: center;
+    border-radius: 50px;
+    margin-top: -12px;
+}
+.Subra-new-button div{
+	line-height: 20px;
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    border-bottom: 2px solid #ffffff;
+}
+
+.Subra-case-studies-bg img {
+    width: 100%;
+}
+
+.Subra-shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    -webkit-box-shadow: inset 0px -100px 170px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px -100px 170px -5px rgba(0,0,0,0.75);
+    box-shadow: inset 0px -100px 170px -5px rgba(0,0,0,0.75);
+}
+
+.button-show-more {
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.75);
+    background-color: #0e3570;
+    outline: none;
+    color: white;
+    border: none;
+    box-sizing: border-box;
+	padding: 18px 36px;
+    font-size: 16px;
+}
+
+.Subra-case-studies-bg-textBox {
+    position: absolute;
+    bottom: 0;
+    padding: 0 25px 12px 25px;
+}
+
+.Subra-case-studies-bg-textBox-head {
+    color: #ffffff;
+    box-sizing: border-box;
+    text-align: left;
+    margin: 0;
+    line-height: 24px;
+    display: inline-block;
+	position:relative;
+    font-size: 18px;
+	font-weight:400;
+    text-transform: capitalize;
+}
+.Subra-case-studies-bg-textBox-head:first-letter {
+	text-transform:uppercase;
+}
+/*.Subra-case-studies-bg-textBox-head:before {
+    content: "";
+    left: -25px;
+    background-color: #ffffff;
+    bottom: -2px;
+    height: 2px;
+    position: absolute;
+    width: 25px;
+}
+*/
+.Subra-case-studies-bg-textBox-text {
+    display: block;
+    padding-left: 0;
+    color: #ffffff;
+    line-height: 14px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+    .Subra-case-studies-bg-textBox-text h4 {
+        font-family: 'Akkurat-Bold';
+        font-size: 22px !important;
+        margin: 15px 0 5px 0;
+		border-bottom:0px solid transparent !important;
+	    
+	/*overflow: hidden;
+	display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;*/
+    }
+
+    .Subra-case-studies-bg-textBox-text p {
+        font-size: 18px;
+        line-height: 20px;
+		
+		 overflow: hidden;
+	display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+    }
+
+.Subra-latest-thinking-section {
+    box-sizing: border-box;
+}
+.Subra-case-studies-bg-textBox-head{
+    font-size: 18px !important;
+    padding: 6px 10px;
+}
+.boxBgColor-575x312{
+    width: 100%;
+    height: 245px;
+}
+.boxBgColor-575x540{
+    width: 100%;
+    height: 425px;
+}
+.boxBgColor-1175x312{
+    width: 100%;
+    height: 245px;
+}
+
+
+@media only screen and (min-width: 1920px) {
+.Subra-case-studies-bg-textBox-head {
+    line-height: 34px;
+    font-size: 36px;
+}
+.Subra-new-button div {
+    line-height: 20px;
+    color: white;
+    font-size: 34px;
+    border-bottom: 2px solid #ffffff;
+}
+.Subra-new-button {
+       width: 65px;
+    padding-top: 21px;
+    height: 65px;
+    text-align: center;
+}
+.Subra-section-head h2 {
+     font-size: 56px; 
+    line-height: 60px;
+}
+.button-show-more {
+    padding: 20px 40px;
+    font-size: 16px;
+}
+.Subra-case-studies-bg-textBox-text h4 {
+    font-size: 22px;
+}
+.Subra-case-studies-bg-textBox-text p {
+    font-size: 18px;
+    line-height: 20px;
+}
+.Subra-case-studies-bg-textBox-head {
+    padding: 4px 10px;
+}
+}
+@media only screen and (max-width: 1600px) {
+    .fluid-width {
+        max-width: 1585px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .container {
+        max-width: 970px;
+    }
+}
+@media only screen and (max-width:1024px) {
+	.Subra-case-studies-section {
+		padding-top:0;
+	}
+}
+
+@media only screen and (max-width:800px) {
+.boxBgColor-575x312{
+    width: 100%;
+    height: 190px;
+}
+.boxBgColor-575x540{
+    height: 330px;
+}
+.boxBgColor-1175x312{
+    height: 190px;
+}
+}
+
+
+@media only screen and (max-width:768px) {
+    .fluid-width {
+        padding: 0 12px 0 12px;
+    }
+    .Subra-case-studies-bg-textBox-head {
+    font-size: 16px !important;
+    padding: 5px 10px;
+}
+}
+@media only screen and (max-width:767px) {
+	.Subra-case-studies-section {
+    padding: 0px 0 5px;
+}
+}
+@media only screen and (max-width:480px) {
+    .Subra-case-studies-section {
+        margin-top: 0px;
+    }
+    .banner {
+        margin-bottom: 0px;
+    }
+    .Subra-section-head h2 {
+    font-size: 32px
+}
+.boxBgColor-575x312{
+    height: auto;
+    min-height: 100px;
+}
+.boxBgColor-575x540{
+    height: auto;
+    min-height: 100px;
+}
+.boxBgColor-1175x312{
+    height: auto;
+    min-height: 100px;
+}
+}
+
+@media only screen and (max-width:380px) {
+    .Subra-case-studies-bg-textBox-text h4 {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .Subra-case-studies-bg-textBox-text p {
+        font-size: 12px;
+		line-height: 15px;
+		margin-bottom:0;
+    }
+
+}
+@media only screen and (max-width:340px) {
+.Subra-case-studies-bg-textBox-text p{
+    -webkit-line-clamp: 2;
+}
+.Subra-section-head h2 {
+    font-size: 26px
+}
+}
+/* case-studies and latest thinking css ends */

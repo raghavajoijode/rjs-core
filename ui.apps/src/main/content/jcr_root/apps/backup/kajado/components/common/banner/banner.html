@@ -1,0 +1,28 @@
+<!-- -------------------- -->
+<!-- Banner               -->
+<!-- -------------------- -->
+
+<div class="scomponent subra-banner"
+     data-sly-use.template="/apps/kajado/components/templates/common.html"
+     data-sly-test.bannerImage="${properties.bannerImage}">
+    <!-- /* <div class="row">
+      <div class="col-xs-12">
+        <div class="banner-image${ properties.isFullWidth ? ' full-width' : ''}" id="hero-image">
+               <img src="${bannerImage}" alt="Banner-image"/>
+        </div>
+      </div>
+    </div> */-->
+    <div class="banner${properties.isFullWidth ? ' full-width' : ''}"
+         style="background-image:url(${bannerImage @ context='styleString'});">
+        <div class="banner-inner">
+            <h1 data-sly-test.heading="${properties.heading}">${heading}</h1>
+            <h3 data-sly-test.subHeading="${properties.subHeading}">${subHeading}</h3>
+            <a data-sly-test="${item.buttonText && item.buttonLink}" href="${properties.buttonLink}" class="btn">${properties.buttonText} </a>
+        </div>
+    </div>
+</div>
+
+<sly data-sly-call="${template.placeholder @ isEmpty=!bannerImage, cssClass='subra-cmp-banner'}"/>
+
+<!-- /* TODO: markup structure */ -->
+<!-- /* TODO: Error handling and Default configuration message */ -->

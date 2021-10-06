@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jsI18n="[Sorry. At this time there are no additional values being returned. Please select another attribute to refine your search.,Done,Cancel,More,Less,Read_More,Read_Less]"
+    resourceType="subra/components/pages/product-listing-category"/>

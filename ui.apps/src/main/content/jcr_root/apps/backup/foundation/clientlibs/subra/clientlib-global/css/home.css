@@ -1,0 +1,70 @@
+/* subra-header */
+.subra .subra-header {
+	padding: 0
+}
+.subra-header.navbar-default {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.subra-header .logo {
+    max-height: 30px;
+}
+.subra-header .active>a, 
+.subra-header .active>a:focus, 
+.subra-header .active>a:hover {
+    font-weight: bolder;
+}
+.subra .subra-header ul {
+    display: flex;
+    list-style: none;
+	margin-top: 1rem;
+}
+.subra .subra-header ul.header-center > li{
+    margin: 0 2rem;
+}
+.subra .subra-header ul.header-right > li{
+    margin: 0 0 0 3rem;
+}
+
+
+/*subra-footer */
+.subra-footer {
+	background: rgba(23, 97, 160, 0.8);
+}
+.subra-footer a {
+	color: #fff;
+	text-decoration: none;
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+}
+.subra-footer .footer-disclaimer {
+    padding: 1rem 0;
+}
+.subra-footer .footer-disclaimer * {
+	display: flex;
+}
+.subra-footer .footer-disclaimer ul {
+    padding: 0;
+}
+.subra-footer .social-icons li:hover a i {
+	font-weight: 600;
+}
+.subra-footer .language {
+	cursor: pointer;
+}
+.subra-footer .copyright li:before {
+    content: "/";
+	padding: 0 1rem;
+}
+.subra-footer .copyright li:hover a {
+	text-decoration: underline;
+}
+
+/*subra-text-image*/
+.scomponent.subra-text-image {
+	text-align: justify;
+	word-break: break-word;
+}
+.scomponent.subra-text img.float-left,
+.scomponent.subra-text img.float-right {
+	padding-top: 0.4rem;
+}

@@ -1,0 +1,4 @@
+#base=source
+
+granite.http.externalize.js
+csrf.js

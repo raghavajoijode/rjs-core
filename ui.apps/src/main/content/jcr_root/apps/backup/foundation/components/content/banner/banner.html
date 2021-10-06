@@ -1,0 +1,30 @@
+<sly data-sly-use.clientLib="/apps/foundation/components/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories=properties.pageClientLibs}"/>
+
+<div class="subra-banner">
+    <img class="d-block w-100"
+         src="${[component.path, properties.image] @ join='/'}"
+         alt="Second slide">
+    <div class="hero" data-image="${[component.path, properties.image] @ join='/'}">
+        <hgroup>
+            <h2>${properties.caption}</h2>
+            <h3>${properties.description}</h3>
+        </hgroup>
+        <button class="btn btn-hero btn-lg" role="button">
+            <a href="${properties.buttonLink @context='uri'}">${properties.buttonLabel}</a>
+        </button>
+    </div>
+</div>
+
+<!--/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~DOCUMENTATION~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Properties
+	- image			-> Path Browser
+	- caption		-> Text Field  	(25)
+	- description	-> Text area	(50)
+	- buttonLink	-> Path Browser
+	- buttonLabel	-> Text Field	(20)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~DOCUMENTATION~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/-->

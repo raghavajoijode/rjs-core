@@ -6,6 +6,6 @@
         cq:template="/conf/rjs-core/settings/wcm/templates/spa-app-template"
         jcr:primaryType="cq:PageContent"
         jcr:title="us"
-        sling:resourceType="rjs-core/components/page"/>
+        sling:resourceType="foundation/components/redirect"/>
     <en/>
 </jcr:root>

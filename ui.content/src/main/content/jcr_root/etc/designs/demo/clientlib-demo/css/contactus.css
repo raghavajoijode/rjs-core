@@ -1,0 +1,1198 @@
+html,
+body {
+   min-height: 100%;
+   margin:0;
+   padding:0;
+}
+a,a:focus,a:hover{
+	text-decoration:none;
+    color: inherit;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none !important;
+	outline-width: 0 !important;
+}
+.g-recaptcha-container { 
+    display: inline-block;		
+    text-align: left;
+    /*background: red;*/	
+    width: 62%;
+}
+.g-recaptcha-container .g-recaptcha{	
+	/*display:inline-block;
+    vertical-align:top;
+    width:62%;*/
+    transform:scale(0.90) !important;
+-webkit-transform:scale(0.90) !important;
+transform-origin:0 0 !important;
+-webkit-transform-origin:0 0 !important;		
+}
+/*.g-recaptcha{
+	display:inline-block;
+    vertical-align:top;
+    width:62%;
+}*/
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+.error-wrapper{
+	text-align:left;
+	padding-left:41%;
+}
+.Subra-contact-us-container{
+	box-sizing:border-box;
+	width:100%;
+	padding:69px 0;
+}
+/*.Subra-contact-us-note{
+	font-size:17px;
+	color:#000000;
+}*/
+/*.Subra-contact-us-form{
+	width:100%;
+	margin:92px auto 0;
+	display:block;
+	text-align:right;
+	border-bottom:2px solid #cccccc;
+    box-sizing: border-box;
+    padding-bottom: 81px;
+
+}*/
+.Subra-contact-us-form-input{
+	margin:24px 0;
+	font-size:17px;
+	font-weight:bold;
+}
+input, textarea{   
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+/*.Subra-contact-us-form form input{
+	width: 60%;
+	font-weight:normal;
+	border-radius:50px;
+	border:2px solid #CCC;
+	box-sizing:border-box;
+	padding:8px;
+	box-shadow:none;
+	font-family:'Akkurat-Light';
+	font-size:14px;
+	padding-left: 13px;
+}*/
+.Subra-contact-us-form .bootstrap-select .dropdown-toggle:focus, a:focus {
+        outline: none !important;
+        outline: none !important;
+}
+/*.Subra-contact-us-form .btn-default:before, .Subra-contact-us-form .btn-default:after {
+    content: "";
+    position: absolute;
+    right: 25px;
+    top: 18px;
+    height: 2px;
+    width: 17px;
+    background: grey;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}*/
+
+.Subra-contact-us-form .btn-default:before {
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*.Subra-contact-us-form .btn-default:after {
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    right: 14px;
+}*/
+.Subra-contact-us-form .bootstrap-select.btn-group .dropdown-toggle .caret {
+    display: none;
+}
+.Subra-contact-us-form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+	width: 60%;
+	border-radius:50px;
+}
+/*.Subra-contact-us-form  .bootstrap-select.btn-group .dropdown-toggle .filter-option{
+	box-sizing:border-box;
+	padding:6px;
+	font-size: 16px;
+    background-color:#ffffff;
+	border-radius:50px;
+	border:2px solid #cccccc;
+}*/
+.Subra-contact-us-form .btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: none;
+    white-space: nowrap;
+    padding:0;
+    font-size: 14px;
+    line-height: 1.42857143;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.Subra-contact-us-form .bootstrap-select.btn-group .dropdown-menu li a{
+	box-sizing:border-box;
+	padding:10px;
+}
+.Subra-contact-us-form .bootstrap-select.btn-group .dropdown-menu {
+    border-radius: 25px;
+    padding: 0px;
+}
+.Subra-contact-us-form .bootstrap-select.btn-group .dropdown-menu li a span.text {
+    padding: 0 0 0 15px;
+	font-family:'Akkurat-Light';
+	font-size:14px;
+}
+.inline-input{
+	display:inline-block;
+	vertical-align:middle;
+	width:13.5% !important;
+}
+.long{
+	width:46% !important;
+}
+/*.Subra-contact-us-form-input span{
+	font-family:'Akkurat-Bold';
+	font-size:16px;
+	display:inline-block;
+	vertical-align:middle;
+	width: 37%;
+	padding-right: 10px;
+	float:left;
+}*/
+.Subra-contact-us-form-input textarea{
+    padding: 3px 0px;
+	resize: none;
+    border-radius: 25px;
+    border: 2px solid #CCC;
+	display:inline-block;
+	vertical-align:top;
+	height: 177px; 
+    width: 60%;
+    padding-right: 17px;
+    padding-left: 17px;
+}
+.Subra-contact-us-form .form-button{
+	display:inline-block;
+	vertical-align:top;
+	width:180px;
+	
+	margin:30px 15px;
+	border-radius:50px;
+	background-color:#000000;
+	color:#ffffff;
+	text-align:center;
+	box-sizing:border-box;
+	padding:16px 10px;
+	border:none;
+	 font-size: 16px;
+	font-family:'Akkurat-Mono';
+}
+.Subra-contact-us-form .innerpage {
+margin-bottom:37px;
+margin-top: 42px;
+}
+.Subra-contact-us-form .innerpage h2 {
+text-align:left;
+}
+.reset{
+	background-color:#70b94d !important;
+}
+.button-wrapper{
+	text-align:center;
+	margin-left: 12%;
+}
+.bootstrap-select.btn-group .dropdown-menu.inner{
+	max-height: 500px !important;
+}
+.address-map-container{
+	box-sizing:border-box;
+	padding:32px 0;
+	position:relative;
+}
+.address-map-container iframe{
+	width:100%;
+	height: 430px;
+	border:0; 
+}
+.bs-caret{
+	display:none !important;
+}
+.error {
+    color: #DF2225;
+	display:none;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
+	font-family:'Akkurat-Light';
+}
+.hidden-input{
+display:none;
+}
+ .btn-default:active:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default:active.focus, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus{
+	background-color:transparent;
+	color:#000000;
+	box-shadow:none;
+} 
+ .btn-default:hover, .btn-default{
+	background-color:transparent;
+	color:#000000;
+	box-shadow:none;
+}
+ .open > .dropdown-toggle.btn-default, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default{
+	background-color:transparent;
+	color:#000000;
+	box-shadow:none; 
+ }
+ .btn-group.open .dropdown-toggle{
+		box-shadow:none;  
+ } 
+.btn-default:focus, .btn-default.focus {
+	background-color:transparent;
+	color:#000000;
+	box-shadow:none; 
+}
+
+:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+.bootstrap-select>.dropdown-toggle.bs-placeholder, .bootstrap-select>.dropdown-toggle.bs-placeholder:active, .bootstrap-select>.dropdown-toggle.bs-placeholder:focus, .bootstrap-select>.dropdown-toggle.bs-placeholder:hover{
+color:#000000;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+color:#000000;
+font-size:19px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+color:#000000;
+font-size:19px;
+}
+::-ms-input-placeholder { /* IE 10+ */
+font-size:0px;
+color:transparent;
+}
+:-moz-placeholder { /* Firefox 18- */
+color:#000000;
+font-size:19px;
+}
+*::-moz-placeholder {
+    color: #000000;
+    font-size: 14px;
+    font-family: 'Akkurat-Light';
+}
+.space-up{
+	margin-top:39px !important;
+}
+.address-map{
+	position:relative;
+	margin-top: 50px;
+}
+ .address-map-content{
+	position:absolute;
+	top:0px;
+	font-size:18px;
+	left:0;
+    width: 35.5%;
+	background-color:rgba(108,108,108,0.9);
+	color:#ffffff;
+	text-align:left;
+    height: 98.7%;
+} 
+.address-map-text{
+	box-sizing:border-box;
+    padding: 103px 73px 0;
+}
+.address-map-text p:first-child{
+	font-size:23px;
+}
+.address-map-text p{
+	margin-bottom:4px;
+}
+.Subra-contact-us-note h3{
+	line-height: 40px;
+margin-bottom:30px;
+}
+.check-location{
+	width:75%;
+margin:51px auto 0;
+border-radius:50px;
+padding:13px 15px;
+text-align:center;
+background-color:#9b9b9b;
+color:#ffffff;
+font-size:20px;
+cursor:pointer;
+}
+/*.w-style{
+  color:#fff;
+  font-weight:bold;
+    }
+.address-style{
+  text-align:center;
+    }
+.g-map{
+position:relative;
+}
+.g-map iframe{
+width:100%;
+min-height:350px;}
+.g-map-contact{
+position:absolute;
+top:0;
+width:100%;
+max-width:380px;
+height:100%;
+background-color:#666666;
+padding:10px;
+}
+.g-map-contact p{
+color:#e5e5e5;
+text-align:left;
+margin-left:40px;
+font-family:'Akkurat-Light';
+font-size:14px;
+}
+.location-link{
+display: block;
+    vertical-align: top;
+    width: 83%;
+	font-size: 20px;
+    margin: 30px 30px;
+    border-radius: 50px;
+    background-color:#A9A9A9;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 16px 10px;
+    border: none;
+}*/
+@media only screen and (min-width:1920px){
+.Subra-contact-us-form-input{
+	font-size:23px;
+}
+.error-wrapper {
+    padding-left: 43%;
+}
+.Subra-contact-us-form .form-button {
+    font-size: 24px;
+	padding: 13px 10px;
+}
+.button-wrapper{
+	margin-left: 22%;
+}
+.Subra-contact-us-form-input textarea{
+    width: 58.5%;
+}
+.Subra-contact-us-form form input {
+    width: 58.5%;
+}
+.Subra-contact-us-form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+	width: 58.5%;
+}
+.Subra-contact-us-form-input span{
+	width: 40%;
+}
+.Subra-contact-us-form  .bootstrap-select.btn-group .dropdown-toggle .filter-option{
+	font-size:19px;
+}
+.check-location{
+font-size:25px;
+}
+.inline-input{
+	display:inline-block;
+	vertical-align:middle;
+	width: 14% !important;
+}
+.long{
+	width:42% !important;
+	margin-left: 24px;
+}
+}
+@media only screen and (max-width:1024px){
+ .address-map-content{
+	top:0px;
+    width: 50%;
+}
+.button-wrapper {
+	text-align:center;
+}
+.Subra-contact-us-container{
+	padding:0px 0;
+}
+.Subra-contact-us-form .form-button {
+    display: inline-block;
+    vertical-align: top;
+}
+}
+@media only screen and (max-width:768px){
+.button-wrapper {
+    margin-left: 0;
+	text-align:right;
+}
+.Subra-contact-us-form .form-button {
+    display: inline-block;
+    vertical-align: top;
+    width: 198px;
+}
+}
+@media only screen and (max-width:767px){
+	 .address-map-content{
+		top:0px;
+		width: 100%;
+	}
+	.button-wrapper {
+		text-align:center;
+	}
+	.Subra-contact-us-note {
+		text-align: left;
+	}
+	.address-map{
+		height: 430px;
+	}
+	.error-wrapper {
+		padding-left: 8%;
+	}
+	.check-location{
+		width:90%;
+	}
+	.address-map-container iframe{
+		display:none;
+	}
+	.address-map-text{
+		box-sizing:border-box;
+		padding: 80px 30px 0;
+		text-align:center;
+	}
+	.Subra-contact-us-form-input{
+		margin-bottom:20px;
+		margin-top: 6px;
+	}
+	.Subra-contact-us-form-input span{
+			display:block;
+			width:95%;
+			margin:0 auto 0px;
+			text-align: left;
+	}
+	.Subra-contact-us-form{
+			text-align:left;
+	}
+	.Subra-contact-us-form form input, .Subra-contact-us-form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+		width:95%;
+		margin:auto;
+	}
+	.Subra-contact-us-form form input{
+		width:100%;
+	}
+
+	.inline-input{
+		width:30% !important;
+		margin:10px auto !important;
+	}
+	.long{
+		width:63% !important;
+		margin:auto;
+	}
+	.Subra-contact-us-form-input textarea{
+		width:95%;
+		display:block;
+		margin:auto;
+	}
+	
+.g-map-contact p {
+    text-align: center;
+    margin-left: 0;
+    margin-top: 3px;
+}
+
+}html,
+body {
+   min-height: 100%;
+   margin:0;
+   padding:0;
+}
+a,a:focus,a:hover{
+	text-decoration:none;
+    color: inherit;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none !important;
+	outline-width: 0 !important;
+}
+/*.g-recaptcha{
+	display:inline-block;
+    vertical-align:top;
+    width:59%;
+}*/
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+.error-wrapper{
+	text-align:left;
+	padding-left:41%;
+}
+.Subra-contact-us-container{
+	box-sizing:border-box;
+	width:100%;
+	padding:69px 0;
+}
+.Subra-contact-us-note{
+	font-size:18px;
+	color:#000000;
+	line-height: 26px;
+}
+.Subra-contact-us-form{
+	width: 100%;
+    margin: 36px auto 0;
+    display: block;
+    text-align: right;
+    border-bottom: none;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+
+}
+.Subra-contact-us-form-input{
+	margin:24px 0;
+	font-size:17px;
+	font-weight:bold;
+}
+input, textarea{   
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.Subra-contact-us-form form input{
+	width: 62%;
+	font-weight:normal;
+	border-radius:50px;
+	border:2px solid #CCC;
+	box-sizing:border-box;
+	padding:8px;
+	box-shadow:none;
+	font-family:'Akkurat-Light';
+	font-size:14px;
+	padding-left: 13px;
+}
+.Subra-contact-us-form .bootstrap-select .dropdown-toggle:focus, a:focus {
+        outline: none !important;
+        outline: none !important;
+}
+.Subra-contact-us-form .btn-default:before, .Subra-contact-us-form .btn-default:after {
+    content: "";
+    position: absolute;
+    right: 25px;
+    top: 18px;
+    height: 2px;
+    width: 17px;
+    background: grey;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+
+.Subra-contact-us-form .btn-default:before {
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.Subra-contact-us-form .btn-default:after {
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    right: 14px;
+}
+.Subra-contact-us-form .bootstrap-select.btn-group .dropdown-toggle .caret {
+    display: none;
+}
+.Subra-contact-us-form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+	width: 62%;
+	border-radius:50px;
+}
+.Subra-contact-us-form .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 62%;
+    border-radius: 50px;
+}
+.Subra-contact-us-form  .bootstrap-select.btn-group .dropdown-toggle .filter-option{
+	box-sizing:border-box;
+	padding:8px;
+	font-size: 14px;
+    background-color:#ffffff;
+	border-radius:50px;
+	border:2px solid #cccccc;
+	font-family: 'Akkurat-Light';
+    padding-left: 13px;
+}
+.Subra-contact-us-form .btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: none;
+    white-space: nowrap;
+    padding:0;
+    font-size: 14px;
+    line-height: 1.42857143;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.Subra-contact-us-form .bootstrap-select.btn-group .dropdown-menu li a{
+	box-sizing:border-box;
+	padding:10px;
+}
+.Subra-contact-us-form .bootstrap-select.btn-group .dropdown-menu {
+    border-radius: 25px;
+    padding: 0px;
+}
+.Subra-contact-us-form .bootstrap-select.btn-group .dropdown-menu li a span.text {
+    padding: 0 0 0 15px;
+}
+.inline-input{
+	display:inline-block;
+	vertical-align:middle;
+	width:13.5% !important;
+}
+.long{
+	width:47.4% !important;
+}
+.Subra-contact-us-form-input span{
+	font-family:'Akkurat-Bold';
+	font-size:16px;
+	display:inline-block;
+	vertical-align:middle;
+	width: 36%;
+	padding-right: 10px;
+	padding-top: 8px;
+	float:left;
+}
+/*.Subra-contact-us-form-input textarea{
+    padding: 3px 0px;
+	resize: none;
+    border-radius: 25px;
+    border: 2px solid #CCC;
+	display:inline-block;
+	vertical-align:top;
+	height: 177px; 
+    width: 60%;
+    padding-right: 17px;
+    padding-left: 17px;
+}*/
+.Subra-contact-us-form-input textarea {
+    padding: 8px 0px;
+    resize: none;
+    border-radius: 25px;
+    border: 2px solid #CCC;
+    display: inline-block;
+    vertical-align: top;
+    height: 177px;
+    width: 62%;
+    padding-right: 17px;
+    padding-left: 17px;
+    font-family: 'Akkurat-Light';
+    font-size: 14px;
+    font-weight: normal;
+}
+/*.Subra-contact-us-form .form-button{
+	display:inline-block;
+	vertical-align:top;
+	width:209px;
+	font-size:16px;
+	margin:30px 15px;
+	border-radius:50px;
+	background-color:#000000;
+	color:#ffffff;
+	text-align:center;
+	box-sizing:border-box;
+	padding:16px 10px;
+	border:none;
+}*/
+.Subra-contact-us-form .form-button {           
+    display: inline-block;
+    vertical-align: top;
+    width: 150px;
+    font-size: 16px;
+    margin: 3px 15px;
+    border-radius: 50px;
+    background-color: #0e3570;
+    color: #ffffff;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px 1px;
+    border: none;
+    font-family: 'Akkurat-Mono';
+}
+.reset{
+	background-color:#0e3570 !important;
+}
+.button-wrapper{
+	text-align:center;
+	margin-left: 12%;
+}
+.bootstrap-select.btn-group .dropdown-menu.inner{
+	max-height: 500px !important;
+}
+.address-map-container{
+	box-sizing:border-box;
+	padding:32px 0;
+	position:relative;
+}
+.address-map-container iframe{
+	width:100%;
+	height: 430px;
+	border:0; 
+}
+.bs-caret{
+	display:none !important;
+}
+.error {
+    color: #DF2225;
+	display:none;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
+	font-family:'Akkurat-Light';
+}
+.hidden-input{
+display:none;
+}
+ .btn-default:active:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default:active.focus, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus{
+	background-color:transparent;
+	color:#000000;
+	box-shadow:none;
+} 
+.map-wrapper{
+	position:relative;
+}
+ .btn-default:hover, .btn-default{
+	background-color:transparent;
+	color:#000000;
+	box-shadow:none;
+}
+ .open > .dropdown-toggle.btn-default, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default{
+	background-color:transparent;
+	color:#000000;
+	box-shadow:none; 
+ }
+ .btn-group.open .dropdown-toggle{
+		box-shadow:none;  
+ } 
+.btn-default:focus, .btn-default.focus {
+	background-color:transparent;
+	color:#000000;
+	box-shadow:none; 
+}
+
+:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+.bootstrap-select>.dropdown-toggle.bs-placeholder, .bootstrap-select>.dropdown-toggle.bs-placeholder:active, .bootstrap-select>.dropdown-toggle.bs-placeholder:focus, .bootstrap-select>.dropdown-toggle.bs-placeholder:hover{
+color:#000000;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+color:#000000;
+font-size:19px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+color:#000000;
+font-size:19px;
+}
+::-ms-input-placeholder { /* IE 10+ */
+font-size:0px;
+color:transparent;
+}
+:-moz-placeholder { /* Firefox 18- */
+color:#000000;
+font-size:19px;
+}
+
+.space-up{
+	margin-top:39px !important;
+}
+.address-map{
+	position:relative;
+	margin-top: 50px;
+}
+ .address-map-content{
+	position:absolute;
+	top:0px;
+	font-size:18px;
+	left:0;
+    width: 35.5%;
+	background-color:rgba(108,108,108,0.9);
+	color:#ffffff;
+	text-align:left;
+    height: 98.7%;
+} 
+.address-map-text{
+	box-sizing:border-box;
+    padding: 103px 73px 0;
+}
+.address-map-text p:first-child{
+	font-size:23px;
+}
+.address-map-text p{
+	margin-bottom:4px;
+}
+.Subra-contact-us-note h3{
+	line-height: 40px;
+margin-bottom:30px;
+}
+.check-location{
+	width:75%;
+margin:51px auto 0;
+border-radius:50px;
+padding:13px 15px;
+text-align:center;
+background-color:#9b9b9b;
+color:#ffffff;
+font-size:20px;
+cursor:pointer;
+}
+.b-style{
+  font-family:'Akkurat-Light';
+  font-size:18px;
+}
+.w-style{
+  color:#fff;
+  font-family:'Akkurat-Bold';
+  font-size:18px;
+  line-height:26px;
+    }
+.address-style{
+  text-align: center;
+    font-size: 38px;
+    line-height: 48px;
+    margin-bottom: 30px;
+    margin-top: 51px;
+    }
+.g-map{
+position:relative;
+}
+.g-map iframe{
+width:100%;
+min-height:350px;}
+.g-map-contact{
+position:absolute;
+top:0;
+width:100%;
+max-width:370px;
+height:99%;
+background-color:#666666;
+padding:10px;
+}
+.g-map-contact p{
+color:#e5e5e5;
+text-align:left;
+margin-left:70px;
+font-family:'Akkurat-Light';
+font-size:14px;
+margin-top: 72px;
+}
+/*
+.location-link{
+display: block;
+    vertical-align: top;
+    width: 67%;
+	font-size: 16px;
+    margin: 30px 57px;
+    border-radius: 50px;
+    background-color:#A9A9A9;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    border: none;
+}
+*/
+.location-link {
+    display: block;
+    vertical-align: top;
+    width: 67%;
+    font-size: 16px;
+    margin: 30px 57px;
+    border-radius: 50px;
+    background-color: #0e3570;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    border: 0;
+}
+
+.location-link:hover {
+    color: #fff;
+}
+
+
+@media only screen and (min-width:1920px){
+.Subra-contact-us-form-input{
+	font-size:23px;
+}
+.error-wrapper {
+    padding-left: 43%;
+}
+.Subra-contact-us-form .form-button {
+    font-size: 16px;
+	font-family:'Akkurat-Mono';
+	
+	padding: 13px 10px;
+}
+.button-wrapper{
+	margin-left: 22%;
+}
+.Subra-contact-us-form-input textarea{
+    width: 58.5%;
+}
+.Subra-contact-us-form form input {
+    width: 58.5%;
+}
+.Subra-contact-us-form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+	width: 58.5%;
+}
+.Subra-contact-us-form-input span{
+	width: 40%;
+}
+.Subra-contact-us-form  .bootstrap-select.btn-group .dropdown-toggle .filter-option{
+	font-size:19px;
+}
+.check-location{
+font-size:25px;
+}
+.inline-input{
+	display:inline-block;
+	vertical-align:middle;
+	width: 14% !important;
+}
+.long{
+	width:42% !important;
+	margin-left: 24px;
+}
+}
+@media only screen and (max-width:1024px){
+ .address-map-content{
+	top:0px;
+    width: 50%;
+}
+.button-wrapper {
+	text-align:center;
+}
+.Subra-contact-us-container{
+	padding:0px 0;
+}
+.Subra-contact-us-form .form-button {
+    display: inline-block;
+    vertical-align: top;
+}
+}
+@media only screen and (max-width:768px){
+.button-wrapper {
+    margin-left: 0;
+	text-align:right;
+}
+.Subra-contact-us-form .form-button {
+    display: inline-block;
+    vertical-align: top;
+    width: 198px;
+}
+}
+@media only screen and (max-width:767px){
+ .address-map-content{
+	top:0px;
+    width: 100%;
+}
+.button-wrapper {
+	text-align:center;
+}
+.Subra-contact-us-note {
+    text-align: left;
+}
+.address-map{
+	height: 430px;
+}
+.error-wrapper {
+    padding-left: 8%;
+}
+.check-location{
+	width:90%;
+}
+.address-map-text{
+	box-sizing:border-box;
+    padding: 80px 30px 0;
+	text-align:center;
+}
+.Subra-contact-us-form-input{
+	margin-bottom:20px;
+	margin-top: 6px;
+}
+.Subra-contact-us-form-input span{
+		display:block;
+		width:95%;
+		margin:0 auto 0px;
+		margin-bottom: 9px;
+}
+.Subra-contact-us-form{
+		text-align:left;
+}
+.Subra-contact-us-form form input, .Subra-contact-us-form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+	width:95%;
+	margin:auto;
+}
+.inline-input{
+	width:30% !important;
+	margin:10px auto !important;
+}
+.long{
+	width:63% !important;
+	margin:auto;
+}
+.Subra-contact-us-form-input textarea{
+	width:100%;
+	display:block;
+	margin:auto;
+	margin-left:0px;
+}
+   .Subra-contact-us-form .form-button {
+    width: 110px;
+    margin: 10px 15px;
+}
+/*.g-recaptcha{
+    width:100%;
+}
+    .g-recaptcha > div{
+	width:100% !important;
+	}*/
+.rc-anchor.rc-anchor-normal.rc-anchor-light {
+    width: auto !important;
+}
+.address-style {
+    font-size: 26px;
+    line-height: 32px;
+	margin-top: 30px;
+}
+.g-map-contact p {
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 6px;
+}
+/*.g-recaptcha iframe{
+    width:100%;
+}*/
+.location-link {
+    width: 100%;
+	max-width: 230px;
+   margin: 3px auto;
+}
+
+.g-map-contact {
+	height:auto;
+    left: 0;
+
+}
+/*css to reorder map and address*/
+.map-wrapper {
+	display: flex; 
+    flex-direction: column;
+}
+.map-wrapper > .g-map {
+	order:2;
+}
+.map-wrapper > .g-map-contact {
+	order: 1;
+   /* margin-bottom: 15px;*/
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+}
+.space-up {		
+    margin-top: 21px !important;		
+}
+.Subra-contact-us-form .recaptcha {
+ text-align:center;
+}		
+.g-recaptcha-container {		
+    /*display: inline-block;		
+    text-align: left;*/		
+    /*background: red;*/		
+    width: auto;		
+    margin: auto;		
+    text-align: center;		
+}		
+.g-recaptcha-container .g-recaptcha{ 		
+	display: block;		
+	margin:0 auto;		
+	width: 93%;		
+}
+
+}
+.btn-group.bootstrap-select:nth-child(2) {
+    margin-left: 0 !important;
+}
+.loading_gif {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9999999999;
+    width: 57px;
+    height: 45px;
+}
+.loading_gif span {
+    color:black;
+    font-size: 14px;
+    color:#107bce;
+}
+.loading_gif img {
+    width: 45px;
+    visibility: visible;
+}

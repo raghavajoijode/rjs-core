@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2017-03-02T09:57:39.141+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/demo/templates/report"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Workflow Reporrt"
+        jcr:uuid="e414bbc0-460c-45aa-b435-ad479576fe91"
+        sling:resourceType="demo/components/structure/report"/>
+</jcr:root>

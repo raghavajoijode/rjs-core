@@ -1,0 +1,57 @@
+.Subra-sustainability-section{
+	float: left;
+	width:100%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.sustainability-list .sustainability-list-block img{
+	width: 100%;
+	max-width: 280px;
+	padding-top: 15px;
+}
+.sustainability-list-block{
+	float: left;
+	width: 100%;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.sustainability-list-block .no-padding{
+	padding-left: 0px;
+}
+.bodyContent-akkurat-light p{
+	font-size: 24px;
+    line-height: 36px;
+    color: #58585b;
+    padding-bottom: 40px;
+    margin-bottom: 0;
+    font-family: 'akkurat-light';
+}
+@media screen and (max-width: 1024px){
+.sustainability-list .sustainability-list-block h4{
+	font-size: 24px;
+    line-height: 1.2;
+    font-family: 'akkurat-bold';
+}
+}
+
+@media screen and (max-width: 767px){
+	.sustainability-list .sustainability-list-block img {
+	margin-bottom: 30px;
+    margin: 0 auto;
+    text-align: center;
+    float: none;
+    display: none;
+    display: block;
+}
+}
+
+@media screen and (max-width: 480px){
+	.bodyContent-akkurat-light p {
+    font-size: 17px;
+    line-height: 24px;
+}
+.sustainability-list-block .no-padding {
+    padding-left: 12px;
+}
+}

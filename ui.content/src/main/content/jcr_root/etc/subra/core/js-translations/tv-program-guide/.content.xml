@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jsI18n="[TV Show on {0},TVGuide Shows Unavailable,Host,Back to TV guide,Watch Show,Previous Shows,Upcoming Shows,Close,Show started {0}min. {1}sec. ago,The Zip Code you entered was not a number.,The Zip Code you entered did not contain right amount of digits.,TVGuide ShowItems Unavailable,Play,Pause,Fullscreen,Non-Fullscreen,Mute,Unmute,Resume,You have stopped the video,The video has not downloaded fully due to a network error.,The video cannot be downloaded as there appears to be a problem with the server or network\, or because the format cannot be supported.,The video playback ended as the video may be corrupted or because it used features your browser did not support.,This video is not supported by your device.,There appears to be a problem with this video\, please try again later.,TV ShowItems Unavailable Future]"
+    resourceType="subra/components/pages/tv-program-guide"/>

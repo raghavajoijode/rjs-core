@@ -1,0 +1,12 @@
+
+
+
+/*subra-text-image*/
+.scomponent.subra-text-image {
+	text-align: justify;
+	word-break: break-word;
+}
+.scomponent.subra-text img.float-left,
+.scomponent.subra-text img.float-right {
+	padding-top: 0.4rem;
+}

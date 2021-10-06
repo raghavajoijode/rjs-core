@@ -1,0 +1,20 @@
+<div class="sComponent ticket-listing container"
+
+     data-sly-test="${!ticketsModel.isTicketList}">
+    <!-- /* data-sly-use.ticketsModel="${'org.subra.aem.rjs.core.component.models.TicketsModel'}" */ -->
+    <div data-sly-test.ticket="${ticketsModel.ticket}"
+         data-sly-use.reporter="${'org.subra.aem.rjs.core.component.models.UserModel' @ suid='ticket.reporterId'}"
+         data-sly-use.assignee="${'org.subra.aem.rjs.core.component.models.UserModel' @ suid='ticket.assigneeId'}">
+        <h2 data-sly-test.ticketNumber="${ticket.ticketNumber}">${'Ticket Number :' @ i18n} ${ticketNumber}</h2>
+        <h3 data-sly-test.title="${ticket.heading}">${title}</h3>
+        <p data-sly-test.description="${ticket.description}">${description}</p>
+        <p data-sly-test.status="${ticket.status}">${'Status :' @ i18n} ${status}</p>
+        <p data-sly-test.reporterName="${reporter.name}">${'Reported By :' @ i18n} ${reporterName}</p>
+        <p data-sly-test.assigneeName="${assignee.name}">${'Assigned To :' @ i18n} ${assigneeName}</p>
+        <p data-sly-test.createdDate="${ticket.createdDate}">${'Created On :' @ i18n} ${createdDate}</p>
+        <p data-sly-test.updatedDate="${ticket.updatedDate}">${'Last Updated On :' @ i18n} ${updatedDate}</p>
+    </div>
+</div>
+
+<!-- /* TODO: markup structure */ -->
+<!-- /* TODO: Error handling and Default configuration message */ -->

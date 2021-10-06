@@ -1,0 +1,33 @@
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientLib.css @ categories='subra.core.component.login'}"/>
+<div class="subra-login-form">
+    <form>
+        <img src="${properties.logo || '/content/dam/kajado/internal/logo/subra-logo-185x80.png'}" class="logo"
+             alt="Logo">
+        <h1 class="text-center">${properties.loginHeaderText || 'Login'}</h1>
+        <div class="form-group">
+            <input type="text" name="username" class="form-control"
+                   placeholder="${properties.userNamePlaceholderText || 'Username'}" required="required">
+        </div>
+        <div class="form-group">
+            <input type="password" name="password" class="form-control"
+                   placeholder="${properties.passwordPlaceholderText || 'Password'}" required="required">
+        </div>
+        <div id="errorDiv"></div>
+        <div class="form-group">
+            <input type="hidden" id="loginPagePath" value="${currentPage.path}">
+            <input type="hidden" id="succesRedirectPage" value="/content/kajado/en">
+            <button type="submit" class="btn btn-primary btn-block">${properties.loginButtonText || 'Login'}</button>
+        </div>
+        <div class="clearfix">
+            <label class="pull-left checkbox-inline"><input name="remember-me" type="checkbox">${properties.rememberMeText
+                || 'Remember me'}</label>
+            <a data-sly-test="${properties.forgotPasswordLink}" href="${properties.forgotPasswordLink}"
+               class="pull-right">${properties.forgotPasswordLinkText || 'Forgot Password?'}</a>
+        </div>
+    </form>
+    <p class="text-center"><a
+            href="${properties.registrationLink || '/content/kajado/auth/registration' @ extension='html'}">${properties.registrationLinkText
+        || 'Create an Account'}</a></p>
+</div>
+<sly data-sly-call="${clientLib.js @ categories='subra.core.component.login'}"/>

@@ -1,0 +1,12 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.ehcache.org/ehcache.xsd"
+	defaultTransactionTimeoutInSeconds="5">
+	<defaultCache maxElementsInMemory="0" eternal="false"
+		timeToLiveSeconds="0" overflowToDisk="false" diskPersistent="false" />
+	<cache name="org.subra.aem.foundation.core.services.impl.ProductServiceImpl:in"
+		maxElementsInMemory="1000" eternal="false" timeToLiveSeconds="30"
+		overflowToDisk="false" diskPersistent="false" />
+	<cache name="org.subra.aem.foundation.core.services.impl.ProductServiceImpl-errors:in"
+		maxElementsInMemory="1000" eternal="false" timeToLiveSeconds="30"
+		overflowToDisk="false" diskPersistent="false" />
+</ehcache>

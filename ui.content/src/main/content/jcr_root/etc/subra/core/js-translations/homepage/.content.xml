@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jsI18n="[Read_More,Read_Less,Show_More,Show_Less]"
+    jsI18nMsgError="[Sorry\, there was a problem]"
+    resourceType="subra/components/pages/homepage"/>

@@ -1,0 +1,103 @@
+###############################################################################
+#                           ENV:PROD                                          #
+#                                                                             #
+#           RJS GLOBAL - GROUPS AND ACLs DEFINITION FILE                     #
+#                                                                             #
+###############################################################################
+
+### Global settings
+- global_config:
+    minRequiredVersion: "3.0.2"
+
+### Legacy Groups to delete
+- obsolete_authorizables:
+
+### Variable Definition
+- DEF globalUserAccessAdminGroupId=to-be-defined-globalUserAccessAdminGroupId
+
+### Group definition
+- group_config:
+    # Global group, parent of all RJS group hierarchy
+    - rjs_all_users:
+        - name: RJS Everyone
+          isMemberOf: contributor, workflow-users, dam-users
+          path: /home/groups/rjs
+
+    #Global User Access Admin group
+    - ${globalUserAccessAdminGroupId}:
+        - name: RJS Global User Access Admin
+          description: RJSGLOBALAdobeCMSPRDUSerAccessAdmin
+          isMemberOf: rjs_all_users
+          path: /home/groups/rjs
+
+### Service user definition
+- user_config:
+    - rjs-service-user:
+        - name: RJS SSD Service User
+          path: /home/users/system/rjs
+          isSystemUser: true
+
+### Permission definition
+- ace_config:
+
+    - rjs_all_users:
+        # Begin - Allow read access to /content but not to its children
+        - path: /content
+          permission: deny
+          privileges: jcr:read,jcr:readAccessControl
+
+        - path: /content
+          permission: allow
+          privileges: jcr:read,jcr:readAccessControl
+          repGlob: ''
+
+        - path: /content
+          permission: allow
+          privileges: jcr:read,jcr:readAccessControl
+          repGlob: '/jcr:*'
+        # End - Allow read access to /content but not to its children
+
+        # Begin - Allow read access to /content/dam but not to its children
+        #       - Deny replicate to /content/dam and children, this privilege is granted to dam-users
+        - path: /content/dam
+          permission: allow
+          privileges: jcr:read,jcr:readAccessControl
+          repGlob: ''
+
+        - path: /content/dam
+          permission: allow
+          privileges: jcr:read,jcr:readAccessControl
+          repGlob: '/jcr:*'
+
+        - path: /content/dam
+          permission: deny
+          actions: modify, create, delete, acl_read, acl_edit, replicate
+
+        - path: /content/dam/collections
+          permission: allow
+          actions: read, modify, create, delete
+        # End - Allow read access to /content/dam but not to its children
+
+        # Allow read access to /content/cq:tags and /conf (this is required to access crx de lite, due to a bug)
+        - path: /content/cq:tags
+          permission: allow
+          privileges: jcr:read
+
+        - path: /conf
+          permission: allow
+          privileges: jcr:read
+
+    - ${globalUserAccessAdminGroupId}:
+        - path: /home/groups
+          permission: allow
+          actions: read,modify,create,delete,replicate, acl_read, acl_edit
+
+        - path: /home/users
+          permission: allow
+          actions: read
+
+    - rjs-service-user:
+        - path: /
+          permission: allow
+          actions: read, modify, create, delete, acl_read, acl_edit, replicate
+

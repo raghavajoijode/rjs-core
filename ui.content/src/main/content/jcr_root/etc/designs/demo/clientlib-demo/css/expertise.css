@@ -1,0 +1,215 @@
+/* expertise css starts */
+
+body {
+    padding: 0;
+    margin: 0;
+    
+	  counter-reset: section;   
+}
+.fluid-width {
+    max-width: 1585px;
+    padding: 0 24px 0 24px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.Subra-section-head {
+   /* text-align: center;
+    margin: 0;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 40px; */
+}
+
+    .Subra-section-head h2 {
+        font-size: 48px;
+        line-height: 48px;
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+.Subra-show-more-button {
+    margin: 24px 0 65px 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.Subra-expertise-section {
+    padding-top: 0px;
+    box-sizing: border-box;
+    padding-bottom: 27px;
+}
+
+.Subra-epertise-section-content-media {
+    padding-top: 10px;
+}
+
+.Subra-epertise-section-content-text {
+    padding-top: 8px;
+	font-family:Akkurat;
+}
+
+.Subra-epertise-section-content h4 {
+    font-size: 40px;
+}
+
+.Subra-epertise-section-content-text p {
+    font-size: 24px;
+    line-height: 35px;
+    font-family: 'Akkurat-Mono';
+}
+
+.Subra-epertise-section-subcontent-text h5 {
+   font-size: 34px;
+	font-family:'Akkurat-Mono';
+}
+
+.Subra-epertise-section-subcontent-text p {
+     font-size: 24px;
+	font-family:'Akkurat-Light';
+    color: #58585b;
+}
+.image-under-Text{
+	display:block;
+	margin:0;
+	padding: 5px 0;
+	font-size:14px;
+	color:#58585b;
+    font-family: 'Akkurat-Light';
+}
+.Subra-epertise-section-subcontent-text ul li {
+    font-size: 30px;
+    margin: 14px 0 30px 0;
+    color: #58585b;
+    line-height: 30px;
+    font-family: 'akkurat-italic';
+    position: relative;
+    list-style: none;
+    padding-left: 20px;
+}
+    .Subra-epertise-section-subcontent-text ul li:before{
+	 counter-increment: section;   
+	content: counter(section) "";
+        height: 36px;
+        width: 35px;
+    top: 50%;
+	transform:translateY(-50%);
+        color: #ffffff;
+		padding-top:5px;
+		display:block;
+        font-size: 16px;
+	font-weight:400;
+	text-align:center;
+        font-style: normal;
+        left: -39px;
+        position: absolute;
+        border-bottom: 1px solid rgb(114,104,92);
+        background-color: rgb(132,120,105);
+        border-radius: 50px;
+    }
+
+.Subra-epertise-section-content-media img {
+    width: 100%;
+}
+@media only screen and (min-width: 1920px) {
+.Subra-epertise-section-content-text p {
+    font-size: 24px;
+    line-height: 34px;
+    font-family: 'Akkurat-Mono';
+}
+.image-under-Text {
+    font-size: 14px;
+    font-family: 'Akkurat';
+}
+.Subra-epertise-section-subcontent-text h5 {
+    font-size: 28px;
+    color:#0e3570;
+}
+.Subra-epertise-section-subcontent-text p {
+    font-size: 18px;
+    line-height: 26px;
+}
+.Subra-epertise-section-subcontent-text ul li {
+     font-size: 24px;
+    margin: 14px 0 30px 0;
+    color: #58585b;
+    line-height: 36px;
+	padding-left: 40px;
+}
+.Subra-epertise-section-subcontent-text ul li {
+padding-left: 40px;
+}
+.Subra-expertise-section {
+    padding-top: 0px;
+    box-sizing: border-box;
+    padding-bottom: 40px;
+    padding-top: 20px;
+}
+.Subra-epertise-section-subcontent-text ul li:before{
+     height: 40px;
+    width: 40px;
+    font-size: 22px;
+	padding-top: 0;
+    left: -40px;
+}
+}
+@media only screen and (max-width: 1600px) {
+    .fluid-width {
+        max-width: 1585px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+@media only screen and (max-width:990px) {
+
+    .Subra-epertise-section-content-text p {
+       font-size: 22px;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .Subra-epertise-section-content-media {
+        padding: 10px 0 10px 0;
+    }
+    .fluid-width {
+        padding: 0 12px 0 12px;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .Subra-epertise-section-content-text p {
+        font-size: 20px;
+    }
+
+    .Subra-epertise-section-subcontent-text p {
+        font-size: 17px;
+    }
+
+    .Subra-epertise-section-subcontent-text ul li {
+        font-size: 16px;
+        line-height: 20px;
+        padding-left: 10px;
+    }
+
+        .Subra-epertise-section-subcontent-text ul li:before {
+            height: 20px;
+    width: 20px;
+    padding: 0;
+    font-size: 12px;
+        }
+}
+@media only screen and (max-width:360px){
+	.Subra-epertise-section-subcontent-text h5 {
+    font-size: 27px;
+}
+}
+/* expertise css ends */

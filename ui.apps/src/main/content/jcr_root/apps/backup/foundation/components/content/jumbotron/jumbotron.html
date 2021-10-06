@@ -1,0 +1,15 @@
+<sly
+        data-sly-use.clientLib="/apps/foundation/components/templates/clientlib.html"
+        data-sly-use.common="/apps/foundation/components/templates/common.html"
+        data-sly-call="${clientlib.css @ categories=properties.pageClientLibs}"/>
+
+<div class="subra-jumbotron text-center"
+     data-sly-use.jumbotron="org.subra.aem.rjs.core.component.models.Jumbotron">
+    <div class="jumbotron mb-0">
+        <h2>${jumbotron.heading}</h2>
+        <p>${jumbotron.text}</p>
+    </div>
+</div>
+
+<sly
+        data-sly-call="${common.placeholder @ isEmpty=jumbotron.isEmpty, cssClass='cmp-title scmp-jumbptron', emptyText='Configure Jumbo...'}"></sly>

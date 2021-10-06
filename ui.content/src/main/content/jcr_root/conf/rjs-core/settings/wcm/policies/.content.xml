@@ -8,7 +8,7 @@
             <form jcr:primaryType="nt:unstructured">
                 <container jcr:primaryType="nt:unstructured">
                     <form-container
-                        jcr:description="Allows the form components to be dropped into this core form container."
+                        jcr:description="Allows the form components to be dropped into this form container."
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Content Form"
                         sling:resourceType="wcm/core/components/policy/policy"
@@ -240,7 +240,7 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Page Content"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    components="[group:RJS Core - Content,group:RJS Core - Forms,/apps/rjs-core}/components/form/container]">
+                    components="[group:RJS Core - Content,/apps/rjs-core/components/form/container]">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:authoring jcr:primaryType="nt:unstructured">
                         <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -278,7 +278,7 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="XF Root"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    components="[group:RJS Core - Content,group:RJS Core - Forms,/apps/rjs-core/components/form/container]">
+                    components="[group:RJS Core - Content,/apps/rjs-core/components/form/container]">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:authoring jcr:primaryType="nt:unstructured">
                         <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -370,7 +370,7 @@
                         components="[/libs/wcm/foundation/components/responsivegrid,/apps/rjs-core/components/text]">
                         <jcr:content jcr:primaryType="nt:unstructured"/>
                     </spa-default>
-                    </responsivegrid>
+                </responsivegrid>
             </components>
         </foundation>
     </wcm>

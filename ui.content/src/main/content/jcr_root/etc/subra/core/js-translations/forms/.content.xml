@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jsI18n="[Read_More,Read_Less,Show_More,Show_Less,GDPR_Opt_Confirm,Contactus_Email_ErrorMsg,Sweepstakes_Submit_ErrorMsg,GDPR_form_success,GDPR_form_error,GDPR_form_msg_error,Error_Generic_500,CM_Opt_anonymous,CM_Opt_opt_out,CM_Opt_optin,{0} is required.,I agree to the,Official Rules,Valid_Age_Label,Optional_Email_Label,Valid_Name_Label,Take Me Shopping,Submit_Thanks,This is a required field,Newsletter_Duplicate_Subscription_Error]"
+    resourceType="subra/components/pages/form"/>

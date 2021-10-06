@@ -1,0 +1,28 @@
+<!--/*
+
+This is a htl file to display the page mark-up structure.
+
+File dependencies:
+	templates/base-page-template.html
+	socialmedia/body-start.html
+	body.html
+	socialmedia/body-end.html
+
+*/-->
+<!DOCTYPE HTML>
+<html data-sly-use.page="org.subra.aem.rjs.core.component.models.BasePage"
+      lang="${page.language}"
+      data-sly-use.pagetemplate="templates/base-page-template.html">
+<!--/*data-sly-use.oldpage="com.adobe.cq.wcm.core.components.models.Page"*/-->
+<head data-sly-call="${pagetemplate.head @ page=page}"></head>
+<body class="${page.cssClassNames}">
+<sly data-sly-test.isRedirectPage="${page.redirectTarget && (wcmmode.edit || wcmmode.preview)}"
+     data-sly-call="${pagetemplate.redirect @ redirectTarget = page.redirectTarget}"/>
+<sly data-sly-test="${!isRedirectPage}">
+    <sly data-sly-include="socialmedia/body-start.html"/>
+    <sly data-sly-include="body.html"/>
+    <sly data-sly-call="${pagetemplate.footer @ page=page}"/>
+    <sly data-sly-include="socialmedia/body-end.html"/>
+</sly>
+</body>
+</html>

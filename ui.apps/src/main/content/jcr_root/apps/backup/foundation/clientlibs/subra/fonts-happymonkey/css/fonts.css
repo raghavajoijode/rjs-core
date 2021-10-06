@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'SubraRegularFont';
+    src: url('./resources/fonts/HappyMonkey-Regular.ttf')  format('truetype'),
+		 url('./resources/fonts/HappyMonkey-Regular.woff2') format('woff2'),
+		 url('./resources/fonts/HappyMonkey-Regular.woff') format('woff'),
+		 url('./resources/fonts/HappyMonkey-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('./resources/fonts/HappyMonkey-Regular.svg#HappyMonkey-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

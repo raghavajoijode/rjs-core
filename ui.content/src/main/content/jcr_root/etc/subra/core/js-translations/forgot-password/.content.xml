@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jsI18n="[]"
+    jsI18nMsgError="[Email address was not found,Please Enter Valid Email,There was an issue with the server. Please try later]"
+    jsI18nMsgInfo="[]"
+    jsI18nMsgSuccess="[]"
+    resourceType="subra/components/pages/myaccount/password/forgot"/>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jsI18n="[valid through,month year]"
+    jsI18nMsgError="[Cart has already been submitted and no longer in an editable state.]"
+    jsI18nMsgInfo="[]"
+    jsI18nMsgSuccess="[{0} has been removed.]"
+    resourceType="subra/components/pages/checkout/payment-options"/>

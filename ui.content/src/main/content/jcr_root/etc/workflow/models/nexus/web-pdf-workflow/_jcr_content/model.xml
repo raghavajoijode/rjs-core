@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}false"
+    jcr:primaryType="cq:WorkflowModel"
+    jcr:uuid="0dac677f-1e14-403f-a1f6-495c15a287d7"
+    sling:resourceType="cq/workflow/components/model"
+    description="No Description"
+    title="Web PDF Workflow">
+    <metaData
+        cq:lastModified="{Long}1488461806057"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"/>
+    <nodes jcr:primaryType="nt:unstructured">
+        <node0
+            jcr:primaryType="cq:WorkflowNode"
+            title="Start"
+            type="START">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node0>
+        <node1
+            jcr:primaryType="cq:WorkflowNode"
+            title="Retrieving the BV or SL"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.demo.core.models.BV_SL_Retriever"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node1>
+        <node2
+            jcr:primaryType="cq:WorkflowNode"
+            title="Push For Edition or Rework"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DIALOG_PATH="/etc/workflow/demo/VMM-Assignees/dialog"
+                DYNAMIC_PARTICIPANT="com.demo.core.models.DynamicParticipantVMM"/>
+        </node2>
+        <node3
+            jcr:primaryType="cq:WorkflowNode"
+            title="Redirecting VMMs choice"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.demo.core.models.Choice"/>
+        </node3>
+        <node4
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_SPLIT"
+            type="OR_SPLIT">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node4>
+        <node5
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_JOIN"
+            type="OR_JOIN">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node5>
+        <node6
+            jcr:primaryType="cq:WorkflowNode"
+            title="Content Edition"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DIALOG_PATH="/etc/workflow/demo/SME-Assignees/dialog"
+                DYNAMIC_PARTICIPANT="com.demo.core.models.DynamicParticipantPerformer"/>
+        </node6>
+        <node7
+            jcr:primaryType="cq:WorkflowNode"
+            title="Redirecting Editors Choice"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.demo.core.models.EditorsChoice"
+                PROCESS_ARGS="occurence:0"/>
+        </node7>
+        <node8
+            jcr:primaryType="cq:WorkflowNode"
+            title="Content Review"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DIALOG_PATH="/etc/workflow/demo/CR-Assignees/dialog"
+                DYNAMIC_PARTICIPANT="com.demo.core.models.DynamicParticipantReviewer"/>
+        </node8>
+        <node9
+            jcr:primaryType="cq:WorkflowNode"
+            title="Redirecting Reviewers Choice"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.demo.core.models.ReviewersChoice"
+                PROCESS_ARGS="occurence:0"/>
+        </node9>
+        <node10
+            jcr:primaryType="cq:WorkflowNode"
+            title="Branding Approval"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DYNAMIC_PARTICIPANT="com.demo.core.models.DynamicParticipantBrandTeam"/>
+        </node10>
+        <node11
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_SPLIT"
+            type="OR_SPLIT">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node11>
+        <node12
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_JOIN"
+            type="OR_JOIN">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node12>
+        <node13
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Not Approved"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                script="function check()&#xa;{return true;}"
+                TARGET_NODE_ID="node2"
+                TARGET_NODE_PATH="/etc/workflow/models/web-pdf-workflow/jcr:content/flow/dynamic_participant"/>
+        </node13>
+        <node14
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Approved"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                script="function check()&#xa;{return true;}"
+                TARGET_NODE_ID="node42"
+                TARGET_NODE_PATH="/etc/workflow/models/web-pdf-workflow/jcr:content/flow/dynamic_participant_1574650742"/>
+        </node14>
+        <node15
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Brand Agency Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                script="function check()&#xa;{return true;}"
+                TARGET_NODE_ID="node16"
+                TARGET_NODE_PATH="/etc/workflow/models/web-pdf-workflow/jcr:content/flow/or/1/or/3/dynamic_participant_1649366784"/>
+        </node15>
+        <node16
+            jcr:primaryType="cq:WorkflowNode"
+            title="Brand Agency Review"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DYNAMIC_PARTICIPANT="com.demo.core.models.DynamicParticipantBrandAgency"/>
+        </node16>
+        <node17
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Revert To Brand Team"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                script="function check()&#xa;{return true;}"
+                TARGET_NODE_ID="node10"
+                TARGET_NODE_PATH="/etc/workflow/models/web-pdf-workflow/jcr:content/flow/or/1/dynamic_participant_727230136"/>
+        </node17>
+        <node18
+            jcr:primaryType="cq:WorkflowNode"
+            title="Content Review"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DIALOG_PATH="/etc/workflow/demo/CR-Assignees/dialog"
+                DYNAMIC_PARTICIPANT="com.demo.core.models.DynamicParticipantReviewer"/>
+        </node18>
+        <node19
+            jcr:primaryType="cq:WorkflowNode"
+            title="Redirecting Reviewers Choice"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.demo.core.models.ReviewersChoice"/>
+        </node19>
+        <node20
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_SPLIT"
+            type="OR_SPLIT">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node20>
+        <node21
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_JOIN"
+            type="OR_JOIN">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node21>
+        <node22
+            jcr:primaryType="cq:WorkflowNode"
+            title="Content Edition"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DIALOG_PATH="/etc/workflow/demo/SME-Assignees/dialog"
+                DYNAMIC_PARTICIPANT="com.demo.core.models.DynamicParticipantPerformer"/>
+        </node22>
+        <node23
+            jcr:primaryType="cq:WorkflowNode"
+            title="Redirecting Editors Choice"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.demo.core.models.EditorsChoice"/>
+        </node23>
+        <node24
+            jcr:primaryType="cq:WorkflowNode"
+            title="Branding Approval"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DIALOG_PATH="/etc/workflow/demo/brand-team/dialog"
+                DYNAMIC_PARTICIPANT="com.demo.core.models.DynamicParticipantBrandTeam"/>
+        </node24>
+        <node25
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_SPLIT"
+            type="OR_SPLIT">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node25>
+        <node26
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_JOIN"
+            type="OR_JOIN">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node26>
+        <node27
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Not Approved"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                script="function check()&#xa;{return true;}"
+                TARGET_NODE_ID="node2"
+                TARGET_NODE_PATH="/etc/workflow/models/web-pdf-workflow/jcr:content/flow/dynamic_participant"/>
+        </node27>
+        <node28
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Approved"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                script="function check()&#xa;{return true;}"
+                TARGET_NODE_ID="node42"
+                TARGET_NODE_PATH="/etc/workflow/models/web-pdf-workflow/jcr:content/flow/dynamic_participant_1574650742"/>
+        </node28>
+        <node29
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Brand Agency Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                script="function check()&#xa;{return true;}"
+                TARGET_NODE_ID="node30"
+                TARGET_NODE_PATH="/etc/workflow/models/web-pdf-workflow/jcr:content/flow/or/2/or/2/or/3/dynamic_participant_1649366784"/>
+        </node29>
+        <node30
+            jcr:primaryType="cq:WorkflowNode"
+            title="Brand Agency Review"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DYNAMIC_PARTICIPANT="com.demo.core.models.DynamicParticipantBrandAgency"/>
+        </node30>
+        <node31
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Revert To Brand Team"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                script="function check()&#xa;{return true;}"
+                TARGET_NODE_ID="node24"
+                TARGET_NODE_PATH="/etc/workflow/models/web-pdf-workflow/jcr:content/flow/or/2/or/2/dynamic_participant"/>
+        </node31>
+        <node32
+            jcr:primaryType="cq:WorkflowNode"
+            title="Branding Approval"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DIALOG_PATH="/etc/workflow/demo/brand-team/dialog"
+                DYNAMIC_PARTICIPANT="com.demo.core.models.DynamicParticipantBrandTeam"/>
+        </node32>
+        <node33
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_SPLIT"
+            type="OR_SPLIT">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node33>
+        <node34
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_JOIN"
+            type="OR_JOIN">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node34>
+        <node35
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Not Approved"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                script="function check()&#xa;{return true;}"
+                TARGET_NODE_ID="node2"
+                TARGET_NODE_PATH="/etc/workflow/models/web-pdf-workflow/jcr:content/flow/dynamic_participant"/>
+        </node35>
+        <node36
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Approved"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                script="function check()&#xa;{return true;}"
+                TARGET_NODE_ID="node43"
+                TARGET_NODE_PATH="/etc/workflow/models/web-pdf-workflow/jcr:content/flow/or/2/dynamic_participant_1192343506"/>
+        </node36>
+        <node37
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Brand Agency Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                script="function check()&#xa;{return true;}"
+                TARGET_NODE_ID="node38"
+                TARGET_NODE_PATH="/etc/workflow/models/web-pdf-workflow/jcr:content/flow/or/2/or/3/or/3/dynamic_participant_1649366784"/>
+        </node37>
+        <node38
+            jcr:primaryType="cq:WorkflowNode"
+            title="Brand Agency Review"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DYNAMIC_PARTICIPANT="com.demo.core.models.DynamicParticipantBrandAgency"/>
+        </node38>
+        <node39
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Revert To Brand Team"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                script="function check()&#xa;{return true;}"
+                TARGET_NODE_ID="node32"
+                TARGET_NODE_PATH="/etc/workflow/models/web-pdf-workflow/jcr:content/flow/or/2/or/3/dynamic_participant"/>
+        </node39>
+        <node40
+            jcr:primaryType="cq:WorkflowNode"
+            title="Content Agency Review"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DYNAMIC_PARTICIPANT="com.demo.core.models.DynamicParticipantReviewAgency"/>
+        </node40>
+        <node41
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="To Website Team"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                script="function check()&#xa;{return true;}"
+                TARGET_NODE_ID="node42"
+                TARGET_NODE_PATH="/etc/workflow/models/web-pdf-workflow/jcr:content/flow/dynamic_participant_1574650742"/>
+        </node41>
+        <node42
+            jcr:primaryType="cq:WorkflowNode"
+            title="Website Team"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DIALOG_PATH="/etc/workflow/demo/publishSchedule/dialog"
+                DYNAMIC_PARTICIPANT="com.demo.core.models.DynamicParticipantWebsiteTeam"/>
+        </node42>
+        <node43
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_SPLIT"
+            type="OR_SPLIT">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node43>
+        <node44
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_JOIN"
+            type="OR_JOIN">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node44>
+        <node45
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Website Agency"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                script="function check()&#xa;{return true;}"
+                TARGET_NODE_ID="node46"
+                TARGET_NODE_PATH="/etc/workflow/models/web-pdf-workflow/jcr:content/flow/or_1995315492/1/dynamic_participant"/>
+        </node45>
+        <node46
+            jcr:primaryType="cq:WorkflowNode"
+            title="Website Agency"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DYNAMIC_PARTICIPANT="com.demo.core.models.DynamicParticipantWebsiteAgency"/>
+        </node46>
+        <node47
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Revert To Website Team"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                script="function check()&#xa;{return true;}"
+                TARGET_NODE_ID="node42"
+                TARGET_NODE_PATH="/etc/workflow/models/web-pdf-workflow/jcr:content/flow/dynamic_participant_1574650742"/>
+        </node47>
+        <node48
+            jcr:primaryType="cq:WorkflowNode"
+            title="Schedule Activation of Page or Asset"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.demo.core.models.ScheduledActivator"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node48>
+        <node49
+            jcr:primaryType="cq:WorkflowNode"
+            title="End"
+            type="END">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node49>
+    </nodes>
+    <transitions jcr:primaryType="nt:unstructured">
+        <node0_x0023_node1
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node0"
+            rule=""
+            to="node1">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node0_x0023_node1>
+        <node1_x0023_node2
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node1"
+            rule=""
+            to="node2">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node1_x0023_node2>
+        <node2_x0023_node3
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node2"
+            rule=""
+            to="node3">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node2_x0023_node3>
+        <node3_x0023_node4
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node3"
+            to="node4">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node3_x0023_node4>
+        <node4_x0023_node6
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node4"
+            rule=""
+            to="node6">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node4_x0023_node6>
+        <node6_x0023_node7
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node6"
+            rule=""
+            to="node7">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node6_x0023_node7>
+        <node7_x0023_node8
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node7"
+            rule=""
+            to="node8">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node7_x0023_node8>
+        <node8_x0023_node9
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node8"
+            rule=""
+            to="node9">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node8_x0023_node9>
+        <node9_x0023_node10
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node9"
+            rule=""
+            to="node10">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node9_x0023_node10>
+        <node10_x0023_node11
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node10"
+            to="node11">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node10_x0023_node11>
+        <node11_x0023_node13
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node11"
+            rule=""
+            to="node13">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node11_x0023_node13>
+        <node13_x0023_node12
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node13"
+            to="node12">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node13_x0023_node12>
+        <node11_x0023_node14
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node11"
+            rule=""
+            to="node14">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node11_x0023_node14>
+        <node14_x0023_node12
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node14"
+            to="node12">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node14_x0023_node12>
+        <node11_x0023_node15
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node11"
+            rule=""
+            to="node15">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node11_x0023_node15>
+        <node15_x0023_node16
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node15"
+            rule=""
+            to="node16">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node15_x0023_node16>
+        <node16_x0023_node17
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node16"
+            rule=""
+            to="node17">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node16_x0023_node17>
+        <node17_x0023_node12
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node17"
+            to="node12">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node17_x0023_node12>
+        <node12_x0023_node5
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node12"
+            to="node5">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node12_x0023_node5>
+        <node4_x0023_node18
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node4"
+            rule=""
+            to="node18">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node4_x0023_node18>
+        <node18_x0023_node19
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node18"
+            rule=""
+            to="node19">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node18_x0023_node19>
+        <node19_x0023_node20
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node19"
+            to="node20">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node19_x0023_node20>
+        <node20_x0023_node22
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node20"
+            rule=""
+            to="node22">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node20_x0023_node22>
+        <node22_x0023_node23
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node22"
+            rule=""
+            to="node23">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node22_x0023_node23>
+        <node23_x0023_node21
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node23"
+            to="node21">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node23_x0023_node21>
+        <node20_x0023_node24
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node20"
+            rule=""
+            to="node24">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node20_x0023_node24>
+        <node24_x0023_node25
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node24"
+            to="node25">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node24_x0023_node25>
+        <node25_x0023_node27
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node25"
+            rule=""
+            to="node27">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node25_x0023_node27>
+        <node27_x0023_node26
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node27"
+            to="node26">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node27_x0023_node26>
+        <node25_x0023_node28
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node25"
+            rule=""
+            to="node28">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node25_x0023_node28>
+        <node28_x0023_node26
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node28"
+            to="node26">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node28_x0023_node26>
+        <node25_x0023_node29
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node25"
+            rule=""
+            to="node29">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node25_x0023_node29>
+        <node29_x0023_node30
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node29"
+            rule=""
+            to="node30">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node29_x0023_node30>
+        <node30_x0023_node31
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node30"
+            rule=""
+            to="node31">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node30_x0023_node31>
+        <node31_x0023_node26
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node31"
+            to="node26">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node31_x0023_node26>
+        <node26_x0023_node21
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node26"
+            to="node21">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node26_x0023_node21>
+        <node20_x0023_node32
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node20"
+            rule=""
+            to="node32">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node20_x0023_node32>
+        <node32_x0023_node33
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node32"
+            to="node33">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node32_x0023_node33>
+        <node33_x0023_node35
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node33"
+            rule=""
+            to="node35">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node33_x0023_node35>
+        <node35_x0023_node34
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node35"
+            to="node34">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node35_x0023_node34>
+        <node33_x0023_node36
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node33"
+            rule=""
+            to="node36">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node33_x0023_node36>
+        <node36_x0023_node34
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node36"
+            to="node34">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node36_x0023_node34>
+        <node33_x0023_node37
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node33"
+            rule=""
+            to="node37">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node33_x0023_node37>
+        <node37_x0023_node38
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node37"
+            rule=""
+            to="node38">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node37_x0023_node38>
+        <node38_x0023_node39
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node38"
+            rule=""
+            to="node39">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node38_x0023_node39>
+        <node39_x0023_node34
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node39"
+            to="node34">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node39_x0023_node34>
+        <node34_x0023_node21
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node34"
+            to="node21">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node34_x0023_node21>
+        <node21_x0023_node5
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node21"
+            to="node5">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node21_x0023_node5>
+        <node4_x0023_node40
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node4"
+            rule=""
+            to="node40">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node4_x0023_node40>
+        <node40_x0023_node41
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node40"
+            rule=""
+            to="node41">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node40_x0023_node41>
+        <node41_x0023_node5
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node41"
+            to="node5">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node41_x0023_node5>
+        <node5_x0023_node42
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node5"
+            rule=""
+            to="node42">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node5_x0023_node42>
+        <node42_x0023_node43
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node42"
+            to="node43">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node42_x0023_node43>
+        <node43_x0023_node45
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node43"
+            rule=""
+            to="node45">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node43_x0023_node45>
+        <node45_x0023_node46
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node45"
+            rule=""
+            to="node46">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node45_x0023_node46>
+        <node46_x0023_node47
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node46"
+            rule=""
+            to="node47">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node46_x0023_node47>
+        <node47_x0023_node44
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node47"
+            to="node44">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node47_x0023_node44>
+        <node43_x0023_node48
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node43"
+            rule=""
+            to="node48">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node43_x0023_node48>
+        <node48_x0023_node44
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node48"
+            to="node44">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node48_x0023_node44>
+        <node44_x0023_node49
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node44"
+            to="node49">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node44_x0023_node49>
+    </transitions>
+</jcr:root>

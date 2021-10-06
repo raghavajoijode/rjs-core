@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    cq:lastReplicated="{Date}2017-04-28T08:07:57.668-04:00"
+    cq:lastReplicatedBy="raghava"
+    cq:lastReplicationAction="Activate"
+    jcr:description="#138D75"
+    jcr:mixinTypes="[cq:ReplicationStatus]"
+    jcr:primaryType="cq:Tag"
+    jcr:title="Business Process"
+    sling:resourceType="cq/tagging/components/tag"/>

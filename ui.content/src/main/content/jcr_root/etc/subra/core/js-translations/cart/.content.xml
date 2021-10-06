@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jsI18n="[You have no Saved Items right now.,Removed {0}, Added {0}]"
+    jsI18nMsgError="[System Error Customer Service,PayerId_Mismatch_ErrorMsg,PayerId_Mismatch_ErrorMsg_Authenticated,PayerId_Already_Exists_ErrorMsg,Sorry\, there was a problem]"
+    jsI18nMsgInfo="[]"
+    jsI18nMsgSuccess="[]"
+    resourceType="subra/components/pages/checkout/cart"/>

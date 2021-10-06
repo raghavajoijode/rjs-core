@@ -1,0 +1,102 @@
+<!-- -------------------- -->
+<!-- Banner               -->
+<!-- -------------------- -->
+
+<div class="scomponent subra-banner"
+     data-sly-use.template="/apps/kajado/components/templates/common.html"
+     data-sly-test.bannerImage="${properties.bannerImage}">
+    <!-- /* <div class="row">
+      <div class="col-xs-12">
+        <div class="banner-image${ properties.isFullWidth ? ' full-width' : ''}" id="hero-image">
+               <img src="${bannerImage}" alt="Banner-image"/>
+        </div>
+      </div>
+    </div> */-->
+    <div class="banner${properties.isFullWidth ? ' full-width' : ''}"
+         style="background-image:url(${bannerImage @ context='styleString'});">
+        <div class="banner-inner">
+            <h1 data-sly-test.heading="${properties.heading}">${heading}</h1>
+            <h3 data-sly-test.subHeading="${properties.subHeading}">${subHeading}</h3>
+            <a data-sly-test="${item.buttonText && item.buttonLink}" href="${properties.buttonLink}" class="btn">${properties.buttonText} </a>
+        </div>
+    </div>
+</div>
+
+<script>
+	// Attach a submit handler to the form
+	$( ".scomponent.subra-signup-form" ).submit(function(e) {
+	 
+	  // Stop form from submitting normally
+	  e.preventDefault();
+	 
+	  // Get some values from elements on the page:
+	  var $form = $(this),
+	  email = $form.find("input[name='email']" ).val(),
+	  name = $form.find("input[name='name']" ).val(),
+	  pwd = $form.find("input[name='pwd']" ).val(),
+	  url = $form.attr("action");
+	 
+	  // Send the data using post
+	  var posting = $.post( url, { email: email, name : name, pwd : pwd} );
+	  // Put the results in a div
+	  posting.done(function(data) {
+	    //var content = $(data).find( "#content" );
+	    //$( "#result" ).empty().append(data);
+	    alert(data);
+	  });
+	  
+	  posting.fail(function() {
+	    //var content = $(data).find( "#content" );
+	    //$( "#result" ).empty().append(data);
+	    alert("failes");
+	  });
+	  
+	  posting.always(function() {
+	    //var content = $(data).find( "#content" );
+	    //$( "#result" ).empty().append(data);
+	    alert("always");
+	  });
+	  
+	});
+
+</script>
+
+<div class="scomponent subra-signup-form"
+     data-sly-use.template="/apps/kajado/components/templates/common.html">
+    <form action="/bin/subra/user/create-account" method="post">
+        <img src="subra-logo-185x80.png" class="logo" alt="Logo">
+        <h1 class="text-center">Register</h1>
+        <p class="hint-text">Create your account. It's free and only takes a minute.</p>
+        <div class="form-group">
+            <!-- <div class="row">
+                <div class="col-xs-6"><input type="text" class="form-control" name="first_name" placeholder="First Name" required="required"></div>
+                <div class="col-xs-6"><input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required"></div>
+            </div>    -->
+            <input type="text" class="form-control" name="name" placeholder="Email" required="required">
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" name="pwd" placeholder="Password" required="required">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" name="confirm_pwd" placeholder="Confirm Password"
+                   required="required">
+        </div>
+        <div class="form-group">
+            <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of
+                Use</a> &amp; <a href="#">Privacy Policy</a></label>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">Register Now</button>
+        </div>
+    </form>
+    <div class="text-center">Already have an account? <a href="./login.html">Login</a></div>
+</div>
+
+
+<sly data-sly-call="${template.placeholder @ isEmpty=false, cssClass='subra-cmp-signup-form'}"/>
+
+<!-- /* TODO: markup structure */ -->
+<!-- /* TODO: Error handling and Default configuration message */ -->

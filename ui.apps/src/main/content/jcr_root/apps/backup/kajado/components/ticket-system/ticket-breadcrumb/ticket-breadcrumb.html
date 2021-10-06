@@ -1,0 +1,12 @@
+<nav aria-label="${'breadcrumb' @i18n}">
+    <!-- /* data-sly-use.ticketsModel="${'org.subra.aem.rjs.core.component.models.TicketsModel'}" */-->
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <sly data-sly-list="${model.bredcrumbs}">
+            <li class="breadcrumb-item${itemIndex.last ? ' active' : ''}" aria-current="${itemIndex.last && 'page'}">
+                <a data-sly-test="${!itemIndex.last}" href="${item.link}">${item.label}</a>
+            </li>
+        </sly>
+    </ol>
+</nav>
+<!-- /* TODO: Error handling and Default configuration message */ -->

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:lastModified="{Date}2017-01-03T11:45:48.616+05:30"
+    jcr:lastModifiedBy="admin"
+    jcr:primaryType="cq:Tag"
+    jcr:title="Themes"
+    sling:resourceType="cq/tagging/components/tag">
+    <agile/>
+    <analytics/>
+    <applications-management-services/>
+    <artificial-intelligence-and-automation/>
+    <as-a-service/>
+    <big-data/>
+    <cloud/>
+    <commercial-constructs/>
+    <cyber-security-and-enterprise-risk/>
+    <devops/>
+    <digital/>
+    <enterprise-architecture/>
+    <enterprise-ops-transformation/>
+    <internet-of-things_x0020__x0028_iot_x0029_/>
+    <kpo-services/>
+    <mobile-mobility/>
+    <open-source/>
+    <product-lifecycle-management_x0020__x0028_plm_x0029_/>
+    <software-defined-everything_x0028_sdx_x0029_/>
+    <video-_x0026_-broadband-media/>
+    <industry-4.0/>
+    <block-chain/>
+</jcr:root>

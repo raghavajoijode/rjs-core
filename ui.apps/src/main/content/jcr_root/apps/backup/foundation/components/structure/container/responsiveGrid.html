@@ -1,0 +1,7 @@
+<template data-sly-template.responsiveGrid="${ @ container}">
+    <div id="${container.id}"
+         class="cmp-container"
+         style="${container.backgroundStyle @ context='styleString'}">
+        <sly data-sly-resource="${resource @ resourceType='foundation/components/structure/responsivegrid'}"></sly>
+    </div>
+</template>

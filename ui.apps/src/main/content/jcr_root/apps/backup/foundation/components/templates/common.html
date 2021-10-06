@@ -1,0 +1,6 @@
+<!-- /* Empty Text Placeholder*/ -->
+<sly data-sly-template.placeholder="${@ isEmpty, cssClass, emptyText}">
+    <div data-sly-test="${(wcmmode.edit || wcmmode.preview) && isEmpty}"
+         class="cq-placeholder ${cssClass}"
+         data-emptytext="${component.properties.jcr:title @ i18n}${emptyText && ' - '}${emptyText}"></div>
+</sly>

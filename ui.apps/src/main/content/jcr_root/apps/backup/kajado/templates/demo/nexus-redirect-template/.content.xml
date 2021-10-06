@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:description="This is a redirect template to create redirect page"
+          jcr:primaryType="cq:Template"
+          jcr:title="Demo Redirect Template"
+          allowedPaths="[/content(/.*)?]"
+          ranking="{Long}100">
+    <jcr:content
+            jcr:primaryType="cq:PageContent"
+            sling:redirect="{Boolean}true"
+            sling:redirectStatus="{Long}302"
+            sling:resourceType="demo/components/structure/redirect"/>
+</jcr:root>

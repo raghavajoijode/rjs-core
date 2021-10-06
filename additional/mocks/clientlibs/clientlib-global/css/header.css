@@ -1,0 +1,70 @@
+/* header */
+
+header {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.header.scomponent {
+    display: flex;
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.header.navbar-default {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.header .header_logo {
+    max-height: 30px;
+}
+
+.header .header__menu-link.active>a,
+.header .header__menu-link.active>a:focus,
+.header .header__menu-link.active>a:hover {
+    font-weight: bolder;
+}
+
+.header ul {
+    display: flex;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.header ul.header__menu-links>li {
+    margin: 0 2rem;
+}
+
+.header ul.header__user-nav>li {
+    margin: 0 0 0 3rem;
+}
+
+.navbar {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+.navbar>.container,
+.navbar>.container-fluid {}

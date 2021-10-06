@@ -1,0 +1,22 @@
+<div class="scmp-prototype" data-cmp-is="prototype">
+    <h2 class="cmp-prototype__title">Hello World Component</h2>
+    <div class="cmp-prototype__item" data-sly-test="${properties.text}">
+        <p class="cmp-prototype__item-label">Text property:</p>
+        <pre class="cmp-prototype__item-output"
+             data-cmp-hook-prototype="property">${properties.text}</pre>
+    </div>
+    <div class="cmp-prototype__item"
+         data-sly-use.model="org.subra.aem.rjs.core.component.models.Prototype"
+         data-sly-test="${model.message}">
+        <p class="cmp-prototype__item-label">Model message:</p>
+        <pre class="cmp-prototype__item-output"
+             data-cmp-hook-prototype="model">${model.message}</pre>
+    </div>
+    <div class="cmp-prototype__item"
+         data-sly-use.model="org.subra.aem.rjs.core.component.models.Prototype"
+         data-sly-test="${model.message}">
+        <p class="cmp-prototype__item-label">Model message:</p>
+        <pre class="cmp-prototype__item-output"
+             data-cmp-hook-prototype="model">${model.message2}</pre>
+    </div>
+</div>

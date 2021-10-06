@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/acs-commons"
+        cq:lastModified="{Date}2019-09-09T14:15:03.465+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/acs-commons/templates/utilities/acl-packager"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="subra-acl-packager"
+        sling:resourceType="acs-commons/components/utilities/packager/acl-packager">
+        <configuration
+            jcr:lastModified="{Date}2019-09-09T14:15:02.922+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="acs-commons/components/utilities/packager/acl-packager/configuration"
+            conflictResolution="IncrementVersion"
+            includeConfiguration="true"
+            includePrincipals="true"
+            packageACLHandling="MergePreserve"
+            packageDescription="ACL Package initially defined by a ACS AEM Commons - ACL Packager configuration."
+            packageGroupName="ACLs"
+            packageName="acls"
+            packageVersion="1.0.0"
+            principalNames="subra-admin-user"/>
+    </jcr:content>
+</jcr:root>

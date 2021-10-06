@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:lastModified="{Date}2017-04-30T10:49:54.243+05:30"
+    jcr:lastModifiedBy="admin"
+    jcr:primaryType="cq:Tag"
+    jcr:title="Industries"
+    sling:resourceType="cq/tagging/components/tag">
+    <retail/>
+    <banking/>
+    <automotive/>
+    <consumer-goods/>
+    <healthcare/>
+    <insurance/>
+    <medical-devices/>
+    <utilities/>
+    <tag/>
+    <media/>
+    <communication-service-providers/>
+    <consumer-electronics/>
+    <services/>
+    <network-equipment-providers/>
+    <natural-resources/>
+    <aerospace-and-defense/>
+    <engineering-and-construction/>
+    <oil-and-gas/>
+    <platforms-and-software-products/>
+    <process-and-industrial-manufacturing/>
+    <securities-and-capital-markets/>
+    <travel-transportation-and-hospitality/>
+    <semiconductors/>
+    <semiconductors-computing-storage-and-peripherals/>
+    <public-sector/>
+    <public-sector-and-higher-education/>
+    <pharmaceuticals/>
+</jcr:root>

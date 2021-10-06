@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:description="Scroll To Top Component, a common component to top of page."
+          jcr:primaryType="cq:Component"
+          jcr:title="Scroll To Top"
+          componentGroup="Subra: Common"/>

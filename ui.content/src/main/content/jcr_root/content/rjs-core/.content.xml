@@ -4,18 +4,16 @@
     <jcr:content
         cq:allowedTemplates="[/conf/rjs-core/settings/wcm/templates/(?!xf-).*]"
         cq:conf="/conf/rjs-core"
-        cq:redirectTarget="/content/rjs-core/us/en"
-        cq:template="/conf/rjs-core/settings/wcm/templates/spa-app-template"
         jcr:primaryType="cq:PageContent"
         jcr:title="RJS Core"
         sling:configRef="/conf/rjs-core"
         sling:redirect="{Boolean}true"
         sling:redirectStatus="{Long}302"
-        sling:resourceType="rjs-core/components/page">
+        sling:resourceType="foundation/components/redirect"
+        redirectTarget="/content/rjs-core/us/en">
         <image jcr:primaryType="nt:unstructured">
             <file/>
         </image>
     </jcr:content>
-    <language-masters/>
     <us/>
 </jcr:root>

@@ -1,0 +1,17 @@
+
+Hello ${recipientName},
+
+Greetings from Subra!
+
+Your request to register an account with us is successful.
+
+Please use the below link to login.
+Login Link: ${link}
+
+Hope you enjoy your stay with us.
+ 
+-----------
+From,
+Team Subra.
+-----------
+***This is a system generated electronic message. Please do not reply as this mailbox is never monitored.***

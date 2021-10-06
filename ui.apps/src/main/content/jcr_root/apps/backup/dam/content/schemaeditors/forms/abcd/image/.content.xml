@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="sling:Folder"
+          type="text">
+    <jcr:content jcr:primaryType="nt:unstructured"/>
+    <items jcr:primaryType="nt:unstructured">
+        <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container">
+            <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+                    type="nav"/>
+            <items jcr:primaryType="nt:unstructured">
+                <tab1
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Unnamed-1"
+                        sling:resourceType="granite/ui/components/foundation/section"
+                        listOrder="0"
+                        tabid="0b04163f-e896-49ff-bb2b-87d914e55f43">
+                    <items jcr:primaryType="nt:unstructured">
+                        <col1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container"
+                                listOrder="0"/>
+                        <col2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container"
+                                listOrder="1">
+                            <items jcr:primaryType="nt:unstructured">
+                                <_x0031_479726586355
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="dam/gui/components/admin/schemaforms/formbuilder/sectionfield"
+                                        fieldLabel="Field Label"
+                                        metaType="section"/>
+                                <_x0031_479726604324
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="dam/gui/components/admin/referencing"
+                                        fieldLabel="Image1234"
+                                        metaType="referencing"/>
+                            </items>
+                        </col2>
+                        <col3
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container"
+                                listOrder="2"/>
+                    </items>
+                </tab1>
+            </items>
+        </tabs>
+    </items>
+</jcr:root>

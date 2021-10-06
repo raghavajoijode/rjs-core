@@ -1,0 +1,43 @@
+.toggle-button{
+	padding: 15px 0px;
+}
+
+.toggle-button-content-button.active{
+    background-color: #0e3570;
+	color: #ffffff;
+}
+.fade-in{
+	display:block !important;
+}
+.director-content{
+	padding:50px 0;
+}
+.director-heading{
+	margin-bottom:20px;
+	font-weight:bold;
+}
+.group-executive-council-cotent, .executive-committe-cotent{
+	display:none;
+}
+.independent-director-cotent-box{
+	margin-bottom:40px;
+}
+.independent-director-cotent-box-image img{
+	width:100%;
+}
+.independent-director-cotent-box-text{
+	text-align:left;
+	padding:10px 10px;	
+}
+
+@media only screen and (max-width: 1400px){
+.container {
+    max-width: 970px;
+}
+}
+ 
+@media only screen and (max-width:767px){
+.toggle-button-content-button{
+	margin:30px 0;
+}	
+}

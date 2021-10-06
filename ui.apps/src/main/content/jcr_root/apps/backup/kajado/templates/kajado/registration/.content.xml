@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:description="Kajado Registration page"
+          jcr:primaryType="cq:Template"
+          jcr:title="Kajado Registration page"
+          allowedPaths="[\0]"
+          ranking="{Long}3">
+    <jcr:content
+            jcr:primaryType="cq:PageContent"
+            sling:resourceType="kajado/components/pages/page">
+        <registration
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kajado/components/account/registration"/>
+        <parsys
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+    </jcr:content>
+</jcr:root>

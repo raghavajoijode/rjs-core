@@ -1,0 +1,6 @@
+<div class="scomponent subra-heading text-center"
+     data-sly-use.template="/apps/kajado/components/templates/common.html"
+     data-sly-test.headingText="${properties.headingText}">
+    <h2 data-sly-element="${properties.headingLevel}">${headingText}</h1>
+</div>
+<sly data-sly-call="${template.placeholder @ isEmpty=!headingText, cssClass='subra-cmp-heading'}"/>

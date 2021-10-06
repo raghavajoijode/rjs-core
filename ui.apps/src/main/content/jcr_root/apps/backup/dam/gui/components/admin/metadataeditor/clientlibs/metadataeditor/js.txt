@@ -1,0 +1,2 @@
+js/metadataeditor.js
+js/form.js

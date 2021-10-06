@@ -1,0 +1,87 @@
+<!--/*
+This is a htl template to to privide different sections of 'html' page.
+Contains:
+	head
+	headlibs
+	favicons
+	footer
+	redirect
+File dependencies:
+	socialmedia/head.html
+	customheaderlibs.html
+	customfooterlibs.html
+*/-->
+
+<!--/* Template head: to load head section */-->
+<template data-sly-template.head="${ @ page }">
+    <meta charset="UTF-8">
+    <title>${page.title}</title>
+    <meta data-sly-test.keywords="${page.keywords}" name="keywords" content="${keywords}"/>
+    <meta data-sly-test.description="${properties['jcr:description']}" name="description" content="${description}"/>
+    <meta data-sly-test.templateName="${page.templateName}" name="template" content="${templateName}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <sly data-sly-include="socialmedia/head.html"/>
+    <sly data-sly-include="customheaderlibs.html"/>
+    <sly data-sly-call="${headlibs @
+                                designPath                = page.designPath,
+                                staticDesignPath          = page.staticDesignPath,
+                                clientLibCategories       = page.clientLibCategories,
+                                clientLibCategoriesJsHead = page.clientLibCategoriesJsHead,
+                                hasCloudconfigSupport     = page.hasCloudconfigSupport}"/>
+    <sly data-sly-test.appResourcesPath=${page.appResourcesPath} data-sly-call="${favicons @ path = appResourcesPath}"/>
+</template>
+
+<!--/* Template headlibs: to load default header libraries */-->
+<template
+        data-sly-template.headlibs="${@ designPath, staticDesignPath, clientLibCategories, clientLibCategoriesJsHead, hasCloudconfigSupport}"
+        data-sly-use.clientlib="/apps/foundation/components/templates/clientlib.html">
+    <sly data-sly-test="${!wcmmode.disabled}"
+         data-sly-call="${clientlib.all @ categories = [
+        'cq.pagetypes.html5page',
+        'cq.authoring.page',
+        'cq.authoring.dialog',
+        'cq.wcm.foundation-main',
+        'cq.shared'
+        ]
+     }"/>
+    <sly data-sly-include="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp"/>
+    <sly data-sly-test="${hasCloudconfigSupport}"
+         data-sly-resource="${'cloudconfig-header' @ resourceType='cq/cloudconfig/components/scripttags/header'}"/>
+    <sly data-sly-test="${clientLibCategoriesJsHead}"
+         data-sly-call="${clientlib.js @ categories=clientLibCategoriesJsHead}"/>
+    <sly data-sly-test="${clientLibCategories}"
+         data-sly-call="${clientlib.css @ categories=clientLibCategories}"/>
+    <link data-sly-test="${staticDesignPath}" href="${staticDesignPath}" rel="stylesheet" type="text/css"/>
+</template>
+
+<!--/* Template favicons: to load favicons */-->
+<template data-sly-template.favicons="${ @ path ='The path to the client library resources folder'}">
+    <link rel="icon" sizes="192x192" href="${path}/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="${path}/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="${path}/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="${path}/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="${path}/apple-touch-icon-120x120.png">
+    <meta name="msapplication-square310x310logo" content="${path}/icon-310x310.png">
+    <meta name="msapplication-wide310x150logo" content="${path}/icon-310x150.png">
+    <meta name="msapplication-square150x150logo" content="${path}/icon-150x150.png">
+    <meta name="msapplication-square70x70logo" content="${path}/icon-70x70.png">
+</template>
+
+<!--/* Template footer: to load default footer libraries */-->
+<template data-sly-template.footer="${ @ page}">
+    <sly data-sly-use.clientlib="/apps/foundation/components/templates/clientlib.html"
+         data-sly-test.clientlibCategoriesJsBody="${page.clientLibCategoriesJsBody}"
+         data-sly-call="${clientlib.js @ categories=clientlibCategoriesJsBody}"/>
+    <sly data-sly-include="customfooterlibs.html"/>
+    <sly data-sly-resource="${'cloudservices' @ resourceType='cq/cloudserviceconfigs/components/servicecomponents'}"/>
+    <sly data-sly-test="${page.hasCloudconfigSupport}"
+         data-sly-resource="${'cloudconfig-footer' @ resourceType='cq/cloudconfig/components/scripttags/footer'}"/>
+</template>
+
+<!--/* Template redirect: to redirect to another page */-->
+<template data-sly-template.redirect="${ @ redirectTarget}">
+    <p class="cmp-page__redirect">
+        ${'This page redirects to' @ i18n} <a href="${redirectTarget.url}">${redirectTarget.page.title
+        || redirectTarget.url}</a>
+    </p>
+</template>

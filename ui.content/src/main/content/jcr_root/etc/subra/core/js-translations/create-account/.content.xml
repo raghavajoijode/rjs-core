@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jsI18n="[]"
+    jsI18nMsgError="[Please enter a valid phone number.,We're sorry! That PIN cannot be used. Please try again.,Sorry\, we don't allow common passwords such as this one.,The information you entered is incorrect. Please try again.]"
+    resourceType="subra/components/pages/myaccount/create-account"/>

@@ -1,0 +1,25 @@
+<div class="sComponent ticket-listing container"
+
+     data-sly-test="${ticketsModel.isTicketList}">
+    <!-- /*data-sly-use.ticketsModel="${'org.subra.aem.rjs.core.component.models.TicketsModel'}" */ -->
+    <h2>${properties.heading}</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>${'S No' @ i18n}</th>
+            <th>${'Number' @ i18n}</th>
+            <th>${'Description' @ i18n}</th>
+            <th>${'Status' @ i18n}</th>
+        </tr>
+        </thead>
+        <tbody data-sly-list="${ticketsModel.tickets}">
+        <tr>
+            <td>${itemIndex.count}</td>
+            <td><a href="/${item.ticketNumber}">${item.ticketNumber}</a></td>
+            <td>${item.heading}</td>
+            <td>${item.status}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!-- /* TODO: Error handling and Default configuration message */ -->

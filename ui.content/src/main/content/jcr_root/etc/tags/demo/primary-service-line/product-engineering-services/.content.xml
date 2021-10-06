@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    cq:backlinks="[/etc/tags/demo/primary-service-line/product-engineering]"
+    jcr:description="#4A235A"
+    jcr:lastModified="{Date}2017-04-27T01:36:00.020-04:00"
+    jcr:lastModifiedBy="admin"
+    jcr:primaryType="cq:Tag"
+    jcr:title="Product Engineering Services"
+    sling:resourceType="cq/tagging/components/tag"/>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          cq:icon="search"
+          jcr:description="Full-text search"
+          jcr:primaryType="cq:Component"
+          jcr:title="Quick Search (v1)"
+          sling:resourceSuperType="core/wcm/components/search/v1/search"
+          componentGroup="Subra Core - TPC:aem-core"/>

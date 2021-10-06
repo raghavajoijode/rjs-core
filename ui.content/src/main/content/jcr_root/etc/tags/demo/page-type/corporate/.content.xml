@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="others"
+    jcr:primaryType="cq:Tag"
+    jcr:title="Corporate"
+    sling:resourceType="cq/tagging/components/tag">
+    <buyback/>
+    <corporate-governance/>
+    <events/>
+    <investor/>
+    <news/>
+    <sustainability/>
+    <Subratv/>
+    <about-Subra/>
+    <leadership/>
+    <leadership-detail/>
+    <annual-reports/>
+    <blogs/>
+    <blogs-detail/>
+    <faqs/>
+    <guidance-vs-actuals/>
+    <last-3yrs-data/>
+    <location/>
+    <operation-metrics/>
+    <quarterly-results/>
+    <unpaid-dividend/>
+    <analyst-interactions/>
+    <newsroom/>
+</jcr:root>

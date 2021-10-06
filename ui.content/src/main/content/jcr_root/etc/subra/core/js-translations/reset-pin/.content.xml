@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jsI18n="[Weak,Good,Strong]"
+    jsI18nMsgError="[We're sorry! That PIN cannot be used. Please try again.,The information you entered is incorrect. Please try again.]"
+    jsI18nMsgInfo="[]"
+    jsI18nMsgSuccess="[PIN successfully reset]"
+    resourceType="subra/components/pages/myaccount/pin/reset"/>

@@ -1,0 +1,9 @@
+/* subra-scroll-top */
+.scomponent.subra-scroll-top {
+	position: fixed;
+	padding: 0;
+	margin: 0;
+	bottom: 2vh;
+	left: 95vw;
+	cursor: pointer;
+}

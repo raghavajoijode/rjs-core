@@ -1,0 +1,32 @@
+/*subra-footer */
+.subra-footer {
+	background: rgba(23, 97, 160, 0.8);
+}
+.subra-footer a {
+	color: #fff;
+	text-decoration: none;
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+}
+.subra-footer .footer-disclaimer {
+    padding: 1rem 0;
+}
+.subra-footer .footer-disclaimer * {
+	display: flex;
+}
+.subra-footer .footer-disclaimer ul {
+    padding: 0;
+}
+.subra-footer .social-icons li:hover a i {
+	font-weight: 600;
+}
+.subra-footer .language {
+	cursor: pointer;
+}
+.subra-footer .copyright li:before {
+    content: "/";
+	padding: 0 1rem;
+}
+.subra-footer .copyright li:hover a {
+	text-decoration: underline;
+}

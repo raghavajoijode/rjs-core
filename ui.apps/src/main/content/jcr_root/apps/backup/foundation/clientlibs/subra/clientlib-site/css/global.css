@@ -1,0 +1,80 @@
+body {
+	padding: 0 1vw;
+}
+
+.subra {
+	font-family: SubraRegularFont;
+}
+
+.subra a, .subra .fa {
+	color: rgba(23, 97, 160, 1);;
+}
+
+.subra .fa.fa-trash {
+	color: red;
+}
+
+.subra.container, .scomponent .container, .subra .container {
+	max-width: unset;
+	padding: 0
+}
+
+.subra img {
+	max-width: 100%;
+}
+
+.subra .btn-primary {
+	background-color: rgba(23, 97, 160, 0.8);
+	color: #fff;
+}
+
+.subra .scomponent {
+	padding: 0;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media ( min-width : 992px) {
+	.subra .scomponent {
+		padding: 0 5vw;
+		margin-bottom: 3rem;
+	}
+}
+
+.subra .subra-header .scomponent {
+	margin-bottom: 1rem;
+}
+
+.subra .subra-footer .scomponent {
+	margin-bottom: 0;
+}
+
+/* Extra small devices (portrait phones, less than 576px) -xs */
+@media ( max-width : 575.98px) {
+}
+
+/* Small devices (landscape phones, 576px and up) -sm*/
+@media ( min-width : 576px) {
+}
+
+@media ( max-width : 767.98px) {
+}
+
+/* Medium devices (tablets, 768px and up) -md*/
+@media ( min-width : 768px) {
+}
+
+@media ( max-width : 991.98px) {
+}
+
+/* Large devices (desktops, 992px and up) -lg*/
+@media ( min-width : 992px) {
+}
+
+@media ( max-width : 1199.98px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) -xl */
+@media ( min-width : 1200px) {
+}

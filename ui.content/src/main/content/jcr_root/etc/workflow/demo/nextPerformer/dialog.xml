@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath=""
+    title="Performers"
+    touchUiDialogPath="/etc/workflow/demo/nextPerformer/cq:dialog"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <performers
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Choose Next Performer"
+            name="performers"
+            type="select"
+            xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <SME_x0020_or_x0020_GW
+                    jcr:primaryType="nt:unstructured"
+                    text="Subject Matter Expert"
+                    value="sme"/>
+                <vmm
+                    jcr:primaryType="nt:unstructured"
+                    text="Vertical Marketing Manager"
+                    value="vmm"/>
+                <smes
+                    jcr:primaryType="nt:unstructured"
+                    text="Subject Matter Experts"
+                    value="sme"/>
+                <ghost-writers
+                    jcr:primaryType="nt:unstructured"
+                    text="Ghost Writers"
+                    value="ghost-writers"/>
+            </options>
+        </performers>
+    </items>
+</jcr:root>

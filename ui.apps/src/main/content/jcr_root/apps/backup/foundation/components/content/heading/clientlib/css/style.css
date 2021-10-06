@@ -1,0 +1,26 @@
+/* subra-header */
+.subra-header {
+	padding: 0
+}
+.subra-header.navbar-default {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.subra-header .logo {
+    max-height: 30px;
+}
+.subra-header .active>a, 
+.subra-header .active>a:focus, 
+.subra-header .active>a:hover {
+    font-weight: bolder;
+}
+.subra-header ul {
+    display: flex;
+    list-style: none;
+	margin-top: 1rem;
+}
+.subra-header ul.header-center > li{
+    margin: 0 2rem;
+}
+.subra-header ul.header-right > li{
+    margin: 0 0 0 3rem;
+}

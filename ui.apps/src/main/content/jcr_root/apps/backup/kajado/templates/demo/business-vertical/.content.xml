@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:description="Business vertical page template "
+          jcr:primaryType="cq:Template"
+          jcr:title="Business Vertical "
+          allowedPaths="[\0]">
+    <jcr:content
+            jcr:primaryType="cq:PageContent"
+            sling:resourceType="/apps/demo/components/structure/business-vertical">
+        <expertise-1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+            <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="demo/components/content/title"
+                    title="Expertise"/>
+        </expertise-1>
+        <case-study-title
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+            <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="demo/components/content/title"
+                    title="Case Studies"/>
+        </case-study-title>
+        <latest-thinking-title
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+            <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="demo/components/content/title"
+                    title="Latest Thinking"/>
+        </latest-thinking-title>
+        <offering
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+            <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="demo/components/content/title"
+                    title="Solutions and offerings"/>
+        </offering>
+        <segments
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+            <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="demo/components/content/title"
+                    title="Segments"/>
+        </segments>
+        <hero-banner
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,80 @@
+/* subra-carousel */
+.subra-carousel {
+    position: relative;
+    height: 90vh;
+}
+.subra-carousel .carousel-inner .carousel-item {
+    height: 90vh;
+}
+.subra-carousel .carousel-indicators > li {
+	height: 2vh;
+	width: 2vh;
+    background-color: rgba(23, 97, 160, 1);
+    opacity: .5;
+	border: none;
+}
+.subra-carousel .carousel-indicators > li.active {
+	opacity: 1;
+	background-clip: unset;
+}
+.subra-carousel .carousel-item .slide {
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.subra-carousel .hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+.subra-carousel .hero h2 {
+    font-size: 6em;    
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+.subra-carousel .carousel-inner .carousel-item .hero {
+    opacity: 0;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+        -ms-transition: 2s all ease-in-out .1s; 
+         -o-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s; 
+}
+.subra-carousel .carousel-inner .carousel-item.active .hero {
+    opacity: 1;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+        -ms-transition: 2s all ease-in-out .1s; 
+         -o-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s;    
+}
+.subra-carousel .btn.btn-lg {
+	padding: 10px 40px;
+}
+.subra-carousel .btn.btn-hero,
+.subra-carousel .btn.btn-hero:hover,
+.subra-carousel .btn.btn-hero:focus {
+    color: #fff;
+    background-color: rgba(23, 97, 160, 0.8);
+    border-color: rgba(23, 97, 160, 0.8);
+    outline: none;
+    margin: 20px auto;
+}
+@media screen and (min-width: 980px){
+    .subra-carousel .hero { width: 980px; }    
+}
+@media screen and (max-width: 640px){
+    .subra-carousel .hero h2 { font-size: 4em; }    
+}

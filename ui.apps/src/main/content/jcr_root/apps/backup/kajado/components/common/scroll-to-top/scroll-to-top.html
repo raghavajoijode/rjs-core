@@ -1,0 +1,6 @@
+<div class="scomponent subra-scroll-top d-none"
+     data-sly-use.template="/apps/kajado/components/templates/common.html"
+     data-sly-test.scrollToTopImage="${properties.scrollToTopImage}">
+    <img src="${scrollToTopImage}" alt="${'back to top' @ i18n}" title="${'back to top' @ i18n}"/>
+</div>
+<sly data-sly-call="${template.placeholder @ isEmpty=!scrollToTopImage, cssClass='subra-cmp-scroll-top'}"/>

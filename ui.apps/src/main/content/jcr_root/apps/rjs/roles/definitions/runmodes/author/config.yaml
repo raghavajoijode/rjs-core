@@ -1,0 +1,142 @@
+###############################################################################
+#                           ENV:PROD                                          #
+#                                                                             #
+#           CORE - GROUPS AND ACLs DEFINITION FILE                           #
+#                                                                             #
+###############################################################################
+
+### Definition of Variables
+-
+- DEF adminCOREGroupId=to-be-defined-adminCOREGroupId
+- DEF viewOnlyCOREGroupId=to-be-defined-viewOnlyCOREGroupId
+- DEF contentEditorCOREGroupId=to-be-defined-contentEditorCOREGroupId
+- DEF contentPublisherCOREGroupId=to-be-defined-contentPublisherCOREGroupId
+
+- DEF marketArray=[ar, bo, br, ca, cl, co, cr, do, ec, sv, gt, hn, mx, ni, pa, py, pe, uy, ve, ad, at, be, bg, hr, cz, dk, fi, fr, de, gr, hu, is, it, lu, nl, no, pl, pt, ro, sk, si,
+  es, se, ch, gb, by, il, kz, ru, ua, af, bd, kh, tl, in, id, la, mv, pk, ph, th, vn, vu, dz, eg, iq, jo, kw, lb, ly, ma, sa, tn, tr, cy, ae, df, az, hk, jp, kr, mo,
+  my, nz, sg, tw, au, sl, uk, rs, mk, md, me, lv, lt, ge, ba, al, gl, kg]
+
+- DEF regionArray=[europe, americas, easterneurope, eastasiaandaustralia, middleeastafricaanddf, southsoutheastasia]
+
+
+### Groups definition
+- group_config:
+
+## AEM Only groups - Used to simplify Access Control. Users are shouldn't be members of these groups
+    - rjs_core_users:
+        - name: CORE Users
+          isMemberOf: rjs_all_users
+          path: rjs/ssd
+
+    - rjs_core_users_markets:
+        - name: CORE Users Markets
+          isMemberOf: rjs_core_users
+          path: rjs/ssd
+
+    - rjs_core_users_regions:
+        - name: CORE Users Regions
+          isMemberOf: rjs_core_users
+          path: rjs/ssd
+
+## END - AEM Only Groups
+
+## AZURE Groups - Users are members of these groups
+    - ${contentEditorSSDGroupId}:
+        - name: CORE Global Content Editor
+          description: FMCCAdobeCMSPRDSSDContentEditor_GL
+          isMemberOf: rjs_core_users_markets
+          path: rjs/ssd
+
+    - ${contentPublisherSSDGroupId}:
+        - name: CORE Global Content Publisher
+          description: FMCCAdobeCMSPRDSSDContentPublisher_GL
+          isMemberOf: rjs_core_users_markets
+          path: rjs/ssd
+
+    - ${adminSSDGroupId}:
+        - name: CORE Admin
+          description: FMCCGLOBALAdobeCMSPRDSSDAdmin
+          isMemberOf: rjs_core_users
+          path: rjs/ssd
+
+    - ${viewOnlySSDGroupId}:
+        - name: CORE View Only
+          description: FMCCGLOBALAdobeCMSPRDSSDViewOnly
+          isMemberOf: rjs_core_users_markets, rjs_core_users_regions
+          path: rjs/ssd
+
+## END AZURE Groups
+
+### Definition of permissions
+- ace_config:
+
+    - rjs_core_users:
+        # Allows read access to /content/rjs-core but not to its children
+        - path: /content/rjs-core
+          permission: allow
+          privileges: jcr:read,jcr:readAccessControl
+          repGlob: ''
+
+        - path: /content/rjs-core
+          permission: allow
+          privileges: jcr:read,jcr:readAccessControl
+          repGlob: '/jcr:*'
+
+        # Allows read access to /content/dam/rjs-core
+        - path: /content/dam/rjs-core
+          permission: allow
+          actions: read
+
+    - rjs_core_users_markets:
+        # read access to all markets
+        - FOR market IN ${marketArray}:
+            - path: /content/rjs-core/${market}
+              permission: allow
+              actions: read
+
+        - path: /content/rjs-core/global
+          permission: allow
+          actions: read
+
+    - rjs_core_users_regions:
+        # read access to all regions
+        - FOR region IN ${regionArray}:
+            - path: /content/rjs-core/${region}
+              permission: allow
+              actions: read
+
+    - ${viewOnlyCOREGroupId}:
+        # Can read
+        - path: /content/rjs-core/global
+          permission: allow
+          actions: read
+
+    # CORE Content Editor - RJSAdobeCMSPRDCOREContentEditor_GL
+    - ${contentEditorCOREGroupId}:
+        # create, modify in all markets
+        - FOR market IN ${marketArray}:
+            - path: /content/rjs-core/${market}
+              permission: allow
+              actions: create, modify
+
+    # CORE Content Publisher - RJSAdobeCMSPRDCOREContentPublisher_GL
+    - ${contentPublisherCOREGroupId}:
+
+        - FOR market IN ${marketArray}:
+            - path: /content/rjs-core/${market}
+              permission: allow
+              privileges: crx:replicate, jcr:removeChildNodes, jcr:removeNode
+
+        - path: /content/rjs-core/global
+          permission: allow
+          privileges: crx:replicate, jcr:removeChildNodes, jcr:removeNode
+
+
+    #CORE Admin PROD - RJSGLOBALAdobeCMSPRDCOREAdmin
+    - ${adminCOREGroupId}:
+        - path: /content/rjs-core
+          permission: allow
+          actions: read, modify, create, delete, acl_read, acl_edit, replicate
+        - path: /content/dam/rjs-core
+          permission: allow
+          actions: read, modify, create, delete, acl_read, acl_edit, replicate

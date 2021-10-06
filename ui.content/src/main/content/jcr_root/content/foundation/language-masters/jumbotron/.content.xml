@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2020-04-30T21:41:59.285+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/foundation/settings/wcm/templates/content-page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Jumbotron"
+        sling:resourceType="foundation/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/overlayed/core/container">
+            <responsivegrid
+                jcr:created="{Date}2020-04-30T19:24:54.620+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-04-30T19:25:14.336+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/structure/responsivegrid">
+                <jumbotron
+                    cq:styleIds="[1588255248303,1588255204586]"
+                    jcr:created="{Date}2020-04-30T21:28:30.038+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2020-04-30T21:28:30.038+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="foundation/components/content/jumbotron"
+                    heading="Welcome!!!"
+                    pageClientLibs="[subra.components.jumbotron]"
+                    text="Some exiting content coming soon.."/>
+                <jumbotron_2034775378
+                    cq:styleIds="[1588255204586,1588255248303]"
+                    jcr:created="{Date}2020-04-30T21:28:43.870+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2020-04-30T21:28:43.870+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="foundation/components/content/jumbotron"
+                    heading="Welcome!!!"
+                    pageClientLibs="[subra.components.jumbotron]"
+                    text="Some exiting content coming soon.."/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>
